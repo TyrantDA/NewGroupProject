@@ -21,16 +21,34 @@ public class arrowLuncher : MonoBehaviour
         Instantiate(arrow, hold, Quaternion.Euler(0f, 0f, 270f));
     }
 
-
-    private void OnTriggerStay(Collider other)
+    IEnumerator delay()
     {
-        //launchArrow();
+        while (true)
+        {
+            launchArrow();
+            yield return new WaitForSeconds(2);
+        }
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("entered");
-        launchArrow();
+        if (!other.transform.CompareTag("Arrow"))
+        {
+            StartCoroutine("delay");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (!other.transform.CompareTag("Arrow"))
+        {
+            StopCoroutine("delay");
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        
     }
 
     // Update is called once per frame
