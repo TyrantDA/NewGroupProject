@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6727084694402583432}
   - component: {fileID: 6727084694402583439}
   - component: {fileID: 6727084694402583438}
-  - component: {fileID: 6727084694402583437}
+  - component: {fileID: 1649558056688521270}
   m_Layer: 5
   m_Name: FillBack
   m_TagString: Untagged
@@ -60,7 +60,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6727084694402583475}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 531.9124}
+  m_LocalPosition: {x: 0, y: 0, z: 496.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6727084694441856640}
@@ -69,7 +69,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1362, y: 758}
+  m_AnchoredPosition: {x: 1362, y: 771.9}
   m_SizeDelta: {x: 240, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6727084694402583432
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6727084694402583437
+--- !u!114 &1649558056688521270
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6727084694402583475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6faf6f15757560e43a56e24320086c24, type: 3}
+  m_Script: {fileID: 11500000, guid: 40bca13a32120ac4bb9e6a3463d90e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 6727084694402583438}
