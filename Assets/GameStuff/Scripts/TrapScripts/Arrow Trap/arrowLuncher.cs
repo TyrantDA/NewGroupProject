@@ -50,10 +50,6 @@ public class arrowLuncher : MonoBehaviour
             StopCoroutine("delay");
         }
     }
-    private void OnTriggerStay(Collider other)
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

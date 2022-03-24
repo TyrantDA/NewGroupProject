@@ -22,14 +22,18 @@ public class arrow : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        m_Rigidbody.isKinematic = true;
-        m_Rigidbody.detectCollisions = false;
 
-        gameObject.transform.parent = collision.gameObject.transform;
-
-        if (collision.transform.CompareTag("Player"))
+        if (!collision.transform.CompareTag("Arrow"))
         {
-            collision.gameObject.GetComponent<HealthOfPlayer>().ArrowDamage();
+            m_Rigidbody.isKinematic = true;
+            m_Rigidbody.detectCollisions = false;
+
+            gameObject.transform.parent = collision.gameObject.transform;
+
+            if (collision.transform.CompareTag("Player"))
+            {
+                collision.gameObject.GetComponent<HealthOfPlayer>().ArrowDamage();
+            }
         }
 
     }
