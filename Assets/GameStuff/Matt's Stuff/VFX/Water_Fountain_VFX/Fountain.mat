@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Fountain
+  m_Shader: {fileID: -6465566751694194690, guid: 91d9cfdb5f9e9fa439a94aaa1f9b4628, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_4a7a9b2908fc4c6c86b741d8bf7e06cc: 1.4
+    - Vector1_593a53077e3f44beba22c40bdd5accfa: 0.12
+    - Vector1_704c927dbfed434b8d0191710781e373: 5
+    - Vector1_84e26ba8086e411ab8a0d3799b06a965: 1
+    - Vector1_d0b9de012a6e44d29f8abd80626eef00: 0
+    - Vector1_d6f1853ac782429ab750d16562ca7da3: 0.15
+    - Vector1_ed39f014989c42d48635a9c2063a0211: 0.4
+    - Vector1_f9c5e004c37f45bb98bab1fa9804587d: 10
+    m_Colors:
+    - Color_81fe362e18944ece9b111163ae3a4475: {r: 0.27869803, g: 0.31648183, b: 0.85490197, a: 0}
+    - Color_a09662c1705943439b7ddd6e83620e13: {r: 0.06674972, g: 0.121971525, b: 0.9433962, a: 0}
+    - Vector2_59fe628d7c7f4ca79ef7319adc48b706: {r: 6, g: 4, b: 0, a: 0}
+    - Vector2_70e371dc9b344cadaa43722e424bde6e: {r: 0, g: -0.6, b: 0, a: 0}
+    - Vector2_9271e8c91e5644e9a871bc74c3acd0e8: {r: 0, g: -0.75, b: 0, a: 0}
+  m_BuildTextureStacks: []
