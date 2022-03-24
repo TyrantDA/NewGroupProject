@@ -5,7 +5,7 @@ using UnityEngine;
 public class arrowLuncher : MonoBehaviour
 {
     public GameObject arrow;
-    public Transform spawnPoint;
+    [SerializeField] Transform[] spawnPoints;
 
     // Start is called before the first frame update
     void Start()
@@ -17,8 +17,12 @@ public class arrowLuncher : MonoBehaviour
 
     void launchArrow()
     {
-        Vector3 hold = spawnPoint.position;
-        Instantiate(arrow, hold, Quaternion.Euler(0f, 0f, 270f));
+        for(int x = 0; x < spawnPoints.Length; x++)
+        {
+            Vector3 hold = spawnPoints[x].position;
+            Instantiate(arrow, hold, Quaternion.Euler(0f, 0f, 270f));
+        }
+       
     }
 
     IEnumerator delay()
