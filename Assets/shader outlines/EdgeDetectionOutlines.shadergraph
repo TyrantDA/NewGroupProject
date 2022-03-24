@@ -465,7 +465,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "143cd4ec11aa4b5a810bbce962b8d979",
     "m_Id": 0,
-    "m_DisplayName": "DepthTreshold",
+    "m_DisplayName": "DepthThreshold",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
