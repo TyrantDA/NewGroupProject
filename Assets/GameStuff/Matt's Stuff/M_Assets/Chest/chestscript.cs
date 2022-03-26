@@ -6,34 +6,39 @@ public class chestscript : MonoBehaviour
 {
     public bool close = true;
     private Animation anim;
-    public bool go = true;
+    public bool go;
 
     // Start is called before the first frame update
     void Start()
     {
+        go = false;
         anim = this.GetComponent<Animation>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (anim.isPlaying)
+        if (go == true)
         {
-            return;
-        }
-        if (close == true)
-        {
-            anim.Play("open");
-            close = false;
-        }
-        if (anim.isPlaying)
-        {
-            return;
-        }
-        if (close != true)
-        {
-            anim.Play("Close");
-            close = true;
+            go = false;
+            if (anim.isPlaying)
+            {
+                return;
+            }
+            if (close == true)
+            {
+                anim.Play("open");
+                close = false;
+            }
+            if (anim.isPlaying)
+            {
+                return;
+            }
+            if (close != true)
+            {
+                anim.Play("Close");
+                close = true;
+            }
         }
     }
 }
