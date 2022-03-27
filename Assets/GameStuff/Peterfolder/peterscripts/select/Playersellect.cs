@@ -9,7 +9,7 @@ public class Playersellect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        radiusDetect = 5.0f;
+        radiusDetect = 3.0f;
         maxium = 3.0f;
     }
     void detect()
@@ -17,31 +17,28 @@ public class Playersellect : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, maxium) && hit.transform.tag == "Chest")
         {
+            print("dd");
+
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, radiusDetect);
             foreach (var hitCollider in hitColliders)
             {
+                print("14");
+
                 if (hitCollider.gameObject.tag == "opener")
                 {
-                    hitCollider.gameObject.GetComponent<identified>().spotted = true;
-                }
-            }
-            if (Input.GetKey("e"))
-            {
-                print("ee");
+                    print("33");
 
-                Collider[] hitColliders2 = Physics.OverlapSphere(transform.position, radiusDetect);
-                foreach (var hitCollider in hitColliders2)
-                {
-                    if (hitCollider.gameObject.tag == "opener")
+                    hitCollider.gameObject.GetComponent<identified>().spotted = true;
+                    if (Input.GetKey("e"))
                     {
                         hitCollider.gameObject.GetComponent<chestscript>().go = true;
-                        return;
-                    }
-                }
-                return;
 
-            
+                    }
+                    return;
+
+                }
             }
+
 
         }
     }

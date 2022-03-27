@@ -18,7 +18,7 @@ public class changerchild : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         changed = hold.change;
         if (changed == true)
