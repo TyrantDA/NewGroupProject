@@ -8,6 +8,7 @@ TagManager:
   - Chest
   - opener
   - kill
+  - Enemy
   layers:
   - Default
   - TransparentFX
