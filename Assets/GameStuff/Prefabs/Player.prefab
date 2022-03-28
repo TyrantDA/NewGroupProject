@@ -158,4 +158,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalHealth: 100
   damageFromEnemy: 10
+  damageFromArrow: 8
+  damageFromPoison: 5
   bar: {fileID: 0}

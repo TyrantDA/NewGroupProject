@@ -22,6 +22,10 @@ public class poisonTrapTrigger : MonoBehaviour
         {
             other.gameObject.GetComponent<HealthOfPlayer>().StartPoisonDamage();
         }
+        else if (other.transform.CompareTag("Enemy"))
+        {
+            other.gameObject.GetComponent<HealthOFEnemy>().StartPoisonDamage();
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -29,6 +33,10 @@ public class poisonTrapTrigger : MonoBehaviour
         if (other.transform.CompareTag("Player"))
         {
             other.gameObject.GetComponent<HealthOfPlayer>().EndPoisonDamage();
+        }
+        else if (other.transform.CompareTag("Enemy"))
+        {
+            other.gameObject.GetComponent<HealthOFEnemy>().EndPoisonDamage();
         }
     }
 }
