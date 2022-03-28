@@ -115,10 +115,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 508635062545721447}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edb6a3f56a672c44d88ed92f62755894, type: 3}
+  m_Script: {fileID: 11500000, guid: 140ce55afe7a70943b56064ebc8e2168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleText: {fileID: 3884179111432434413}
+  titleText: {fileID: 5128199242398570970}
   amountText: {fileID: 643547026813293781}
   icon: {fileID: 5217306714095730276}
 --- !u!1 &837752792915121591

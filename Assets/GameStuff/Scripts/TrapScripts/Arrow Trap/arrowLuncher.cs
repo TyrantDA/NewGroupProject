@@ -7,6 +7,9 @@ public class arrowLuncher : MonoBehaviour
     public GameObject arrow;
     [SerializeField] Transform[] spawnPoints;
 
+    [SerializeField] int amunition;
+    public ItemInfo Ammo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +20,18 @@ public class arrowLuncher : MonoBehaviour
 
     void launchArrow()
     {
-        for(int x = 0; x < spawnPoints.Length; x++)
+        if (amunition > 0)
         {
-            Vector3 hold = spawnPoints[x].position;
-            Instantiate(arrow, hold, Quaternion.Euler(0f, 0f, 270f));
+            for (int x = 0; x < spawnPoints.Length; x++)
+            {
+                Vector3 hold = spawnPoints[x].position;
+                Instantiate(arrow, hold, Quaternion.Euler(0f, 0f, 270f));
+                amunition--;
+            }
+        }
+        else
+        {
+            Debug.Log("no ammo");
         }
        
     }
@@ -40,6 +51,17 @@ public class arrowLuncher : MonoBehaviour
         if (!other.transform.CompareTag("Arrow"))
         {
             StartCoroutine("delay");
+        }
+
+        if(other.transform.CompareTag("Player"))
+        {
+            int hold = other.gameObject.GetComponent<ItemListUI>().HasItem(Ammo);
+            if (hold > 0);
+            {
+                amunition += hold;
+                other.gameObject.GetComponent<ItemListUI>().AddItem(Ammo, -hold);
+            }
+
         }
     }
 

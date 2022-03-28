@@ -9,7 +9,9 @@ public class ItemListUI : MonoBehaviour
     public Transform panelContainer; // position of UI Item will be placed on the canvas
     public GameObject uiItemPrefab; // prefab of IU object which will deplace data. the UIItem script will need to be attached to this item as well
     public int addAmount = 1; // amount to be added on button press used only in testing
-    public ItemInfo food; // an itemInfo object that can be added to the list each individual type of item will need to be add like this for use
+    public ItemInfo Ammo; // an itemInfo object that can be added to the list each individual type of item will need to be add like this for use
+    public ItemInfo Poison;
+
 
     Dictionary<ItemInfo, int> items = new Dictionary<ItemInfo, int>();
     Dictionary<ItemInfo, UIItem> uiItems = new Dictionary<ItemInfo,UIItem>();
@@ -59,10 +61,16 @@ public class ItemListUI : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Food"))
+        if(collision.gameObject.CompareTag("ArrowAmmo"))
         {
             Destroy(collision.gameObject);
-            AddItem(food);
+            AddItem(Ammo,5);
+        }
+
+        if (collision.gameObject.CompareTag("PoisonAmmo"))
+        {
+            Destroy(collision.gameObject);
+            AddItem(Poison, 5);
         }
     }
 }
