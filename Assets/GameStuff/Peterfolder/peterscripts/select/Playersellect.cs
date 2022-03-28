@@ -12,21 +12,18 @@ public class Playersellect : MonoBehaviour
         radiusDetect = 3.0f;
         maxium = 3.0f;
     }
-    void detect()
+    void detect1()
     {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, maxium) && hit.transform.tag == "Chest")
         {
-            print("dd");
 
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, radiusDetect);
             foreach (var hitCollider in hitColliders)
             {
-                print("14");
 
                 if (hitCollider.gameObject.tag == "opener")
                 {
-                    print("33");
 
                     hitCollider.gameObject.GetComponent<identified>().spotted = true;
                     if (Input.GetKey("e"))
@@ -42,8 +39,37 @@ public class Playersellect : MonoBehaviour
 
         }
     }
-    void Update()
+    void detect2()
     {
-        detect();
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, maxium) && hit.transform.tag == "Door")
+        {
+            print("ddd");
+
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, radiusDetect);
+            foreach (var hitCollider in hitColliders)
+            {
+
+                if (hitCollider.gameObject.tag == "opener")
+                {
+                    print("EE");
+                    hitCollider.gameObject.GetComponent<identified>().spotted = true;
+                    if (Input.GetKey("e"))
+                    {
+                        hitCollider.gameObject.GetComponent<Doorsprit>().go = true;
+
+                    }
+                    return;
+
+                }
+            }
+
+
+        }
+    }
+        void Update()
+    {
+        detect1();
+        detect2();
     }
 }

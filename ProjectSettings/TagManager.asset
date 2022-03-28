@@ -8,6 +8,7 @@ TagManager:
   - Chest
   - opener
   - kill
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Water
   - UI
   - tiggers
-  - 
+  - door
   - 
   - 
   - 
