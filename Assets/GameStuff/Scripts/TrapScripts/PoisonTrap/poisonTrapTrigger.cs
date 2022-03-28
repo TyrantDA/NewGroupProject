@@ -5,6 +5,9 @@ using UnityEngine;
 public class poisonTrapTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField] int Ammuntion;
+    public ItemInfo Poison;
+
     void Start()
     {
         
@@ -18,25 +21,45 @@ public class poisonTrapTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.transform.CompareTag("Player"))
+        if (Ammuntion > 0)
         {
-            other.gameObject.GetComponent<HealthOfPlayer>().StartPoisonDamage();
-        }
-        else if (other.transform.CompareTag("Enemy"))
+            if (other.transform.CompareTag("Player"))
+            {
+                other.gameObject.GetComponent<HealthOfPlayer>().StartPoisonDamage();
+            }
+            else if (other.transform.CompareTag("Enemy"))
+            {
+                other.gameObject.GetComponent<HealthOFEnemy>().StartPoisonDamage();
+            }
+        
+            else
+            {
+                Debug.Log("no ammo");
+            }
+
+        if (other.transform.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<HealthOFEnemy>().StartPoisonDamage();
+            int hold = other.gameObject.GetComponent<ItemListUI>().HasItem(Poison);
+            if (hold > 0) ;
+            {
+                Ammuntion += hold;
+                other.gameObject.GetComponent<ItemListUI>().AddItem(Poison, -hold);
+            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.transform.CompareTag("Player"))
+        if (Ammuntion > 0)
         {
-            other.gameObject.GetComponent<HealthOfPlayer>().EndPoisonDamage();
-        }
-        else if (other.transform.CompareTag("Enemy"))
-        {
-            other.gameObject.GetComponent<HealthOFEnemy>().EndPoisonDamage();
+            if (other.transform.CompareTag("Player"))
+            {
+                other.gameObject.GetComponent<HealthOfPlayer>().EndPoisonDamage();
+            }
+            else if (other.transform.CompareTag("Enemy"))
+            {
+                other.gameObject.GetComponent<HealthOFEnemy>().EndPoisonDamage();
+            }
         }
     }
 }
