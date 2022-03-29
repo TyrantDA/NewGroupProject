@@ -9,6 +9,9 @@ TagManager:
   - opener
   - kill
   - Enemy
+  - ArrowAmmo
+  - PoisonAmmo
+  - Door
   layers:
   - Default
   - TransparentFX
