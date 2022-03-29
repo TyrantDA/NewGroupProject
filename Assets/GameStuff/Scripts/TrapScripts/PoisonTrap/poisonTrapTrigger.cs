@@ -40,7 +40,7 @@ public class poisonTrapTrigger : MonoBehaviour
         if (other.transform.CompareTag("Player"))
         {
             int hold = other.gameObject.GetComponent<ItemListUI>().HasItem(Poison);
-            if (hold > 0) ;
+            if (hold > 0)
             {
                 Ammuntion += hold;
                 other.gameObject.GetComponent<ItemListUI>().AddItem(Poison, -hold);

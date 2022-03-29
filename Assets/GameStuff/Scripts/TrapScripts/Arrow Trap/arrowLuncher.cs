@@ -56,7 +56,7 @@ public class arrowLuncher : MonoBehaviour
         if(other.transform.CompareTag("Player"))
         {
             int hold = other.gameObject.GetComponent<ItemListUI>().HasItem(Ammo);
-            if (hold > 0);
+            if (hold > 0)
             {
                 amunition += hold;
                 other.gameObject.GetComponent<ItemListUI>().AddItem(Ammo, -hold);
