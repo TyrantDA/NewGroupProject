@@ -56,7 +56,7 @@ public class Dectection : MonoBehaviour
             {
                 foundSomething = true;
                 hold = x;
-                Debug.Log("have It");
+                //Debug.Log("have It");
             }
 
         }
@@ -67,7 +67,7 @@ public class Dectection : MonoBehaviour
             {
                 if (hitInfo.transform == hitColliders[hold].transform)
                 {
-                    Debug.Log("Detected");
+                    //Debug.Log("Detected");
                     lastSeen = hitColliders[hold].transform.position;
                     agent.destination = lastSeen;
 
@@ -89,7 +89,7 @@ public class Dectection : MonoBehaviour
                 {
                     if (hitInfo.transform == _mHitInfo.transform)
                     {
-                        Debug.Log("Detected Player");
+                        //Debug.Log("Detected Player");
                         lastSeen = _mHitInfo.transform.position;
                         agent.destination = lastSeen;
 
@@ -114,7 +114,7 @@ public class Dectection : MonoBehaviour
 
 
 
-                    Debug.Log("start searching");
+                    //Debug.Log("start searching");
                     agent.destination = lastSeen;
                     if (transform.position.x == lastSeen.x && transform.position.z == lastSeen.z)
                     {
@@ -123,7 +123,7 @@ public class Dectection : MonoBehaviour
                         if (currentTime <= 0)
                         {
                             seen = false;
-                            Debug.Log("stop search");
+                            //Debug.Log("stop search");
                             currentTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
                         }
                         else
@@ -145,7 +145,7 @@ public class Dectection : MonoBehaviour
             }
             else
             {
-                Debug.Log("start searching");
+                //Debug.Log("start searching");
                 agent.destination = lastSeen;
                 if (transform.position.x == lastSeen.x && transform.position.z == lastSeen.z)
                 {
@@ -154,7 +154,7 @@ public class Dectection : MonoBehaviour
                     if (currentTime <= 0)
                     {
                         seen = false;
-                        Debug.Log("stop search");
+                        //Debug.Log("stop search");
                         currentTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
                     }
                     else
