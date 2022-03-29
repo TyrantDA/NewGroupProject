@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class tempobjctives : MonoBehaviour
 {
-    public Material hold3;
-    public Material hold2;
+    public GameObject hold;
     public bool completeone;
     public bool completetwo;
     public bool completethree;
@@ -20,7 +19,6 @@ public class tempobjctives : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.GetComponent<Renderer>().material = hold2;
 
     }
 
@@ -30,7 +28,7 @@ public class tempobjctives : MonoBehaviour
         completeone = !chesthold.close;
         completetwo = !chesthold2.close;
         completethree = !chesthold3.close;
-        completefour = !chesthold.close;
+        completefour = !chesthold4.close;
         if (completeone == true)
         {
             if (completetwo == true)
@@ -39,30 +37,30 @@ public class tempobjctives : MonoBehaviour
                 {
                     if (completefour == true)
                     {
-                        this.GetComponent<Renderer>().material = hold3;
+                        hold.SetActive(true);
 
                     }
                     else
                     {
-                        this.GetComponent<Renderer>().material = hold2;
+                        hold.SetActive(false);
 
                     }
                 }
                 else
                 {
-                    this.GetComponent<Renderer>().material = hold2;
+                    hold.SetActive(false);
 
                 }
             }
             else
             {
-                this.GetComponent<Renderer>().material = hold2;
+                hold.SetActive(false);
 
             }
         }
         else
         {
-            this.GetComponent<Renderer>().material = hold2;
+            hold.SetActive(false);
 
         }
     }

@@ -6,6 +6,9 @@ public class Playersellect : MonoBehaviour
 {
     public float radiusDetect;
     public float maxium;
+    public GameObject hold;
+    public GameObject hold2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,13 +20,20 @@ public class Playersellect : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, maxium) && hit.transform.tag == "Chest")
         {
-
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, radiusDetect);
             foreach (var hitCollider in hitColliders)
             {
 
                 if (hitCollider.gameObject.tag == "opener")
                 {
+                    if (hitCollider.gameObject.GetComponent<chestscript>().close == true)
+                    {
+                        hold.SetActive(true);
+                    }
+                    if (hitCollider.gameObject.GetComponent<chestscript>().close == false)
+                    {
+                        hold2.SetActive(true);
+                    }
 
                     hitCollider.gameObject.GetComponent<identified>().spotted = true;
                     if (Input.GetKey("e"))
@@ -44,15 +54,20 @@ public class Playersellect : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, maxium) && hit.transform.tag == "Door")
         {
-            print("ddd");
-
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, radiusDetect);
             foreach (var hitCollider in hitColliders)
             {
 
                 if (hitCollider.gameObject.tag == "opener")
                 {
-                    print("EE");
+                    if (hitCollider.gameObject.GetComponent<Doorsprit>().close == true)
+                    {
+                        hold.SetActive(true);
+                    }
+                    if (hitCollider.gameObject.GetComponent<Doorsprit>().close == false)
+                    {
+                        hold2.SetActive(true);
+                    }
                     hitCollider.gameObject.GetComponent<identified>().spotted = true;
                     if (Input.GetKey("e"))
                     {
