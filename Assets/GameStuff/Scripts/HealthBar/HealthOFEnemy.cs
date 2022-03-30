@@ -6,7 +6,7 @@ public class HealthOFEnemy : MonoBehaviour
 {
 
     [SerializeField] float totalHealth;
-    [SerializeField] float currentHealth;
+    float currentHealth;
     [SerializeField] float damageFromEnemy;
     [SerializeField] float damageFromArrow;
     [SerializeField] float damageFromPoison;
