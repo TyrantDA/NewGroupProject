@@ -7,6 +7,8 @@ public class playerAttack : MonoBehaviour
     public float hitRange;
     public float timeDelay;
     private bool isCoolDown;
+    private float forwardForce = 200;
+    public GameObject hitBox;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,7 @@ public class playerAttack : MonoBehaviour
             {
                 Debug.Log("hit");
                 hit.transform.gameObject.GetComponent<HealthOFEnemy>().PlayerDamage();
+                hit.transform.gameObject.GetComponent <Rigidbody>().AddForce(Vector3.back * forwardForce);
             }
         }
 
