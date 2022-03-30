@@ -22,18 +22,18 @@ public class playerAttack : MonoBehaviour
  
         if(Physics.Raycast(origin, forward, out hit, hitRange))
         {
-            Debug.Log("Attack");
-            Debug.DrawRay(transform.position, forward, Color.green);
+            Debug.Log("Attack " + hit.transform.gameObject.name);
             if (hit.transform.gameObject.tag == "Enemy")
             {
                 Debug.Log("hit");
+                hit.transform.gameObject.GetComponent<HealthOFEnemy>().PlayerDamage();
             }
         }
 
-        StartCoroutine("calldown");
+        StartCoroutine("cooldown");
     }
 
-    IEnumerator calldown()
+    IEnumerator cooldown()
     {
         isCoolDown = true;
 

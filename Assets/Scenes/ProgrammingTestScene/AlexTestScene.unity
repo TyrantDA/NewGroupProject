@@ -619,6 +619,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3155587951850749834, guid: e6dac3b3a3a551a4eb83ba22ca3d0eeb, type: 3}
+      propertyPath: detectLayers.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3155587951850749835, guid: e6dac3b3a3a551a4eb83ba22ca3d0eeb, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2182,8 +2186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760065d41cccd5541b49b7aabac93cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitRange: 5
-  timeDelay: 8
+  hitRange: 6
+  timeDelay: 0.5
 --- !u!1001 &2036009986
 PrefabInstance:
   m_ObjectHideFlags: 0
