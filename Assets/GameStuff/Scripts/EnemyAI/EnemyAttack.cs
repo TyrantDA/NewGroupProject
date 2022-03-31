@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attack : MonoBehaviour
+public class EnemyAttack : MonoBehaviour
 {
     public float timeDelay;
 
@@ -14,15 +14,15 @@ public class Attack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     void PlayerAttack()
     {
-        if(inRange)
+        if (inRange)
         {
             Debug.Log("hit");
-            target.transform.gameObject.GetComponent<HealthOFEnemy>().PlayerDamage();
+            target.transform.gameObject.GetComponent<HealthOfPlayer>().DamagePlayer();
             target.transform.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.back * forwardForce);
             target.transform.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * upforce);
             inRange = false;
@@ -37,15 +37,13 @@ public class Attack : MonoBehaviour
         yield return new WaitForSeconds(timeDelay);
 
         isCoolDown = false;
-        Debug.Log("off coolDown");
+        //Debug.Log("off coolDown");
     }
 
 
     // Update is called once per frame
-    void Update()
+    public void go()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
             if (!isCoolDown)
             {
                 PlayerAttack();
@@ -54,12 +52,11 @@ public class Attack : MonoBehaviour
             {
                 Debug.Log("cooldown");
             }
-        }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.transform.gameObject.tag == "Enemy")
+        if (other.transform.gameObject.tag == "Player")
         {
             //Debug.Log("in range");
             inRange = true;

@@ -11,7 +11,7 @@ public class Patrol : MonoBehaviour
     public float speed; // not used
 
     int currentMovingTo;
-    GameObject target;
+    [SerializeField] GameObject target;
     NavMeshAgent agent;
     bool patrolling;
 
@@ -19,6 +19,7 @@ public class Patrol : MonoBehaviour
     void Start()
     {
         target = closest(Patroller);
+        Debug.Log(target.name);
         agent = GetComponent<NavMeshAgent>();
         patrolling = false;
     }
@@ -31,18 +32,7 @@ public class Patrol : MonoBehaviour
     // work out the distance between two game objects 
     float Lenth(GameObject p, GameObject pat)
     {
-        float x = pat.transform.position.x * p.transform.position.x;
-        float y = pat.transform.position.y * p.transform.position.y;
-        float z = pat.transform.position.z * p.transform.position.z;
-
-        x = Mathf.Pow(x, 2);
-        y = Mathf.Pow(y, 2);
-        z = Mathf.Pow(z, 2);
-
-        float answer = x + y + z;
-
-        answer = Mathf.Sqrt(answer);
-
+        float answer = Vector3.Distance(p.transform.position, pat.transform.position);
         return answer;
     }
 
@@ -56,7 +46,7 @@ public class Patrol : MonoBehaviour
         for (int x = 0; x < patrolList.Count; x++)
         {
             comare = Lenth(player, patrolList[x]);
-            if(comareHold < comare)
+            if(comareHold > comare)
             {
                 comareHold = comare;
                 key = x;

@@ -6,11 +6,13 @@ public class HealthOFEnemy : MonoBehaviour
 {
 
     [SerializeField] float totalHealth;
-    float currentHealth;
+    
     [SerializeField] float damageFromEnemy;
     [SerializeField] float damageFromArrow;
     [SerializeField] float damageFromPoison;
     [SerializeField] float damageFromPlayer;
+
+    [SerializeField] float currentHealth;
     // Start is called before the first frame update
 
     void Start()

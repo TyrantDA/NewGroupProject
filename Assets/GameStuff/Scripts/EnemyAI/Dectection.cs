@@ -14,6 +14,10 @@ public class Dectection : MonoBehaviour
 
     public LayerMask detectLayers;
 
+    public float combatRange;
+
+    public EnemyAttack hitBox;
+
     float currentTime;
     float minTimeBetweenSpawns = 10;
     float maxTimeBetweenSpawns = 50;
@@ -31,6 +35,7 @@ public class Dectection : MonoBehaviour
     NavMeshAgent agent;
     bool seen;
     Vector3 lastSeen;
+    bool hitRange;
     
 
     void Start()
@@ -42,6 +47,30 @@ public class Dectection : MonoBehaviour
         currentTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
         foundSomething = false;
     }
+
+    float Lenth()
+    {
+        float answer = Vector3.Distance(transform.position, lastSeen);
+        return answer;
+    }
+
+    void engage()
+    {
+        float hold = Lenth();
+        if (hold > combatRange)
+        {
+            agent.destination = lastSeen;
+            hitRange = false;
+        }
+        else
+        {
+            agent.velocity = Vector3.zero;
+            agent.destination = transform.position;
+            hitRange = true;
+            hitBox.go();
+        }
+    }
+
     public void CheckForTargetInLineOfSight()
     {
         _bHasDetectedEnnemy = Physics.SphereCast(transform.position, mRaycastRadius, transform.forward, out _mHitInfo, mTargetDetectionDistance);
@@ -69,7 +98,7 @@ public class Dectection : MonoBehaviour
                 {
                     //Debug.Log("Detected");
                     lastSeen = hitColliders[hold].transform.position;
-                    agent.destination = lastSeen;
+                    engage();
 
                     seen = true;
                     _bHasDetectedEnnemy = false;
@@ -91,7 +120,7 @@ public class Dectection : MonoBehaviour
                     {
                         //Debug.Log("Detected Player");
                         lastSeen = _mHitInfo.transform.position;
-                        agent.destination = lastSeen;
+                        engage();
 
                         seen = true;
                     }
@@ -110,10 +139,45 @@ public class Dectection : MonoBehaviour
                     }
                 }
                 else
-                { 
+                {
 
 
+                    if (!hitRange)
+                    {
+                        //Debug.Log("start searching");
+                        agent.destination = lastSeen;
+                        if (transform.position.x == lastSeen.x && transform.position.z == lastSeen.z)
+                        {
+                            currentTime -= Time.deltaTime;
 
+                            if (currentTime <= 0)
+                            {
+                                seen = false;
+                                //Debug.Log("stop search");
+                                currentTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
+                            }
+                            else
+                            {
+                                transform.Rotate(Vector3.up * 4 * Time.deltaTime);
+                            }
+
+                        }
+                    }
+                }
+            }
+
+        }
+        else
+        {
+            if (!seen)
+            {
+                //Debug.Log("start Patrolling");
+                pat.PatrolRunning();
+            }
+            else
+            {
+                if (!hitRange)
+                {
                     //Debug.Log("start searching");
                     agent.destination = lastSeen;
                     if (transform.position.x == lastSeen.x && transform.position.z == lastSeen.z)
@@ -130,36 +194,6 @@ public class Dectection : MonoBehaviour
                         {
                             transform.Rotate(Vector3.up * 4 * Time.deltaTime);
                         }
-
-                    }
-                }
-            }
-
-        }
-        else
-        {
-            if (!seen)
-            {
-                //Debug.Log("start Patrolling");
-                pat.PatrolRunning();
-            }
-            else
-            {
-                //Debug.Log("start searching");
-                agent.destination = lastSeen;
-                if (transform.position.x == lastSeen.x && transform.position.z == lastSeen.z)
-                {
-                    currentTime -= Time.deltaTime;
-
-                    if (currentTime <= 0)
-                    {
-                        seen = false;
-                        //Debug.Log("stop search");
-                        currentTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
-                    }
-                    else
-                    {
-                        transform.Rotate(Vector3.up * 4 * Time.deltaTime);
                     }
                 }
             }
@@ -180,7 +214,7 @@ public class Dectection : MonoBehaviour
             }
             else
             {
-                Gizmos.color = Color.yellow;
+                Gizmos.color = Color.yellow; 
             }
         }
         else
