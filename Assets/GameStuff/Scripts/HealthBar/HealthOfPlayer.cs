@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthOfPlayer : MonoBehaviour
 {
@@ -42,14 +43,24 @@ public class HealthOfPlayer : MonoBehaviour
         while (true)
         {
             currentHealth -= damageFromPoison;
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForSeconds(1); 
         }
     }
 
+    void dead()
+    {
+        //SceneManager.LoadScene("AlexTestScene");
+        Debug.Log("Player is dead");
+    }
     // Update is called once per frame
     void Update()
     {
         bar.SetHealth(currentHealth);
+        if(currentHealth <= 0)
+        {
+            dead();
+        }
+
     }
 
     
