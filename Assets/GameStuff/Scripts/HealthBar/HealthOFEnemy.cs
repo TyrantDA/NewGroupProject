@@ -6,11 +6,13 @@ public class HealthOFEnemy : MonoBehaviour
 {
 
     [SerializeField] float totalHealth;
-    float currentHealth;
+    
     [SerializeField] float damageFromEnemy;
     [SerializeField] float damageFromArrow;
     [SerializeField] float damageFromPoison;
     [SerializeField] float damageFromPlayer;
+
+    [SerializeField] float currentHealth;
     // Start is called before the first frame update
 
     void Start()
@@ -20,21 +22,37 @@ public class HealthOFEnemy : MonoBehaviour
     public void DamagePlayer()
     {
         currentHealth -= damageFromEnemy;
+        if (currentHealth <= 0)
+        {
+            Dead();
+        }
     }
 
     public void ArrowDamage()
     {
         currentHealth -= damageFromArrow;
+        if (currentHealth <= 0)
+        {
+            Dead();
+        }
     }
 
     public void StartPoisonDamage()
     {
         StartCoroutine("poisonDamage");
+        if (currentHealth <= 0)
+        {
+            Dead();
+        }
     }
 
     public void EndPoisonDamage()
     {
         StopCoroutine("poisonDamage");
+        if (currentHealth <= 0)
+        {
+            Dead();
+        }
     }
 
     IEnumerator poisonDamage()
@@ -42,13 +60,25 @@ public class HealthOFEnemy : MonoBehaviour
         while (true)
         {
             currentHealth -= damageFromPoison;
-            yield return new WaitForEndOfFrame();
+            if (currentHealth <= 0)
+            {
+                Dead();
+            }
+            yield return new WaitForSeconds(1);
         }
     }
 
     public void PlayerDamage()
     {
         currentHealth -= damageFromPlayer;
-        
+        if(currentHealth <= 0)
+        {
+            Dead();
+        }
+    }
+
+    void Dead()
+    {
+        Destroy(gameObject);
     }
 }

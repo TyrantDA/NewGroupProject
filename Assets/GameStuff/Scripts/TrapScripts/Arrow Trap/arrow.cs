@@ -11,7 +11,7 @@ public class arrow : MonoBehaviour
     void Start()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
-        m_Rigidbody.AddForce(transform.up * m_Thrust);
+        m_Rigidbody.AddForce(transform.forward * m_Thrust);
         Destroy(gameObject, 5.0f);
     }
 
@@ -27,6 +27,7 @@ public class arrow : MonoBehaviour
         {
             m_Rigidbody.isKinematic = true;
             m_Rigidbody.detectCollisions = false;
+            // desable collider when texture added
             
 
             gameObject.transform.parent = collision.gameObject.transform;

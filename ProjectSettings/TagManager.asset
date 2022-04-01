@@ -12,6 +12,7 @@ TagManager:
   - ArrowAmmo
   - PoisonAmmo
   - Door
+  - Potion
   layers:
   - Default
   - TransparentFX

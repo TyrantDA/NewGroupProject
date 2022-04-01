@@ -9,6 +9,7 @@ public class arrowLuncher : MonoBehaviour
 
     [SerializeField] int amunition;
     public ItemInfo Ammo;
+    public float yRotate;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,7 @@ public class arrowLuncher : MonoBehaviour
             for (int x = 0; x < spawnPoints.Length; x++)
             {
                 Vector3 hold = spawnPoints[x].position;
-                Instantiate(arrow, hold, Quaternion.Euler(0f, 0f, 270f));
+                Instantiate(arrow, hold, transform.rotation);
                 amunition--;
             }
         }
