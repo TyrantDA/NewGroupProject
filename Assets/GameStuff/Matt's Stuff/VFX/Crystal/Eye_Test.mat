@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Tourmaline
-  m_Shader: {fileID: -6465566751694194690, guid: 2768235a9a22fd240abb07b4801a2dc6, type: 3}
+  m_Name: Eye_Test
+  m_Shader: {fileID: -6465566751694194690, guid: a966fcd8c2349454f80a202b472b7e3c, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -32,13 +32,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_2bf8d788621647cd83fd5a5ab13f2ec7: 0
-    - Vector1_871e1fab1797413fa827cbc1d80d1afd: 0.941
-    - Vector1_8ba3574daaf94c3ca101ddbe3fcc4f25: 1
-    - Vector1_98190d2596a945b49809325e4f6eae9f: 0.366
-    - Vector1_f82938ba31a3428db8ea9c4b2826a71c: 0.252
+    - Vector1_2bf8d788621647cd83fd5a5ab13f2ec7: 1
+    - Vector1_8ba3574daaf94c3ca101ddbe3fcc4f25: 0.378
+    - Vector1_98190d2596a945b49809325e4f6eae9f: 0.742
+    - Vector1_f82938ba31a3428db8ea9c4b2826a71c: 0.085
     m_Colors:
-    - Color_41b8c9509f57473cab9176201877fbca: {r: 0.007843138, g: 1.2235295, b: 1.0901961, a: 1}
-    - Color_42639d6eed2b41a5b8d8a5b81ae67ac4: {r: 0.72305536, g: 0.72305536, b: 0.72305536, a: 1}
-    - Color_426a7519198a494c8e0f7bf4f154e67c: {r: 2.9018078, g: 4.9214664, b: 4.33775, a: 1}
+    - Color_41b8c9509f57473cab9176201877fbca: {r: 3.0451505, g: 0.31886384, b: 2.390603, a: 1}
+    - Color_42639d6eed2b41a5b8d8a5b81ae67ac4: {r: 139.07657, g: 49.20162, b: 103.433815, a: 1}
+    - Color_426a7519198a494c8e0f7bf4f154e67c: {r: 5.8964343, g: 0.427967, b: 9.082411, a: 1}
   m_BuildTextureStacks: []
