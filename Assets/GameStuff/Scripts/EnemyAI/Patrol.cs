@@ -24,6 +24,11 @@ public class Patrol : MonoBehaviour
         patrolling = false;
     }
 
+    public void SetPatrolList(List<GameObject> hold)
+    {
+        patrolList = hold;
+    }
+
     public void setPatrolling(bool set)
     {
         patrolling = set;

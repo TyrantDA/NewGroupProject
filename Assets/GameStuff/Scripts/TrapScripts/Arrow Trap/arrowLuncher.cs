@@ -11,6 +11,8 @@ public class arrowLuncher : MonoBehaviour
     public ItemInfo Ammo;
     public float yRotate;
 
+    int cycleFire = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +44,23 @@ public class arrowLuncher : MonoBehaviour
         while (true)
         {
             launchArrow();
+            cycleFire++;
             yield return new WaitForSeconds(2);
+            if (cycleFire > 0)
+            {
+                RaycastHit hit;
+                Vector3 forward = transform.TransformDirection(Vector3.forward);
+                Vector3 origin = transform.position;
+                if (Physics.Raycast(origin, forward, out hit))
+                {
+                    if (hit.transform.gameObject.tag == "Wall")
+                    {
+                        StopCoroutine("delay");
+                    }
+                }
+            }
+            
+
         }
     }
 
@@ -51,6 +69,7 @@ public class arrowLuncher : MonoBehaviour
     {
         if (!other.transform.CompareTag("Arrow"))
         {
+            cycleFire = 0;
             StartCoroutine("delay");
         }
 
