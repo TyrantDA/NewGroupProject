@@ -13,6 +13,7 @@ TagManager:
   - PoisonAmmo
   - Door
   - Potion
+  - Wall
   layers:
   - Default
   - TransparentFX
