@@ -45,7 +45,7 @@ public class arrowLuncher : MonoBehaviour
         {
             launchArrow();
             cycleFire++;
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(5);
             if (cycleFire > 0)
             {
                 RaycastHit hit;
