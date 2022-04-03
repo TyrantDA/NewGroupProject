@@ -22,7 +22,7 @@ public class throwingproj : MonoBehaviour
     void Update()
     {
         forward = transform.forward;
-        if (Input.GetKey("g"))
+            if (Input.GetKey("g"))
         {
             if(going != true)
             {
@@ -35,7 +35,7 @@ public class throwingproj : MonoBehaviour
             going = false;
 
             StopCoroutine("Delaythis");
-            var newSquare2 = Instantiate(bombfab, (this.transform.position + transform.forward), Quaternion.identity);
+            var newSquare2 = Instantiate(bombfab, (this.transform.position + transform.forward + transform.up), Quaternion.identity);
 
         }
 
@@ -47,14 +47,14 @@ public class throwingproj : MonoBehaviour
         while(i < 6)
         {
             yield return new WaitForSeconds(0.25f);
-            var newSquare = Instantiate(projprfab, (this.transform.position + transform.forward), Quaternion.identity);
+            var newSquare = Instantiate(projprfab, (this.transform.position + transform.forward + transform.up), Quaternion.identity);
 
             i = i + 0.5f;
         }
         while (i > 5)
         {
             yield return new WaitForSeconds(0.25f);
-            var newSquare = Instantiate(projprfab, (this.transform.position + transform.forward), Quaternion.identity);
+            var newSquare = Instantiate(projprfab, (this.transform.position + transform.forward + transform.up), Quaternion.identity);
 
         }
 
