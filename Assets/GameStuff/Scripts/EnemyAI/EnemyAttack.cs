@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public float timeDelay;
+    public Transform spawnShot;
+    public GameObject ShotPrefab;
 
     private bool isCoolDown;
     private bool inRange;
@@ -54,6 +56,17 @@ public class EnemyAttack : MonoBehaviour
             }
     }
 
+    public void goRange()
+    {
+        if (!isCoolDown)
+        {
+            Instantiate(ShotPrefab, spawnShot.position, transform.rotation);
+        }
+        else
+        {
+            Debug.Log("cooldown");
+        }
+    }
     private void OnTriggerStay(Collider other)
     {
         if (other.transform.gameObject.tag == "Player")
