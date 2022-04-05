@@ -20,7 +20,7 @@ public class ge : MonoBehaviour
         goingoff = this.GetComponentInParent<granadescript>().blowup;
         if (goingoff == true)
         {
-            this.gameObject.tag = "stun";
+            this.gameObject.tag = "kill";
             StartCoroutine("Bigger");
         }
     }
