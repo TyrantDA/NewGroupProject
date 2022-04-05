@@ -25,7 +25,7 @@ public class deathplayer : MonoBehaviour
 
             if (stopped != true)
             {
-                GetComponent<TopDownCharacterMover>().enabled = !GetComponent<TopDownCharacterMover>().enabled;
+                GetComponent<InputHandler>().enabled = !GetComponent<InputHandler>().enabled;
                 stopped = true;
 
                 StartCoroutine("Delaythis");
@@ -37,7 +37,7 @@ public class deathplayer : MonoBehaviour
         {
             if (stopped == true)
             {
-                GetComponent<TopDownCharacterMover>().enabled = !GetComponent<TopDownCharacterMover>().enabled;
+                GetComponent<InputHandler>().enabled = !GetComponent<InputHandler>().enabled;
                 stopped = false;
 
             }

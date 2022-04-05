@@ -5,14 +5,15 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public float timeDelay;
-    public Transform spawnShot;
-    public GameObject ShotPrefab;
+    public GameObject spawnPoint;
+    public GameObject Spell;
 
     private bool isCoolDown;
     private bool inRange;
     private Collider target;
     private float forwardForce = 10;
     private float upforce = 10;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -56,17 +57,20 @@ public class EnemyAttack : MonoBehaviour
             }
     }
 
-    public void goRange()
+    public void goRanged(Vector3 target)
     {
         if (!isCoolDown)
         {
-            Instantiate(ShotPrefab, spawnShot.position, transform.rotation);
+            GameObject hold = Instantiate(Spell, spawnPoint.transform.position, transform.rotation);
+            hold.GetComponent<spell>().target = target; 
+            StartCoroutine("cooldown");
         }
         else
         {
             Debug.Log("cooldown");
         }
     }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.transform.gameObject.tag == "Player")

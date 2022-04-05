@@ -153,6 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeDelay: 5
+  spawnPoint: {fileID: 0}
+  Spell: {fileID: 0}
 --- !u!1 &3155587951850749842
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,6 +192,7 @@ Transform:
   m_Children:
   - {fileID: 1060715628}
   - {fileID: 1788176800}
+  - {fileID: 6541579590412722119}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -310,8 +313,9 @@ MonoBehaviour:
   detectLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  combatRange: 1.5
+  combatRange: 0.5
   hitBox: {fileID: 1788176798}
+  ranged: 0
 --- !u!195 &3155587951850749840
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -352,3 +356,33 @@ MonoBehaviour:
   damageFromPoison: 5
   damageFromPlayer: 8
   currentHealth: 0
+--- !u!1 &6338312922032416045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6541579590412722119}
+  m_Layer: 0
+  m_Name: spawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6541579590412722119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6338312922032416045}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.652, y: 0.945, z: 0.413}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3155587951850749835}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

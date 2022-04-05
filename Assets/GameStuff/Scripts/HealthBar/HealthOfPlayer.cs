@@ -10,6 +10,7 @@ public class HealthOfPlayer : MonoBehaviour
     [SerializeField] float damageFromEnemy;
     [SerializeField] float damageFromArrow;
     [SerializeField] float damageFromPoison;
+    [SerializeField] float damageFromSpell;
     public HealthBar bar;
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,12 @@ public class HealthOfPlayer : MonoBehaviour
     public void ArrowDamage()
     {
         currentHealth -= damageFromArrow;
+        Debug.Log("hit");
+    }
+
+    public void SpellDamage()
+    {
+        currentHealth -= damageFromSpell;
     }
 
     public void StartPoisonDamage()

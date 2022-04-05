@@ -17,7 +17,7 @@ public class Dectection : MonoBehaviour
     public float combatRange;
 
     public EnemyAttack hitBox;
-
+   
     public bool ranged;
 
     float currentTime;
@@ -38,7 +38,7 @@ public class Dectection : MonoBehaviour
     bool seen;
     Vector3 lastSeen;
     bool hitRange;
-    
+    int damping =2;
 
     void Start()
     {
@@ -70,8 +70,12 @@ public class Dectection : MonoBehaviour
             {
                 agent.velocity = Vector3.zero;
                 agent.destination = transform.position;
+                var lookPos = lastSeen - transform.position;
+                lookPos.y = 0;
+                var rotation = Quaternion.LookRotation(lookPos);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping);
                 hitRange = true;
-                hitBox.goRange();
+                hitBox.goRanged(lastSeen);
             }
             else
             {
