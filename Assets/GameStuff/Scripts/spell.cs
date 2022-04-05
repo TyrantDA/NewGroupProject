@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class spell : MonoBehaviour
 {
-    Rigidbody m_Rigidbody;
-    public float m_Thrust = 20f;
+    public Vector3 target;
+    public float speed;
+
+    float step;
 
     // Start is called before the first frame update
     void Start()
     {
-        m_Rigidbody = GetComponent<Rigidbody>();
-        m_Rigidbody.AddForce(transform.forward * m_Thrust);
+        //target = transform.position;
+        step = speed * Time.deltaTime;
         Destroy(gameObject, 5.0f);
     }
 
@@ -19,6 +21,26 @@ public class spell : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(transform.position == target)
+        {
+            Destroy(gameObject);
+        }
+        transform.position = Vector3.MoveTowards(transform.position, target, step);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<HealthOfPlayer>().SpellDamage();
+           
+        }
+        else if (collision.transform.CompareTag("Enemy"))
+        {
+            collision.gameObject.GetComponent<HealthOFEnemy>().SpellDamage();
+            
+        }
+        Destroy(gameObject);
+    }
+
 }

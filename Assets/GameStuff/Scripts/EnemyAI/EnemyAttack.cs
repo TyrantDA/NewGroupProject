@@ -57,11 +57,12 @@ public class EnemyAttack : MonoBehaviour
             }
     }
 
-    public void goRanged()
+    public void goRanged(Vector3 target)
     {
         if (!isCoolDown)
         {
-            Instantiate(Spell, spawnPoint.transform.position, transform.rotation);
+            GameObject hold = Instantiate(Spell, spawnPoint.transform.position, transform.rotation);
+            hold.GetComponent<spell>().target = target; 
             StartCoroutine("cooldown");
         }
         else

@@ -220,6 +220,7 @@ MonoBehaviour:
   damageFromEnemy: 10
   damageFromArrow: 8
   damageFromPoison: 5
+  damageFromSpell: 10
   bar: {fileID: 0}
 --- !u!114 &1948038121
 MonoBehaviour:
