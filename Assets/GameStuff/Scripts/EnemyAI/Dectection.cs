@@ -17,6 +17,8 @@ public class Dectection : MonoBehaviour
     public float combatRange;
 
     public EnemyAttack hitBox;
+   
+    public bool ranged;
 
     float currentTime;
     float minTimeBetweenSpawns = 10;
@@ -64,10 +66,20 @@ public class Dectection : MonoBehaviour
         }
         else
         {
-            agent.velocity = Vector3.zero;
-            agent.destination = transform.position;
-            hitRange = true;
-            hitBox.go();
+            if (ranged)
+            {
+                agent.velocity = Vector3.zero;
+                agent.destination = transform.position;
+                hitRange = true;
+                hitBox.goRanged();
+            }
+            else
+            {
+                agent.velocity = Vector3.zero;
+                agent.destination = transform.position;
+                hitRange = true;
+                hitBox.go();
+            }
         }
     }
 

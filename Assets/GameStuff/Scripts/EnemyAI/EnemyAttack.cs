@@ -5,12 +5,15 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public float timeDelay;
+    public GameObject spawnPoint;
+    public GameObject Spell;
 
     private bool isCoolDown;
     private bool inRange;
     private Collider target;
     private float forwardForce = 10;
     private float upforce = 10;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +55,19 @@ public class EnemyAttack : MonoBehaviour
             {
                 Debug.Log("cooldown");
             }
+    }
+
+    public void goRanged()
+    {
+        if (!isCoolDown)
+        {
+            Instantiate(Spell, spawnPoint.transform.position, transform.rotation);
+            StartCoroutine("cooldown");
+        }
+        else
+        {
+            Debug.Log("cooldown");
+        }
     }
 
     private void OnTriggerStay(Collider other)
