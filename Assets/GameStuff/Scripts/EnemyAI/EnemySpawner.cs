@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] GameObject[] listOfenemy;
     [SerializeField] List<PatrolList> patrolLists = new List<PatrolList>();
     public GameObject EnemyPrefab;
+    public GameObject EnemyRangedPrefab;
 
     // Start is called before the first frame update
     void Start()

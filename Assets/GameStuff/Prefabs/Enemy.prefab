@@ -292,6 +292,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  patrolWait: 
   Patroller: {fileID: 3155587951850749842}
   speed: 3
   target: {fileID: 0}
@@ -313,7 +314,7 @@ MonoBehaviour:
   detectLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  combatRange: 0.5
+  combatRange: 1.5
   hitBox: {fileID: 1788176798}
   ranged: 0
 --- !u!195 &3155587951850749840
@@ -355,6 +356,7 @@ MonoBehaviour:
   damageFromArrow: 8
   damageFromPoison: 5
   damageFromPlayer: 8
+  damageFromSpell: 0
   currentHealth: 0
 --- !u!1 &6338312922032416045
 GameObject:
