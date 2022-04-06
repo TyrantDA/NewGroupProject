@@ -7,13 +7,16 @@ public class Patrol : MonoBehaviour
 {
 
     public List<GameObject> patrolList; //list of empty object used a point to patrol between
+    public List<int> patrolWait;
     public GameObject Patroller; //  game object that will be the enemy AI
     public float speed; // not used
 
     int currentMovingTo;
+    int holdWait;
     [SerializeField] GameObject target;
     NavMeshAgent agent;
     bool patrolling;
+    bool delayWait;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +25,13 @@ public class Patrol : MonoBehaviour
         Debug.Log(target.name);
         agent = GetComponent<NavMeshAgent>();
         patrolling = false;
+        delayWait = false;
     }
 
-    public void SetPatrolList(List<GameObject> hold)
+    public void SetPatrolList(List<GameObject> hold, List<int> hold2)
     {
         patrolList = hold;
+        patrolWait = hold2;
     }
 
     public void setPatrolling(bool set)
@@ -72,8 +77,9 @@ public class Patrol : MonoBehaviour
     // find the next patrol point to move two
     GameObject nextTarget()
     {
-        
 
+        holdWait = currentMovingTo;
+        StartCoroutine("delay");
         currentMovingTo++;
 
         if(currentMovingTo >= patrolList.Count)
@@ -84,10 +90,20 @@ public class Patrol : MonoBehaviour
         return patrolList[currentMovingTo];
     }
 
-   
-    // run when patrolling. set the position to go to and check if they have reach in if so the next target function is run
-    public void PatrolRunning()
+    IEnumerator delay()
     {
+        delayWait = true;
+        //Debug.Log("wait for " + patrolWait[holdWait]);
+        yield return new WaitForSeconds(patrolWait[holdWait]);
+
+        delayWait = false;
+    }
+
+        // run when patrolling. set the position to go to and check if they have reach in if so the next target function is run
+        public void PatrolRunning()
+    {
+        if (!delayWait)
+        {
             agent.destination = target.transform.position;
             //float step = speed * Time.deltaTime;
             //transform.position = Vector3.MoveTowards(transform.position, target.transform.position, step);
@@ -98,6 +114,7 @@ public class Patrol : MonoBehaviour
             {
                 target = nextTarget();
             }
+        }
     }
     // Update is called once per frame
     void Update()
