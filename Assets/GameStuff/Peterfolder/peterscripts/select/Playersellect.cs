@@ -30,13 +30,21 @@ public class Playersellect : MonoBehaviour
                 if (hitCollider.gameObject.tag == "opener")
                 {
 
-                    if (hitCollider.gameObject.GetComponent<Doorsprit>().close == true)
+                    if (hitCollider.gameObject.GetComponent<chestscript>().close == true)
                     {
                         opener = true;
                     }
-                    if (hitCollider.gameObject.GetComponent<Doorsprit>().close == false)
+                    else
+                    {
+                        opener = false;
+                    }
+                    if (hitCollider.gameObject.GetComponent<chestscript>().close == false)
                     {
                         closer = true;
+                    }
+                    else
+                    {
+                        closer = false;
                     }
                     hitCollider.gameObject.GetComponent<identified>().spotted = true;
                     if (Input.GetKey("e"))
@@ -67,9 +75,17 @@ public class Playersellect : MonoBehaviour
                     {
                         opener = true;
                     }
+                    else
+                    {
+                        opener = false;
+                    }
                     if (hitCollider.gameObject.GetComponent<Doorsprit>().close == false)
                     {
                         closer = true;
+                    }
+                    else
+                    {
+                        closer = false;
                     }
                     hitCollider.gameObject.GetComponent<identified>().spotted = true;
                     if (Input.GetKey("e"))
@@ -117,7 +133,6 @@ public class Playersellect : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        opener = false;
-        closer = false;
+
     }
 }  
