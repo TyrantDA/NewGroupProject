@@ -11,8 +11,9 @@ public class EnemyAttack : MonoBehaviour
     private bool isCoolDown;
     private bool inRange;
     private Collider target;
-    private float forwardForce = 10;
-    private float upforce = 10;
+
+    public float forwardForce = 10;
+    public float upforce = 10;
     
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class EnemyAttack : MonoBehaviour
         {
             Debug.Log("hit");
             target.transform.gameObject.GetComponent<HealthOfPlayer>().DamagePlayer();
-            target.transform.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.back * forwardForce);
+            target.transform.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * forwardForce);
             target.transform.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * upforce);
             inRange = false;
             StartCoroutine("cooldown");
@@ -62,7 +63,7 @@ public class EnemyAttack : MonoBehaviour
         if (!isCoolDown)
         {
             GameObject hold = Instantiate(Spell, spawnPoint.transform.position, transform.rotation);
-            hold.GetComponent<spell>().target = target; 
+            hold.GetComponent<spell>().target = target;
             StartCoroutine("cooldown");
         }
         else
