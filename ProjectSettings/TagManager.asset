@@ -15,6 +15,7 @@ TagManager:
   - Potion
   - stun
   - floor
+  - dirty
   layers:
   - Default
   - TransparentFX
