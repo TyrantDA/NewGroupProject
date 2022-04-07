@@ -6,12 +6,14 @@ public class Playersellect : MonoBehaviour
 {
     public float radiusDetect;
     public float maxium;
-    public GameObject hold;
-    public GameObject hold2;
+    public bool closer;
+    public bool opener;
 
     // Start is called before the first frame update
     void Start()
     {
+        opener = false;
+        closer = false;
         radiusDetect = 3.0f;
         maxium = 3.0f;
     }
@@ -28,7 +30,14 @@ public class Playersellect : MonoBehaviour
                 if (hitCollider.gameObject.tag == "opener")
                 {
 
-
+                    if (hitCollider.gameObject.GetComponent<Doorsprit>().close == true)
+                    {
+                        opener = true;
+                    }
+                    if (hitCollider.gameObject.GetComponent<Doorsprit>().close == false)
+                    {
+                        closer = true;
+                    }
                     hitCollider.gameObject.GetComponent<identified>().spotted = true;
                     if (Input.GetKey("e"))
                     {
@@ -54,6 +63,14 @@ public class Playersellect : MonoBehaviour
 
                 if (hitCollider.gameObject.tag == "opener")
                 {
+                    if (hitCollider.gameObject.GetComponent<Doorsprit>().close == true)
+                    {
+                        opener = true;
+                    }
+                    if (hitCollider.gameObject.GetComponent<Doorsprit>().close == false)
+                    {
+                        closer = true;
+                    }
                     hitCollider.gameObject.GetComponent<identified>().spotted = true;
                     if (Input.GetKey("e"))
                     {
@@ -98,4 +115,9 @@ public class Playersellect : MonoBehaviour
         detect2();
         detect3();
     }
-}
+    private void FixedUpdate()
+    {
+        opener = false;
+        closer = false;
+    }
+}  

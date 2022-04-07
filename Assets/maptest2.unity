@@ -15908,8 +15908,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radiusDetect: 0
   maxium: 0
-  hold: {fileID: 2009265287}
-  hold2: {fileID: 2009265287}
+  closer: 0
+  opener: 0
 --- !u!114 &370837406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90294,11 +90294,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2009265287 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cdb4a11e808c2904cb172b490c36b682, type: 3}
-  m_PrefabInstance: {fileID: 625267999}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2009624480
 PrefabInstance:
   m_ObjectHideFlags: 0
