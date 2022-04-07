@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] GameObject[] listOfenemy;
     [SerializeField] List<PatrolList> patrolLists = new List<PatrolList>();
     public GameObject EnemyPrefab;
+    public GameObject EnemyRangedPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class EnemySpawner : MonoBehaviour
                     System.Random rnd = new System.Random();
                     int h = rnd.Next(0, patrolLists.Count);
                     listOfenemy[i] = Instantiate(EnemyPrefab, transform.position, transform.rotation);
-                    listOfenemy[i].GetComponent<Patrol>().SetPatrolList(patrolLists[h].getList());
+                    listOfenemy[i].GetComponent<Patrol>().SetPatrolList(patrolLists[h].getList(), patrolLists[h].getWait());
                 }
                 yield return new WaitForSeconds(10);
             }
