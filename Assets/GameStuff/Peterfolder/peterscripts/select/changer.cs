@@ -12,7 +12,6 @@ public class changer : MonoBehaviour
         change = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         change = hold.spotted;
