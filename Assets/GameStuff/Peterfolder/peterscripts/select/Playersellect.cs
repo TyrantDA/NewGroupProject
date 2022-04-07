@@ -24,16 +24,10 @@ public class Playersellect : MonoBehaviour
             foreach (var hitCollider in hitColliders)
             {
 
+
                 if (hitCollider.gameObject.tag == "opener")
                 {
-                    if (hitCollider.gameObject.GetComponent<chestscript>().close == true)
-                    {
-                        hold.SetActive(true);
-                    }
-                    if (hitCollider.gameObject.GetComponent<chestscript>().close == false)
-                    {
-                        hold2.SetActive(true);
-                    }
+
 
                     hitCollider.gameObject.GetComponent<identified>().spotted = true;
                     if (Input.GetKey("e"))
@@ -60,14 +54,6 @@ public class Playersellect : MonoBehaviour
 
                 if (hitCollider.gameObject.tag == "opener")
                 {
-                    if (hitCollider.gameObject.GetComponent<Doorsprit>().close == true)
-                    {
-                        hold.SetActive(true);
-                    }
-                    if (hitCollider.gameObject.GetComponent<Doorsprit>().close == false)
-                    {
-                        hold2.SetActive(true);
-                    }
                     hitCollider.gameObject.GetComponent<identified>().spotted = true;
                     if (Input.GetKey("e"))
                     {
@@ -90,9 +76,11 @@ public class Playersellect : MonoBehaviour
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, radiusDetect);
             foreach (var hitCollider in hitColliders)
             {
-
+                Debug.Log("lol");
                 if (Input.GetKey("e"))
                 {
+                    Debug.Log("4");
+
                     hitCollider.gameObject.GetComponent<Cleanchair>().startcleaning = true;
 
                 }
@@ -109,6 +97,5 @@ public class Playersellect : MonoBehaviour
         detect1();
         detect2();
         detect3();
-
     }
 }

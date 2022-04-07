@@ -16,6 +16,7 @@ TagManager:
   - stun
   - floor
   - dirty
+  - clean
   layers:
   - Default
   - TransparentFX
