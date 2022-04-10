@@ -12,6 +12,7 @@ public class HealthOFEnemy : MonoBehaviour
     [SerializeField] float damageFromPoison;
     [SerializeField] float damageFromPlayer;
     [SerializeField] float damageFromSpell;
+    [SerializeField] float heal;
 
     [SerializeField] float currentHealth;
     // Start is called before the first frame update
@@ -75,6 +76,39 @@ public class HealthOFEnemy : MonoBehaviour
                 Dead();
             }
             yield return new WaitForSeconds(1);
+        }
+    }
+
+    public void StartHealing()
+    {
+        Debug.Log("Start heal");
+        StartCoroutine("HealEnemy");
+        if (currentHealth <= 0)
+        {
+            Dead();
+        }
+    }
+
+    public void EndHealing()
+    {
+        Debug.Log("End Heal");
+        StopCoroutine("HealEnemy");
+        if (currentHealth <= 0)
+        {
+            Dead();
+        }
+    }
+
+    IEnumerator HealEnemy()
+    {
+        while (true)
+        {
+            currentHealth += heal;
+            if (currentHealth <= 0)
+            {
+                Dead();
+            }
+            yield return new WaitForSeconds(10);
         }
     }
 

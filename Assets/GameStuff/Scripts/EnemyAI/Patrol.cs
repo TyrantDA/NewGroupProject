@@ -35,9 +35,29 @@ public class Patrol : MonoBehaviour
         patrolWait = hold2;
     }
 
+    public List<GameObject> GetPatrolList()
+    {
+        return patrolList;
+    }
+
+    public List<int> GetPatrolWait()
+    {
+        return patrolWait;
+    }
+
     public void setPatrolling(bool set)
     {
         patrolling = set;
+    }
+
+    public void setCurrentMoveTo(int hold)
+    {
+        currentMovingTo = hold;
+    }
+
+    public int getCurrentMoveTo()
+    {
+        return currentMovingTo;
     }
     
     // work out the distance between two game objects 

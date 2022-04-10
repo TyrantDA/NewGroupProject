@@ -66,5 +66,12 @@ public class Attack : MonoBehaviour
             inRange = true;
             target = other;
         }
+
+        if (other.transform.gameObject.tag == "EnemyHealer")
+        {
+            //Debug.Log("in range");
+            inRange = true;
+            target = other;
+        }
     }
 }
