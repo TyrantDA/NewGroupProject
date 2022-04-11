@@ -103,7 +103,10 @@ public class HealthOFEnemy : MonoBehaviour
     {
         while (true)
         {
-            currentHealth += heal;
+            if (currentHealth < totalHealth)
+            {
+                currentHealth += heal;
+            }
             if (currentHealth <= 0)
             {
                 Dead();
