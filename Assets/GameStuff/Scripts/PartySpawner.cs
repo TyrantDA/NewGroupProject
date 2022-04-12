@@ -8,10 +8,10 @@ public class PartySpawner : MonoBehaviour
     [SerializeField] List<PatrolList> patrolLists = new List<PatrolList>();
 
     public GameObject spawnPoint1;
-    public GameObject spawnPoint2;
-    public GameObject spawnPoint3;
 
     public int checkTime;
+
+    List<int> patrolHold = new List<int>();
     // Start is called before the first frame update
     void Start()
     {
@@ -37,18 +37,61 @@ public class PartySpawner : MonoBehaviour
         }
 
     }
+
+    int StartPatrol()
+    {
+        patrolHold = new List<int>();
+
+        System.Random rnd = new System.Random();
+        int h = rnd.Next(0, patrolLists.Count);
+
+        patrolHold.Add(h);
+
+        return h;
+    }
+
+    int nextPatrol()
+    {
+        bool checking = true;
+        
+        int h = 0;
+        while(checking)
+        {
+            int same = 0;
+            System.Random rnd = new System.Random();
+            h = rnd.Next(0, patrolLists.Count);
+
+            for(int i = 0; i < patrolHold.Count; i++)
+            {
+                if(patrolHold[i] == h)
+                {
+                    same++;
+                }
+            }
+
+            if(same < patrolHold.Count)
+            {
+                checking = false;
+            }
+
+        }
+
+        return h;  
+    }
     IEnumerator Check()
     {
+        
         while (true)
         {
-            for(int i = 0; i < listOfenemy.Count; i++)
+            int h = StartPatrol();
+            for (int i = 0; i < listOfenemy.Count; i++)
             {
+                
                 int hold = listOfenemy[i].look();
                 
                 if(hold == 3)
                 {
-                    System.Random rnd = new System.Random();
-                    int h = rnd.Next(0, patrolLists.Count);
+                    
 
                     spawnParty(i,0,h);
                     yield return new WaitForSeconds(2);
@@ -57,6 +100,7 @@ public class PartySpawner : MonoBehaviour
                     spawnParty(i,2,h);
                 }
                 yield return new WaitForSeconds(30);
+                h = nextPatrol();
             }
 
            yield return new WaitForSeconds(checkTime);
