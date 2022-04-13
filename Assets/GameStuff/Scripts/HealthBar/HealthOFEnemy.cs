@@ -15,6 +15,7 @@ public class HealthOFEnemy : MonoBehaviour
     [SerializeField] float heal;
 
     [SerializeField] float currentHealth;
+
     // Start is called before the first frame update
 
     void Start()
@@ -118,7 +119,7 @@ public class HealthOFEnemy : MonoBehaviour
     public void PlayerDamage()
     {
         currentHealth -= damageFromPlayer;
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Dead();
         }

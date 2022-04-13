@@ -155,6 +155,8 @@ MonoBehaviour:
   timeDelay: 5
   spawnPoint: {fileID: 0}
   Spell: {fileID: 0}
+  forwardForce: 1000
+  upforce: 1000
 --- !u!1 &3155587951850749842
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +359,7 @@ MonoBehaviour:
   damageFromPoison: 5
   damageFromPlayer: 8
   damageFromSpell: 0
+  heal: 0
   currentHealth: 0
 --- !u!1 &6338312922032416045
 GameObject:
