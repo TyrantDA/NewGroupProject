@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BASE_WOOD 1
+  m_Name: BASE_WOOD 2
   m_Shader: {fileID: -6465566751694194690, guid: 4517890cc063d6c4db2d1da10336d3d8, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -37,7 +37,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_cbf0ff0405834beb9d9249845369fcbd:
-        m_Texture: {fileID: 2800000, guid: c1da5da78617d014cada4f66334e4716, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4711801ffc21ba343bdb36fa50232956, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -97,9 +97,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_290673acc3b64e5a92fd1d0fbd1bb9c1: 2.4
+    - Vector1_290673acc3b64e5a92fd1d0fbd1bb9c1: 0.23
     - Vector1_3285986e6fbf446f95e48858c2ca88b3: 0
-    - Vector1_91a212e4c02b427389382dc06c8f8b55: 2
+    - Vector1_91a212e4c02b427389382dc06c8f8b55: 2.05
     - Vector1_f36aad369af74336b1954858943a5abe: 0.71
     - _AlphaClip: 0
     - _Blend: 0
