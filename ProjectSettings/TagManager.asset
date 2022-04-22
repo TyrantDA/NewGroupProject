@@ -19,6 +19,7 @@ TagManager:
   - clean
   - Wall
   - EnemyHealer
+  - closer
   layers:
   - Default
   - TransparentFX

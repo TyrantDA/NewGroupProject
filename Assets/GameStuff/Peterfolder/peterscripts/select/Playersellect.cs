@@ -8,12 +8,14 @@ public class Playersellect : MonoBehaviour
     public float maxium;
     public bool closer;
     public bool opener;
+    public bool clenaer;
 
     // Start is called before the first frame update
     void Start()
     {
         opener = false;
         closer = false;
+        clenaer = false;
         radiusDetect = 3.0f;
         maxium = 3.0f;
     }
@@ -55,8 +57,20 @@ public class Playersellect : MonoBehaviour
                     return;
 
                 }
+                else
+                {
+                    opener = false;
+                    closer = false;
+
+                }
             }
 
+
+        }
+        else
+        {
+            opener = false;
+            closer = false;
 
         }
     }
@@ -69,7 +83,7 @@ public class Playersellect : MonoBehaviour
             foreach (var hitCollider in hitColliders)
             {
 
-                if (hitCollider.gameObject.tag == "opener")
+                if (hitCollider.gameObject.tag == "opener" || hitCollider.gameObject.tag == "closer")
                 {
                     if (hitCollider.gameObject.GetComponent<Doorsprit>().close == true)
                     {
@@ -100,6 +114,7 @@ public class Playersellect : MonoBehaviour
 
 
         }
+
     }
     void detect3()
     {
@@ -109,11 +124,10 @@ public class Playersellect : MonoBehaviour
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, radiusDetect);
             foreach (var hitCollider in hitColliders)
             {
-                Debug.Log("lol");
+                clenaer = true;
                 if (Input.GetKey("e"))
                 {
-                    Debug.Log("4");
-
+                    clenaer = false;
                     hitCollider.gameObject.GetComponent<Cleanchair>().startcleaning = true;
 
                 }
@@ -124,6 +138,10 @@ public class Playersellect : MonoBehaviour
 
 
         }
+        else
+        {
+            clenaer = false;
+        }
     }
     void Update()
     {
@@ -133,6 +151,7 @@ public class Playersellect : MonoBehaviour
     }
     private void FixedUpdate()
     {
+
 
     }
 }  

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HealthOFEnemy : MonoBehaviour
 {
+    public enimyalive hold;
 
     [SerializeField] float totalHealth;
     
@@ -20,6 +21,7 @@ public class HealthOFEnemy : MonoBehaviour
 
     void Start()
     {
+        hold.alive = hold.alive + 1;
         currentHealth = totalHealth;
     }
     public void DamagePlayer()
@@ -127,6 +129,8 @@ public class HealthOFEnemy : MonoBehaviour
 
     void Dead()
     {
+        hold.alive = hold.alive - 1;
+
         Destroy(gameObject);
     }
 }

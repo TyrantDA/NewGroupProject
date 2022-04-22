@@ -32,6 +32,16 @@ public class Textaprear : MonoBehaviour
             transform.GetChild(1).gameObject.SetActive(false);
 
         }
+        if (hold.clenaer == true)
+        {
+            transform.GetChild(11).gameObject.SetActive(true);
+
+        }
+        else
+        {
+            transform.GetChild(11).gameObject.SetActive(false);
+
+        }
     }
     // Update is called once per frame
     void FixedUpdate()

@@ -10,7 +10,7 @@ public class arrowLuncher : MonoBehaviour
     [SerializeField] int amunition;
     public ItemInfo Ammo;
     public float yRotate;
-
+    public refilnotice hold;
     int cycleFire = 0;
 
     // Start is called before the first frame update
@@ -34,6 +34,7 @@ public class arrowLuncher : MonoBehaviour
         }
         else
         {
+            hold.openr = hold.openr + 1;
             Debug.Log("no ammo");
         }
        

@@ -32,5 +32,13 @@ public class Doorsprit : MonoBehaviour
             close = !close;
 
         }
+        if (close == false)
+        {
+            this.tag = "closer";
+        }
+        if (close == true)
+        {
+            this.tag = "opener";
+        }
     }
 }
