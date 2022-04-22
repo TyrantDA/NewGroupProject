@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2459614361238920379
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6994707717824641669, guid: 0c61cd5098c95f84da48bd6d8834b264, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6994707717824641669, guid: 0c61cd5098c95f84da48bd6d8834b264, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -83.60706
+      objectReference: {fileID: 0}
+    - target: {fileID: 6994707717824641669, guid: 0c61cd5098c95f84da48bd6d8834b264, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.268
+      objectReference: {fileID: 0}
+    - target: {fileID: 6994707717824641669, guid: 0c61cd5098c95f84da48bd6d8834b264, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -27.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 6994707717824641669, guid: 0c61cd5098c95f84da48bd6d8834b264, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6994707717824641669, guid: 0c61cd5098c95f84da48bd6d8834b264, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6994707717824641669, guid: 0c61cd5098c95f84da48bd6d8834b264, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6994707717824641669, guid: 0c61cd5098c95f84da48bd6d8834b264, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6994707717824641669, guid: 0c61cd5098c95f84da48bd6d8834b264, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6994707717824641669, guid: 0c61cd5098c95f84da48bd6d8834b264, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6994707717824641669, guid: 0c61cd5098c95f84da48bd6d8834b264, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7663403839473492031, guid: 0c61cd5098c95f84da48bd6d8834b264, type: 3}
+      propertyPath: m_Name
+      value: Throne_Goblin_Passage (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167591562889462250, guid: 0c61cd5098c95f84da48bd6d8834b264, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c6c184e375e401b44bf6dae5655682d2, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c61cd5098c95f84da48bd6d8834b264, type: 3}

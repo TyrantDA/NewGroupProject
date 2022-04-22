@@ -19,6 +19,7 @@ public class teleporter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("collider with me");
         if(other.transform.CompareTag("Player"))
         {
             other.transform.position = teleporterExit.GetComponent<teleporter>().getSpawnPoint().position;
