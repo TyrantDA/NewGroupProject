@@ -48,7 +48,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6828265438569274401}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -184,15 +184,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3779642501491863687, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3779642501491863687, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3779642501491863687, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3779642501491863687, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -237,6 +237,58 @@ PrefabInstance:
     - target: {fileID: 4930924088346680564, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}
       propertyPath: m_Name
       value: Magic_Spell_Effect
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941824331387280057, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941824331387280057, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Name
+      value: Trails_Spawn_Rate
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941824331387280057, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[1].m_Name
+      value: Spawn_Rate
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941824331387280057, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Name
+      value: Sprite_Size
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941824331387280057, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[3].m_Name
+      value: Size
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941824331387280057, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Value
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941824331387280057, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[1].m_Value
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941824331387280057, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941824331387280057, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[3].m_Value
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941824331387280057, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941824331387280057, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[1].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941824331387280057, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941824331387280057, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[3].m_Overridden
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d5d1e424fab8844ea95a436c3061dcf, type: 3}

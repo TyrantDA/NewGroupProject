@@ -56,8 +56,9 @@ public class HealthOfPlayer : MonoBehaviour
 
     void dead()
     {
-        //SceneManager.LoadScene("AlexTestScene");
+        SceneManager.LoadScene("YouGotFired");
         Debug.Log("Player is dead");
+
     }
     // Update is called once per frame
     void Update()

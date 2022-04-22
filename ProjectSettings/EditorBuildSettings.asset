@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Scenes/transitionScenes/YouGotFired.unity
+    guid: de1a8ab8415cd574f870b3723546e0e8
+  - enabled: 1
+    path: Assets/Scenes/ProgrammingTestScene/AlexTestScene.unity
+    guid: b443e843e4bed644d8e7b62ece3a7d24
   m_configObjects: {}
