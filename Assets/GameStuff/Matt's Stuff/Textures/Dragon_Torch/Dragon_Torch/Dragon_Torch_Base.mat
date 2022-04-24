@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mushroom_Chest_Shiny 1
+  m_Name: Dragon_Torch_Base
   m_Shader: {fileID: -6465566751694194690, guid: 4517890cc063d6c4db2d1da10336d3d8, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -33,11 +33,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_6f9db258cf46446aa01a0caea2c273bf:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 0b25355f097707041aa8d6ea925e1f1d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_cbf0ff0405834beb9d9249845369fcbd:
-        m_Texture: {fileID: 2800000, guid: 73d5c7917eba9a84780ef2a2357865d2, type: 3}
+        m_Texture: {fileID: 2800000, guid: b5060e072f1084e4785dfd21155316e1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -97,9 +97,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_290673acc3b64e5a92fd1d0fbd1bb9c1: 0.3
+    - Vector1_290673acc3b64e5a92fd1d0fbd1bb9c1: 2.4
     - Vector1_3285986e6fbf446f95e48858c2ca88b3: 0.01
-    - Vector1_91a212e4c02b427389382dc06c8f8b55: 0.46
+    - Vector1_91a212e4c02b427389382dc06c8f8b55: 2
     - Vector1_f36aad369af74336b1954858943a5abe: 0.71
     - _AlphaClip: 0
     - _Blend: 0
