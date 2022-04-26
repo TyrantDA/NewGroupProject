@@ -7,7 +7,7 @@ using UnityEngine;
 public class TopDownCharacterMover : MonoBehaviour
 {
     private InputHandler _input;
-
+    public Animator anim;
     [SerializeField]
     private bool RotateTowardMouse;
 
@@ -42,6 +42,7 @@ public class TopDownCharacterMover : MonoBehaviour
 
     }
 
+
     private void RotateFromMouseVector()
     {
         Ray ray = Camera.ScreenPointToRay(_input.MousePosition);
@@ -59,11 +60,22 @@ public class TopDownCharacterMover : MonoBehaviour
         var speed = MovementSpeed * Time.deltaTime;
         // transform.Translate(targetVector * (MovementSpeed * Time.deltaTime)); Demonstrate why this doesn't work
         //transform.Translate(targetVector * (MovementSpeed * Time.deltaTime), Camera.gameObject.transform);
-
+  
         targetVector = Quaternion.Euler(0, Camera.gameObject.transform.rotation.eulerAngles.y, 0) * targetVector;
         var targetPosition = transform.position + targetVector * speed;
+        if (transform.position != targetPosition)
+        {
+            anim.SetBool("walk", true);
+
+        }
+        else
+        {
+            anim.SetBool("walk", false);
+
+        }
         transform.position = targetPosition;
         return targetVector;
+
     }
 
     private void RotateTowardMovementVector(Vector3 movementDirection)
