@@ -17,7 +17,7 @@ public class spell : MonoBehaviour
         //target = transform.position;
         step = speed * Time.deltaTime;
         camera = Camera.main.transform;
-        Destroy(gameObject, 5.0f);
+        Destroy(gameObject, 10.0f);
     }
 
 
