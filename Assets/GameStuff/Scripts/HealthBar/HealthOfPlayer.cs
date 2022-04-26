@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class HealthOfPlayer : MonoBehaviour
 {
+    public Animator anim;
+
     [SerializeField]float totalHealth;
     float currentHealth;
     [SerializeField] float damageFromEnemy;
@@ -22,27 +24,37 @@ public class HealthOfPlayer : MonoBehaviour
 
     public void DamagePlayer()
     {
+        anim.SetBool("hurt", true);
+
         currentHealth -= damageFromEnemy;
     }
 
     public void ArrowDamage()
     {
+        anim.SetBool("hurt", true);
+
         currentHealth -= damageFromArrow;
         Debug.Log("hit");
     }
 
     public void SpellDamage()
     {
+        anim.SetBool("hurt", true);
+
         currentHealth -= damageFromSpell;
     }
 
     public void StartPoisonDamage()
     {
+        anim.SetBool("hurt", true);
+
         StartCoroutine("poisonDamage");
     }
 
     public void EndPoisonDamage()
     {
+        anim.SetBool("hurt", true);
+
         StopCoroutine("poisonDamage");
     }
 
@@ -65,15 +77,37 @@ public class HealthOfPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         bar.SetHealth(currentHealth);
         if(currentHealth <= 0)
         {
             dead();
         }
+        if (currentHealth >= 50)
+        {
+            anim.SetBool("hobble", false);
+        }
+        if (currentHealth <= 50)
+        {
+            anim.SetBool("hobble", true);
+        }
+        if (currentHealth >= 50)
+        {
+            anim.SetBool("hobble", false);
+        }
+
 
     }
+    private void FixedUpdate()
+    {
+        if (anim.GetBool("hurt") == true)
+        {
+            anim.SetBool("hurt", false);
 
-    
-    
+        }
+    }
+
+
+
 
 }

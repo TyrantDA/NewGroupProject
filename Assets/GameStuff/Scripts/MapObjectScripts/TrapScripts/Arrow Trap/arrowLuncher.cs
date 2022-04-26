@@ -76,16 +76,16 @@ public class arrowLuncher : MonoBehaviour
             StartCoroutine("delay");
         }
 
-        if(other.transform.CompareTag("Player"))
-        {
-            int hold = other.gameObject.GetComponent<ItemListUI>().HasItem(Ammo);
-            if (hold > 0)
-            {
-                amunition += hold;
-                other.gameObject.GetComponent<ItemListUI>().AddItem(Ammo, -hold);
-            }
+        //if(other.transform.CompareTag("Player"))
+        //{
+          //  int hold = other.gameObject.GetComponent<ItemListUI>().HasItem(Ammo);
+            //if (hold > 0)
+            //{
+              //  amunition += hold;
+                //other.gameObject.GetComponent<ItemListUI>().AddItem(Ammo, -hold);
+            //}
 
-        }
+//        }
     }
 
     private void OnTriggerExit(Collider other)
