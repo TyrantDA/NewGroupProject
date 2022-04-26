@@ -20,6 +20,8 @@ TagManager:
   - Wall
   - EnemyHealer
   - closer
+  - lit
+  - dim
   layers:
   - Default
   - TransparentFX
