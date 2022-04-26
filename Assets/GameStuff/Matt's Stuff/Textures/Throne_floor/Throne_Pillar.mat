@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Throne_Floor
+  m_Name: Throne_Pillar
   m_Shader: {fileID: -6465566751694194690, guid: 4517890cc063d6c4db2d1da10336d3d8, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
