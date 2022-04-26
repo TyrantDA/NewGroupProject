@@ -42,16 +42,6 @@ public class Textaprear : MonoBehaviour
             transform.GetChild(11).gameObject.SetActive(false);
 
         }
-        if (hold.lighter == true)
-        {
-            transform.GetChild(12).gameObject.SetActive(true);
-
-        }
-        else
-        {
-            transform.GetChild(12).gameObject.SetActive(false);
-
-        }
     }
     // Update is called once per frame
     void FixedUpdate()
