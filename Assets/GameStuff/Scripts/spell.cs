@@ -9,11 +9,14 @@ public class spell : MonoBehaviour
 
     float step;
 
+    private Transform camera;
+
     // Start is called before the first frame update
     void Start()
     {
         //target = transform.position;
         step = speed * Time.deltaTime;
+        camera = Camera.main.transform;
         Destroy(gameObject, 5.0f);
     }
 
@@ -26,6 +29,7 @@ public class spell : MonoBehaviour
             Destroy(gameObject);
         }
         transform.position = Vector3.MoveTowards(transform.position, target, step);
+        transform.LookAt(camera);
     }
 
     private void OnCollisionEnter(Collision collision)
