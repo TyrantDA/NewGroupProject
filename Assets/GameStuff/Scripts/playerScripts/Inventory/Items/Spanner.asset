@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d39f3c3b1709e2f49bff8de2823f5480, type: 3}
-  m_Name: Potion
+  m_Name: Spanner
   m_EditorClassIdentifier: 
-  title: Potion
-  description: Will be taken out of monthl salary
-  icon: {fileID: 21300000, guid: 78bc8db714c3749cc8bd8c0b7e525b85, type: 3}
+  title: Spanner
+  description: Great now there's two of you
+  icon: {fileID: 21300000, guid: 061fcd6caac25954287291fffde7cd2c, type: 3}

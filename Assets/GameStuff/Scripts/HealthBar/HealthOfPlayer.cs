@@ -12,6 +12,7 @@ public class HealthOfPlayer : MonoBehaviour
     [SerializeField] float damageFromPoison;
     [SerializeField] float damageFromSpell;
     public HealthBar bar;
+    public AudioSource releasePosion;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +51,7 @@ public class HealthOfPlayer : MonoBehaviour
         while (true)
         {
             currentHealth -= damageFromPoison;
+            releasePosion.Play();
             yield return new WaitForSeconds(1); 
         }
     }

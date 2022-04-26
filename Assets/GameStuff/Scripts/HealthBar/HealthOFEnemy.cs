@@ -16,7 +16,7 @@ public class HealthOFEnemy : MonoBehaviour
     [SerializeField] float heal;
 
     [SerializeField] float currentHealth;
-
+    public AudioSource releasePoison;
     // Start is called before the first frame update
 
     void Start()
@@ -74,6 +74,7 @@ public class HealthOFEnemy : MonoBehaviour
         while (true)
         {
             currentHealth -= damageFromPoison;
+            releasePoison.Play();
             if (currentHealth <= 0)
             {
                 Dead();

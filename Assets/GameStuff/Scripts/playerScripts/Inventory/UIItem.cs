@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class UIItem : MonoBehaviour
 {
     public Text titleText;
+    public Text description;
     public Text amountText;
     public Image icon;
 
@@ -15,6 +16,7 @@ public class UIItem : MonoBehaviour
         titleText.text = newItem.title;
         amountText.text = amount.ToString();
         icon.sprite = newItem.icon;
+        description.text = newItem.description;
     }
 
 }

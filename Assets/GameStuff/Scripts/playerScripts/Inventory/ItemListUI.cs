@@ -6,7 +6,7 @@ public class ItemListUI : MonoBehaviour
 {
     // this is the item system I used in has the UI elliment biuld in all that is need is a prefab of that element  
 
-    public Transform panelContainer; // position of UI Item will be placed on the canvas
+    public GameObject listContent; // position of UI Item will be placed on the canvas
     public GameObject uiItemPrefab; // prefab of IU object which will deplace data. the UIItem script will need to be attached to this item as well
     public int addAmount = 1; // amount to be added on button press used only in testing
     public ItemInfo Ammo; // an itemInfo object that can be added to the list each individual type of item will need to be add like this for use
@@ -31,7 +31,7 @@ public class ItemListUI : MonoBehaviour
             if (amount < 1)
                 return;
             items.Add(newItem, amount);
-            uiItems.Add(newItem, Instantiate(uiItemPrefab, panelContainer).GetComponent<UIItem>());
+            uiItems.Add(newItem, Instantiate(uiItemPrefab, listContent.transform).GetComponent<UIItem>());
             uiItems[newItem].SetItem(newItem, items[newItem]);
         }
         else

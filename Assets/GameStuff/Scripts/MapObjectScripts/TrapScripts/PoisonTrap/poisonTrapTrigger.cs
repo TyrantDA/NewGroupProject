@@ -7,6 +7,7 @@ public class poisonTrapTrigger : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] int Ammuntion;
     public ItemInfo Poison;
+    
 
     void Start()
     {

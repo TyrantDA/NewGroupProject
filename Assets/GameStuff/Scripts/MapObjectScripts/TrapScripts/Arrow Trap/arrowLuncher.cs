@@ -5,6 +5,7 @@ using UnityEngine;
 public class arrowLuncher : MonoBehaviour
 {
     public GameObject arrow;
+    public AudioSource effect;
     [SerializeField] Transform[] spawnPoints;
 
     [SerializeField] int amunition;
@@ -29,6 +30,7 @@ public class arrowLuncher : MonoBehaviour
             {
                 Vector3 hold = spawnPoints[x].position;
                 Instantiate(arrow, hold, transform.rotation);
+                effect.Play();
                 amunition--;
             }
         }
