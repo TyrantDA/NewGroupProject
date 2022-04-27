@@ -7,6 +7,7 @@ public class EnemyAttack : MonoBehaviour
     public float timeDelay;
     public GameObject spawnPoint;
     public GameObject Spell;
+    public Animator anim;
 
     private bool isCoolDown;
     private bool inRange;
@@ -23,6 +24,8 @@ public class EnemyAttack : MonoBehaviour
 
     void PlayerAttack()
     {
+        anim.SetBool("attack", true);
+
         if (inRange)
         {
             Debug.Log("hit");
@@ -79,6 +82,14 @@ public class EnemyAttack : MonoBehaviour
             //Debug.Log("in range");
             inRange = true;
             target = other;
+        }
+    }
+    private void FixedUpdate()
+    {
+        if (anim.GetBool("attack") == true)
+        {
+            anim.SetBool("attack", false);
+
         }
     }
 }

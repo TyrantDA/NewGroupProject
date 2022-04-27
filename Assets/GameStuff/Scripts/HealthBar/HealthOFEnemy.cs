@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+
 
 public class HealthOFEnemy : MonoBehaviour
 {
     public enimyalive hold;
+    public Animator anim;
+    public Rigidbody RB;
 
     [SerializeField] float totalHealth;
     
@@ -132,6 +136,15 @@ public class HealthOFEnemy : MonoBehaviour
     {
         hold.alive = hold.alive - 1;
 
+        StartCoroutine("deadth");
+    }
+    IEnumerator deadth()
+    {
+        anim.SetBool("death", true);
+        GetComponent<Passivication>().stopped = true;
+        Debug.Log("GG");
+        yield return new WaitForSeconds(2);
         Destroy(gameObject);
+
     }
 }
