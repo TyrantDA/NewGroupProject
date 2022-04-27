@@ -4549,6 +4549,14 @@ PrefabInstance:
       propertyPath: hold
       value: 
       objectReference: {fileID: 1122445427}
+    - target: {fileID: 5237052607855481614, guid: dc8ff14be43e9d341b7cec8a0ad4688a, type: 3}
+      propertyPath: upforce
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237052607855481614, guid: dc8ff14be43e9d341b7cec8a0ad4688a, type: 3}
+      propertyPath: forwardForce
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 7162791709356049665, guid: dc8ff14be43e9d341b7cec8a0ad4688a, type: 3}
       propertyPath: patrolList.Array.data[0]
       value: 
@@ -4571,11 +4579,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7162791709356049690, guid: dc8ff14be43e9d341b7cec8a0ad4688a, type: 3}
       propertyPath: ranged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7162791709356049690, guid: dc8ff14be43e9d341b7cec8a0ad4688a, type: 3}
       propertyPath: combatRange
-      value: 7
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7162791709356049690, guid: dc8ff14be43e9d341b7cec8a0ad4688a, type: 3}
       propertyPath: radiusDetect
