@@ -67,13 +67,15 @@ public class HealthOfPlayer : MonoBehaviour
             yield return new WaitForSeconds(1); 
         }
     }
-
-    void dead()
+    IEnumerator dead()
     {
+        anim.SetBool("death", true);
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene("YouGotFired");
         Debug.Log("Player is dead");
-
     }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -81,7 +83,7 @@ public class HealthOfPlayer : MonoBehaviour
         bar.SetHealth(currentHealth);
         if(currentHealth <= 0)
         {
-            dead();
+            StartCoroutine("dead");
         }
         if (currentHealth >= 50)
         {
