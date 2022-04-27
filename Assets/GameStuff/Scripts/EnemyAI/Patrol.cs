@@ -11,6 +11,7 @@ public class Patrol : MonoBehaviour
     public List<int> patrolWait;
     public GameObject Patroller; //  game object that will be the enemy AI
     public float speed; // not used
+    public Animator anim;
 
     int currentMovingTo;
     int holdWait;
@@ -113,7 +114,10 @@ public class Patrol : MonoBehaviour
 
     IEnumerator delay()
     {
+
         delayWait = true;
+        anim.SetBool("walk", false);
+
         //Debug.Log("wait for " + patrolWait[holdWait]);
         yield return new WaitForSeconds(patrolWait[holdWait]);
 
@@ -126,7 +130,8 @@ public class Patrol : MonoBehaviour
         if (!delayWait)
         {
             agent.destination = target.transform.position;
-            
+            anim.SetBool("walk", true);
+
             //float step = speed * Time.deltaTime;
             //transform.position = Vector3.MoveTowards(transform.position, target.transform.position, step);
 
@@ -141,6 +146,7 @@ public class Patrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //if (patrolling)
         //{
         //    agent.destination = target.transform.position;
@@ -154,6 +160,6 @@ public class Patrol : MonoBehaviour
         //        target = nextTarget();
         //    }
         //}
-          
+
     }
 }

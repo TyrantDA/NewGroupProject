@@ -9,6 +9,7 @@ public class Attack : MonoBehaviour
     private bool isCoolDown;
     private bool inRange;
     private Collider target;
+    public Animator anim;
 
     public float forwardForce;
     public float upforce;
@@ -20,7 +21,10 @@ public class Attack : MonoBehaviour
 
     void PlayerAttack()
     {
-        if(inRange)
+        anim.SetBool("attack", true);
+
+
+        if (inRange)
         {
             
             target.transform.gameObject.GetComponent<HealthOFEnemy>().PlayerDamage();
@@ -73,6 +77,14 @@ public class Attack : MonoBehaviour
             //Debug.Log("in range");
             inRange = true;
             target = other;
+        }
+    }
+    private void FixedUpdate()
+    {
+        if (anim.GetBool("attack") == true)
+        {
+            anim.SetBool("attack", false);
+
         }
     }
 }
