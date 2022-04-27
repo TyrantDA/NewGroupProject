@@ -15,7 +15,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'Hips' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -75,11 +76,46 @@ ModelImporter:
   referencedClips:
   - 2e1cba9eb695f58499abce2fb7fde683
   - 8a554ed10f96a5449886965426c583f8
+  - 98812aa47185d314fa59a4b197d2ce26
+  - b518099024106c24cb111f6b8377ee0d
+  - 92221f29cf243db45b760e676280851d
+  - 1f5e0c7f7951bdf4a9aeba9e31cc06d5
+  - a50a247ae3de3fa4299ae26985835e10
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: goblin_final(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: body_gremlin
+      parentName: goblin_final(Clone)
+      position: {x: 0.04597952, y: 1.1698109, z: 0.2815171}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: arms_gremlin
+      parentName: goblin_final(Clone)
+      position: {x: -0, y: 0.8396814, z: 0.26034477}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ears_gremlin
+      parentName: goblin_final(Clone)
+      position: {x: 0.015628815, y: 1.4670651, z: 0.25169772}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: button
+      parentName: goblin_final(Clone)
+      position: {x: 0.03129919, y: 0.8655074, z: 0.5263724}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: legs_gremlin
+      parentName: goblin_final(Clone)
+      position: {x: 0.033561926, y: 0.22495979, z: 0.26130995}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5

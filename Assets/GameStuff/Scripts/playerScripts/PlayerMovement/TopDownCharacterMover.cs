@@ -27,8 +27,22 @@ public class TopDownCharacterMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);
+        if (Input.GetKeyDown("r"))
+        {
+            MovementSpeed = 20;
+            anim.SetBool("run", true);
+
+        }
+        if (Input.GetKeyUp("r"))
+        {
+            MovementSpeed = 10;
+            anim.SetBool("run", false);
+
+        }
+
+
+
+            var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);
         var movementVector = MoveTowardTarget(targetVector);
 
         if (!RotateTowardMouse)
