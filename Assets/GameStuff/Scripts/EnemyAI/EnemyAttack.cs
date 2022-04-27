@@ -24,7 +24,8 @@ public class EnemyAttack : MonoBehaviour
 
     void PlayerAttack()
     {
-        anim.SetBool("attack", true);
+
+    //    anim.SetBool("attack", true);
 
         if (inRange)
         {
@@ -53,7 +54,9 @@ public class EnemyAttack : MonoBehaviour
     {
             if (!isCoolDown)
             {
-                PlayerAttack();
+            anim.SetBool("attack", true);
+
+            PlayerAttack();
             }
             else
             {
@@ -63,8 +66,12 @@ public class EnemyAttack : MonoBehaviour
 
     public void goRanged(Vector3 target)
     {
+
         if (!isCoolDown)
         {
+
+            anim.SetBool("attack", true);
+
             GameObject hold = Instantiate(Spell, spawnPoint.transform.position, transform.rotation);
             hold.GetComponent<spell>().target = target;
             StartCoroutine("cooldown");

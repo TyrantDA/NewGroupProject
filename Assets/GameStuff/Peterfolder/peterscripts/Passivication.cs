@@ -8,7 +8,7 @@ public class Passivication : MonoBehaviour
 {
     public bool acive = true;
     public bool stopped = false;
-    public Rigidbody RB; 
+    public Rigidbody RB;
     // Start is called before the first frame update
     void Start()
     {

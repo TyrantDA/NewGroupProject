@@ -30,6 +30,8 @@ public class HealthOFEnemy : MonoBehaviour
     }
     public void DamagePlayer()
     {
+        anim.SetBool("hit", true);
+
         currentHealth -= damageFromEnemy;
         if (currentHealth <= 0)
         {
@@ -39,6 +41,8 @@ public class HealthOFEnemy : MonoBehaviour
 
     public void ArrowDamage()
     {
+        anim.SetBool("hit", true);
+        Debug.Log("f");
         currentHealth -= damageFromArrow;
         if (currentHealth <= 0)
         {
@@ -48,6 +52,8 @@ public class HealthOFEnemy : MonoBehaviour
 
     public void SpellDamage()
     {
+        anim.SetBool("hit", true);
+
         currentHealth -= damageFromSpell;
         if (currentHealth <= 0)
         {
@@ -57,6 +63,8 @@ public class HealthOFEnemy : MonoBehaviour
 
     public void StartPoisonDamage()
     {
+        anim.SetBool("hit", true);
+
         StartCoroutine("poisonDamage");
         if (currentHealth <= 0)
         {
@@ -75,6 +83,7 @@ public class HealthOFEnemy : MonoBehaviour
 
     IEnumerator poisonDamage()
     {
+
         while (true)
         {
             currentHealth -= damageFromPoison;
@@ -125,6 +134,8 @@ public class HealthOFEnemy : MonoBehaviour
 
     public void PlayerDamage()
     {
+        anim.SetBool("hit", true);
+
         currentHealth -= damageFromPlayer;
         if (currentHealth <= 0)
         {
@@ -142,9 +153,25 @@ public class HealthOFEnemy : MonoBehaviour
     {
         anim.SetBool("death", true);
         GetComponent<Passivication>().stopped = true;
+        GetComponent<pas2>().stopped = true;
+
         Debug.Log("GG");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         Destroy(gameObject);
 
+    }
+    IEnumerator hit()
+    {
+        yield return new WaitForSeconds(1);
+        anim.SetBool("hit", false);
+
+    }
+    private void FixedUpdate()
+    {
+        if (anim.GetBool("hit") == true)
+        {
+            StartCoroutine("hit");
+
+        }
     }
 }
