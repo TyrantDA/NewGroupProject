@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LAVA_V4
+  m_Name: LAVA_V4 Test
   m_Shader: {fileID: -6465566751694194690, guid: 16cd0eb2576552344bae7c463131dbba, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -46,7 +46,7 @@ Material:
     m_Colors:
     - Color_232454c8409549a38b7c4df22e8690ed: {r: 3.482202, g: 2.315993, b: 2.315993, a: 1}
     - Color_a9874c4f171549ffa9f22be4e9ec74d2: {r: 8.817418, g: 1.4488715, b: 0.08279266, a: 1}
-    - Vector2_25404d27a8124d2d9ee5db4dbfa0c2df: {r: 2, g: 2, b: 0, a: 0}
+    - Vector2_25404d27a8124d2d9ee5db4dbfa0c2df: {r: 13, g: 13, b: 0, a: 0}
     - Vector2_95ab41e87785413a8ea4689e60a10b04: {r: 0, g: 0.01, b: 0, a: 0}
     - Vector2_cca46cee8cba41db872538fffaa8fafc: {r: 0, g: 0.02, b: 0, a: 0}
   m_BuildTextureStacks: []
