@@ -674,6 +674,7 @@ GameObject:
   - component: {fileID: 3317876525819218143}
   - component: {fileID: 3317876525819218142}
   - component: {fileID: 2506850016385535377}
+  - component: {fileID: 1798760857911921421}
   m_Layer: 0
   m_Name: goblin69
   m_TagString: Player
@@ -871,6 +872,23 @@ MonoBehaviour:
   anim: {fileID: 9178866790159748446}
   cap: {fileID: 3317876525819218137}
   shp: {fileID: 2506850016385535376}
+--- !u!114 &1798760857911921421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2506850016385535390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae613dd28909c3b45962c7c1f65e20d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listContent: {fileID: 0}
+  uiItemPrefab: {fileID: 508635062545721447, guid: b1c0ad6201c9dc74c81701cd0fd28b7d, type: 3}
+  addAmount: 1
+  Ammo: {fileID: 11400000, guid: a90bd24670b5c10499ea442ed154c2a8, type: 2}
+  Poison: {fileID: 11400000, guid: 71f842d5fab8a1b46bcd249175a522a9, type: 2}
 --- !u!1 &3176257527860163209
 GameObject:
   m_ObjectHideFlags: 0
