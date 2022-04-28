@@ -92,7 +92,7 @@ public class HealthOFEnemy : MonoBehaviour
             {
                 Dead();
             }
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(3);
         }
     }
 
