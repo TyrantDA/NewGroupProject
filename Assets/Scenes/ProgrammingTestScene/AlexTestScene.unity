@@ -1880,7 +1880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: 6959370131488508907, guid: 236ed6f1380336a42b421e8dcbe42b3d, type: 3}
-  effect: {fileID: 0}
+  effect: {fileID: 932780898}
   spawnPoints:
   - {fileID: 1910908668}
   - {fileID: 453981249}
@@ -2207,6 +2207,11 @@ Transform:
   m_Father: {fileID: 379260830}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &461130236 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4011175083702091313, guid: 348441c184676cd45ad5229a6b529c96, type: 3}
+  m_PrefabInstance: {fileID: 1349339682}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &487417468
 GameObject:
   m_ObjectHideFlags: 0
@@ -2545,7 +2550,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628238484}
-  m_LocalRotation: {x: 0.059229277, y: 0.7343249, z: -0.46834156, w: -0.4877655}
+  m_LocalRotation: {x: 0.059229247, y: 0.7343249, z: -0.46834156, w: -0.4877655}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3346,6 +3351,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72a47e14a14a0e043b33762406e72b19, type: 3}
+--- !u!82 &932780898 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1679487966, guid: a3116b04dfdc07346966be03e73eca4c, type: 3}
+  m_PrefabInstance: {fileID: 4545964611495251017}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &935308020 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6451692334672151599, guid: 72fe133159cc24843b0df129596aec58, type: 3}
@@ -4936,7 +4946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: 6959370131488508907, guid: 236ed6f1380336a42b421e8dcbe42b3d, type: 3}
-  effect: {fileID: 0}
+  effect: {fileID: 932780898}
   spawnPoints:
   - {fileID: 891865825}
   - {fileID: 544353649}
@@ -5078,6 +5088,10 @@ PrefabInstance:
       propertyPath: hold
       value: 
       objectReference: {fileID: 1122445427}
+    - target: {fileID: 8735296721943196398, guid: 348441c184676cd45ad5229a6b529c96, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 461130236}
     - target: {fileID: 8735296721943196399, guid: 348441c184676cd45ad5229a6b529c96, type: 3}
       propertyPath: m_RootOrder
       value: 1

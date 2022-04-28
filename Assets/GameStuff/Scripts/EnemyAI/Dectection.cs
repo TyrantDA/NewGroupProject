@@ -68,6 +68,7 @@ public class Dectection : MonoBehaviour
         if (hold > combatRange)
         {
             anim.SetBool("walk", true);
+            anim.SetBool("run", true);
             agent.speed = runningSpeed;
             agent.destination = lastSeen;
             hitRange = false;
@@ -91,6 +92,10 @@ public class Dectection : MonoBehaviour
             {
                 agent.velocity = Vector3.zero;
                 agent.destination = transform.position;
+                var lookPos = lastSeen - transform.position;
+                lookPos.y = 0;
+                var rotation = Quaternion.LookRotation(lookPos);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping);
                 hitRange = true;
                 hitBox.go();
             }
@@ -266,6 +271,7 @@ public class Dectection : MonoBehaviour
 
     private void FixedUpdate()
     {
+        anim.SetBool("run", false);
         agent.speed = walkingSpeed;
         CheckForTargetInLineOfSight();
 

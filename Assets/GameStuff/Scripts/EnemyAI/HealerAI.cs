@@ -63,6 +63,7 @@ public class HealerAI : MonoBehaviour
         if (hold > followRange)
         {
             anim.SetBool("walk", true);
+            anim.SetBool("run", true);
             agent.speed = RunningSpeed;
             agent.destination = lastSeen;
         }
@@ -85,6 +86,7 @@ public class HealerAI : MonoBehaviour
         if (hold > combatRange)
         {
             anim.SetBool("walk", true);
+            anim.SetBool("run", true);
             agent.speed = RunningSpeed;
             agent.destination = lastSeen;
             hitRange = false;
@@ -301,6 +303,7 @@ public class HealerAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        anim.SetBool("run", false);
         agent.speed = walkingSpeed;
         dectectedPartyMember = false;
         dectect();
