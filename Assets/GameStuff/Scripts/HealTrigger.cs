@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HealTrigger : MonoBehaviour
 {
+    public Animator anim;
+
+    GameObject target;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +26,19 @@ public class HealTrigger : MonoBehaviour
     {
         if (other.transform.CompareTag("Enemy"))
         {
-            other.gameObject.GetComponent<HealthOFEnemy>().StartHealing();
+            target = other.transform.gameObject;
+            StartCoroutine("Heal");
+        }
+    }
+
+    public IEnumerator heal()
+    {
+        while(true)
+        {
+            anim.SetBool("heal", true);
+
+            target.GetComponent<HealthOFEnemy>().HealEnemy();
+            yield return new WaitForSeconds(10);
         }
     }
 
@@ -31,7 +46,7 @@ public class HealTrigger : MonoBehaviour
     {
         if (other.transform.CompareTag("Enemy"))
         {
-            other.gameObject.GetComponent<HealthOFEnemy>().EndHealing();
+            StopCoroutine("Heal");
         }
     }
 }

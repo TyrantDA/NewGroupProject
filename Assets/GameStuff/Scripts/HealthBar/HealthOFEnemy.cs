@@ -96,30 +96,11 @@ public class HealthOFEnemy : MonoBehaviour
         }
     }
 
-    public void StartHealing()
-    {
-        Debug.Log("Start heal");
-        StartCoroutine("HealEnemy");
-        if (currentHealth <= 0)
-        {
-            Dead();
-        }
-    }
+   
 
-    public void EndHealing()
+    public void HealEnemy()
     {
-        Debug.Log("End Heal");
-        StopCoroutine("HealEnemy");
-        if (currentHealth <= 0)
-        {
-            Dead();
-        }
-    }
-
-    IEnumerator HealEnemy()
-    {
-        while (true)
-        {
+        
             if (currentHealth < totalHealth)
             {
                 currentHealth += heal;
@@ -128,8 +109,7 @@ public class HealthOFEnemy : MonoBehaviour
             {
                 Dead();
             }
-            yield return new WaitForSeconds(10);
-        }
+       
     }
 
     public void PlayerDamage()

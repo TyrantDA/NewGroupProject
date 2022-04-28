@@ -13,6 +13,7 @@ public class HealerAI : MonoBehaviour
 
     public float followRange;
     public float combatRange;
+    public Animator anim;
 
     public EnemyAttack hitBox;
 
@@ -57,10 +58,14 @@ public class HealerAI : MonoBehaviour
         float hold = Lenth();
         if (hold > followRange)
         {
+            anim.SetBool("walk", true);
+
             agent.destination = lastSeen;
         }
         else
         {
+            anim.SetBool("walk", false);
+
             agent.velocity = Vector3.zero;
             agent.destination = transform.position;
             var lookPos = lastSeen - transform.position;
@@ -75,11 +80,15 @@ public class HealerAI : MonoBehaviour
         float hold = Lenth();
         if (hold > combatRange)
         {
+            anim.SetBool("walk", true);
+
             agent.destination = lastSeen;
             hitRange = false;
         }
         else
         {
+            anim.SetBool("walk", false);
+
             agent.velocity = Vector3.zero;
             agent.destination = transform.position;
             var lookPos = lastSeen - transform.position;
@@ -230,7 +239,9 @@ public class HealerAI : MonoBehaviour
             }
             else
             {
-                transform.Rotate(Vector3.up * 4 * Time.deltaTime);
+                anim.SetBool("walk", false);
+
+                transform.Rotate(Vector3.up * 10 * Time.deltaTime);
             }
 
         }
@@ -252,7 +263,9 @@ public class HealerAI : MonoBehaviour
             }
             else
             {
-                transform.Rotate(Vector3.up * 4 * Time.deltaTime);
+                anim.SetBool("walk", false);
+
+                transform.Rotate(Vector3.up * 10 * Time.deltaTime);
             }
 
         }

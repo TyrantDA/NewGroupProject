@@ -334,13 +334,15 @@ GameObject:
   - component: {fileID: 2275887536550885706}
   - component: {fileID: 4618361375972297190}
   - component: {fileID: 3915563790365653148}
+  - component: {fileID: 416836153144350921}
+  - component: {fileID: 416836153144350922}
   m_Layer: 0
   m_Name: knight69
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8735296721943196399
 Transform:
   m_ObjectHideFlags: 0
@@ -348,7 +350,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8735296721943196406}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 35.881927, y: -17.613567, z: -3.0754356}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -484,7 +486,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  patrolWait: 04000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  patrolWait: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   Patroller: {fileID: 8735296721943196406}
   speed: 3
   anim: {fileID: 4011175083702091313}
@@ -503,6 +505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mRaycastRadius: 5
   mTargetDetectionDistance: 7
+  anim: {fileID: 0}
   radiusDetect: 3
   detectLayers:
     serializedVersion: 2
@@ -547,7 +550,7 @@ MonoBehaviour:
   hold: {fileID: 0}
   anim: {fileID: 4011175083702091313}
   RB: {fileID: 8735296721943196395}
-  totalHealth: 4
+  totalHealth: 100
   damageFromEnemy: 10
   damageFromArrow: 8
   damageFromPoison: 5
@@ -584,7 +587,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acive: 1
   stopped: 0
-  RB: {fileID: 0}
+  RB: {fileID: 8735296721943196395}
+--- !u!114 &416836153144350921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8735296721943196406}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c6544f4acc99c4eb253efcb06bc445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acive: 1
+  stopped: 0
+  RB: {fileID: 8735296721943196395}
+--- !u!114 &416836153144350922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8735296721943196406}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ab9f3cece76884bbc00da582ca9608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mRaycastRadius: 0
+  mTargetDetectionDistance: 0
+  radiusDetect: 0
+  detectLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  followRange: 0
+  combatRange: 0
+  anim: {fileID: 0}
+  hitBox: {fileID: 0}
 --- !u!1001 &7403948390921618336
 PrefabInstance:
   m_ObjectHideFlags: 0

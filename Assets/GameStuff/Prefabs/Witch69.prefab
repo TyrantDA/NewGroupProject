@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 1091141985898856436}
   - component: {fileID: 7605192619250398282}
   - component: {fileID: 1091141985898856433}
+  - component: {fileID: 7553032399592754029}
+  - component: {fileID: 7553032399592754030}
   m_Layer: 0
   m_Name: Witch69
   m_TagString: Enemy
@@ -32,7 +34,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091141985898856438}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 32.473938, y: -17.673567, z: -12.98535}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -104,9 +106,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 3.2577195
+  m_Height: 3.3742752
   m_Direction: 1
-  m_Center: {x: 0, y: 0.62885976, z: 0}
+  m_Center: {x: 0, y: 0.5705819, z: 0}
 --- !u!54 &1091141985898856427
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -170,7 +172,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  patrolWait: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  patrolWait: 0a000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   Patroller: {fileID: 0}
   speed: 3
   anim: {fileID: 7490965202184444071}
@@ -189,6 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mRaycastRadius: 5
   mTargetDetectionDistance: 7
+  anim: {fileID: 7490965202184444071}
   radiusDetect: 3
   detectLayers:
     serializedVersion: 2
@@ -256,7 +259,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acive: 1
   stopped: 0
-  RB: {fileID: 0}
+  RB: {fileID: 1091141985898856427}
+--- !u!114 &7553032399592754029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091141985898856438}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ab9f3cece76884bbc00da582ca9608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mRaycastRadius: 0
+  mTargetDetectionDistance: 0
+  radiusDetect: 0
+  detectLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  followRange: 0
+  combatRange: 0
+  anim: {fileID: 0}
+  hitBox: {fileID: 0}
+--- !u!114 &7553032399592754030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091141985898856438}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c6544f4acc99c4eb253efcb06bc445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acive: 1
+  stopped: 0
+  RB: {fileID: 1091141985898856427}
 --- !u!1 &2661175889419189263
 GameObject:
   m_ObjectHideFlags: 0

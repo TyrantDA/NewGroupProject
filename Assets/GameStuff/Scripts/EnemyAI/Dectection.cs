@@ -8,6 +8,7 @@ public class Dectection : MonoBehaviour
     // NPC has two dection system a retangle coming out of the front repiretion line of site
     public float mRaycastRadius;  // width of our line of sight (x-axis and y-axis)
     public float mTargetDetectionDistance;  // depth of our line of sight (z-axis)
+    public Animator anim;
 
     // and a sphere around the NPC to detect thinks at close range 
     public float radiusDetect; //radius of detection around the NPC 
@@ -58,14 +59,19 @@ public class Dectection : MonoBehaviour
 
     void engage()
     {
+
         float hold = Lenth();
         if (hold > combatRange)
         {
+            anim.SetBool("walk", true);
+
             agent.destination = lastSeen;
             hitRange = false;
         }
         else
         {
+            anim.SetBool("walk", false);
+
             if (ranged)
             {
                 agent.velocity = Vector3.zero;
@@ -174,7 +180,9 @@ public class Dectection : MonoBehaviour
                             }
                             else
                             {
-                                transform.Rotate(Vector3.up * 4 * Time.deltaTime);
+                                anim.SetBool("walk", false);
+
+                                transform.Rotate(Vector3.up * 10 * Time.deltaTime);
                             }
 
                         }
@@ -208,7 +216,9 @@ public class Dectection : MonoBehaviour
                         }
                         else
                         {
-                            transform.Rotate(Vector3.up * 4 * Time.deltaTime);
+                            anim.SetBool("walk", false);
+
+                            transform.Rotate(Vector3.up * 10 * Time.deltaTime);
                         }
                     }
                 }
