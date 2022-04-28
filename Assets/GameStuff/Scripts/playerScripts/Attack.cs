@@ -26,7 +26,7 @@ public class Attack : MonoBehaviour
 
         if (inRange)
         {
-            
+            Debug.Log(target.name + " " + "attacking");
             target.transform.gameObject.GetComponent<HealthOFEnemy>().PlayerDamage();
             target.transform.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * forwardForce);
             target.transform.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * upforce);
@@ -65,9 +65,10 @@ public class Attack : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        Debug.Log(other.transform.tag);
         if (other.transform.gameObject.tag == "Enemy")
         {
-            //Debug.Log("in range");
+            Debug.Log("in range");
             inRange = true;
             target = other;
         }

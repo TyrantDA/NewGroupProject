@@ -155,6 +155,7 @@ MonoBehaviour:
   timeDelay: 5
   spawnPoint: {fileID: 0}
   Spell: {fileID: 0}
+  anim: {fileID: 0}
   forwardForce: 1000
   upforce: 1000
 --- !u!1 &3155587951850749842
@@ -271,7 +272,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3155587951850749842}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 70
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -357,6 +358,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hold: {fileID: 0}
+  anim: {fileID: 0}
+  RB: {fileID: 0}
   totalHealth: 100
   damageFromEnemy: 10
   damageFromArrow: 8

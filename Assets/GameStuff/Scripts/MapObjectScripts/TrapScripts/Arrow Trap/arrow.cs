@@ -40,6 +40,10 @@ public class arrow : MonoBehaviour
             {
                 collision.gameObject.GetComponent<HealthOFEnemy>().ArrowDamage();
             }
+            else if(collision.transform.CompareTag("EnemyHealer"))
+            {
+                collision.gameObject.GetComponent<HealthOFEnemy>().ArrowDamage();
+            }
         }
 
     }
