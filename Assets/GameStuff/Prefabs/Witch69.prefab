@@ -142,38 +142,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  patrolWait: 0a000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  Patroller: {fileID: 0}
+  patrolWait: 00000000000000000000000000000000
+  Patroller: {fileID: 1091141985898856438}
   speed: 3
   anim: {fileID: 7490965202184444071}
   target: {fileID: 0}
@@ -199,6 +169,7 @@ MonoBehaviour:
   combatRange: 5
   hitBox: {fileID: 2661175890129873402}
   ranged: 1
+  runningSpeed: 7
 --- !u!195 &1091141985898856436
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -282,6 +253,7 @@ MonoBehaviour:
   combatRange: 0
   anim: {fileID: 0}
   hitBox: {fileID: 0}
+  RunningSpeed: 0
 --- !u!114 &7553032399592754030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,7 +479,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 14
+  MaxDistance: 35
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0

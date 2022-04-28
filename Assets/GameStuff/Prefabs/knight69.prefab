@@ -342,7 +342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8735296721943196399
 Transform:
   m_ObjectHideFlags: 0
@@ -458,35 +458,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  patrolWait: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  patrolWait: 00000000000000000000000000000000
   Patroller: {fileID: 8735296721943196406}
   speed: 3
   anim: {fileID: 4011175083702091313}
@@ -513,6 +485,7 @@ MonoBehaviour:
   combatRange: 1.5
   hitBox: {fileID: 5976528028787500282}
   ranged: 0
+  runningSpeed: 7
 --- !u!195 &8735296721943196404
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -625,6 +598,7 @@ MonoBehaviour:
   combatRange: 0
   anim: {fileID: 0}
   hitBox: {fileID: 0}
+  RunningSpeed: 0
 --- !u!1001 &7403948390921618336
 PrefabInstance:
   m_ObjectHideFlags: 0

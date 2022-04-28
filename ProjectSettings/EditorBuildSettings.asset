@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ProgrammingTestScene/AlexTestScene.unity
     guid: b443e843e4bed644d8e7b62ece3a7d24
+  - enabled: 1
+    path: Assets/Scenes/transitionScenes/WelcomGoblin.unity
+    guid: e69415067bcccb445bcddb39f2c5df7b
+  - enabled: 1
+    path: Assets/Scenes/ProgrammingTestScene/Petertest2donttouchthismatt.unity
+    guid: 08ec74002fba1254e982e5893d9e7822
   m_configObjects: {}

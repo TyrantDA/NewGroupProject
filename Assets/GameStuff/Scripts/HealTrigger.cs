@@ -27,7 +27,7 @@ public class HealTrigger : MonoBehaviour
         if (other.transform.CompareTag("Enemy"))
         {
             target = other.transform.gameObject;
-            StartCoroutine("Heal");
+            StartCoroutine("heal");
         }
     }
 
@@ -46,7 +46,7 @@ public class HealTrigger : MonoBehaviour
     {
         if (other.transform.CompareTag("Enemy"))
         {
-            StopCoroutine("Heal");
+            StopCoroutine("heal");
         }
     }
 }

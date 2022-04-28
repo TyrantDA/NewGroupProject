@@ -17,6 +17,9 @@ public class HealerAI : MonoBehaviour
 
     public EnemyAttack hitBox;
 
+    float walkingSpeed;
+    public float RunningSpeed;
+
     private RaycastHit _mHitInfo;   // allocating memory for the raycasthit
     // to avoid Garbage
     private bool _bHasDetectedEnnemy = false;   // tracking whether the player
@@ -45,6 +48,7 @@ public class HealerAI : MonoBehaviour
         pat = GetComponent<Patrol>();
         agent = GetComponent<NavMeshAgent>();
         currentTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
+        walkingSpeed = agent.speed;
     }
 
     float Lenth()
@@ -59,7 +63,7 @@ public class HealerAI : MonoBehaviour
         if (hold > followRange)
         {
             anim.SetBool("walk", true);
-
+            agent.speed = RunningSpeed;
             agent.destination = lastSeen;
         }
         else
@@ -81,7 +85,7 @@ public class HealerAI : MonoBehaviour
         if (hold > combatRange)
         {
             anim.SetBool("walk", true);
-
+            agent.speed = RunningSpeed;
             agent.destination = lastSeen;
             hitRange = false;
         }
@@ -297,6 +301,7 @@ public class HealerAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        agent.speed = walkingSpeed;
         dectectedPartyMember = false;
         dectect();
         if(seenPartyMember)

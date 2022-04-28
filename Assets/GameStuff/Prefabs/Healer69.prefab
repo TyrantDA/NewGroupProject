@@ -71,7 +71,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 30
+  MaxDistance: 35
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -409,39 +409,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  patrolWait: 0a000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  Patroller: {fileID: 0}
+  patrolWait: 00000000000000000000000000000000
+  Patroller: {fileID: 4707141303113474711}
   speed: 3
   anim: {fileID: 3305936733277950107}
   target: {fileID: 0}
@@ -482,7 +451,7 @@ MonoBehaviour:
   hold: {fileID: 0}
   anim: {fileID: 3305936733277950107}
   RB: {fileID: 4707141303113474706}
-  totalHealth: 1
+  totalHealth: 100
   damageFromEnemy: 10
   damageFromArrow: 1
   damageFromPoison: 5
@@ -513,6 +482,7 @@ MonoBehaviour:
   combatRange: 1.5
   anim: {fileID: 3305936733277950107}
   hitBox: {fileID: 4707141302500687452}
+  RunningSpeed: 7
 --- !u!114 &3305936732174510904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,6 +520,7 @@ MonoBehaviour:
   combatRange: 0
   hitBox: {fileID: 0}
   ranged: 0
+  runningSpeed: 0
 --- !u!114 &3305936732174510906
 MonoBehaviour:
   m_ObjectHideFlags: 0

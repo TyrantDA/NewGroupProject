@@ -71,6 +71,9 @@ public class HealthOfPlayer : MonoBehaviour
     {
         anim.SetBool("death", true);
         yield return new WaitForSeconds(3);
+        int gobnumber = PlayerPrefs.GetInt("GobNumber", 36);
+        gobnumber++;
+        PlayerPrefs.SetInt("GobNumber", gobnumber);
         SceneManager.LoadScene("YouGotFired");
         Debug.Log("Player is dead");
     }

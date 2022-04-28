@@ -21,6 +21,9 @@ public class Dectection : MonoBehaviour
    
     public bool ranged;
 
+    float walkingSpeed;
+    public float runningSpeed;
+
     float currentTime;
     float minTimeBetweenSpawns = 10;
     float maxTimeBetweenSpawns = 50;
@@ -49,6 +52,7 @@ public class Dectection : MonoBehaviour
         lastSeen = new Vector3(0f, 0f, 0f);
         currentTime = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
         foundSomething = false;
+        walkingSpeed = agent.speed;
     }
 
     float Lenth()
@@ -64,7 +68,7 @@ public class Dectection : MonoBehaviour
         if (hold > combatRange)
         {
             anim.SetBool("walk", true);
-
+            agent.speed = runningSpeed;
             agent.destination = lastSeen;
             hitRange = false;
         }
@@ -262,6 +266,9 @@ public class Dectection : MonoBehaviour
 
     private void FixedUpdate()
     {
+        agent.speed = walkingSpeed;
         CheckForTargetInLineOfSight();
+
+        Debug.Log(agent.speed);
     }
 }
