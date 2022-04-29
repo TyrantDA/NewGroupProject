@@ -70,6 +70,8 @@ public class HealthOfPlayer : MonoBehaviour
     IEnumerator dead()
     {
         anim.SetBool("death", true);
+        GetComponent<deathplayer>().acive = false;
+
         yield return new WaitForSeconds(3);
         int gobnumber = PlayerPrefs.GetInt("GobNumber", 36);
         gobnumber++;

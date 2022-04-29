@@ -134,8 +134,6 @@ public class HealthOFEnemy : MonoBehaviour
         anim.SetBool("death", true);
         GetComponent<Passivication>().stopped = true;
         GetComponent<pas2>().stopped = true;
-
-        Debug.Log("GG");
         yield return new WaitForSeconds(3);
         Destroy(gameObject);
 

@@ -76,6 +76,7 @@ public class Dectection : MonoBehaviour
         else
         {
             anim.SetBool("walk", false);
+            anim.SetBool("run", false);
 
             if (ranged)
             {
@@ -190,6 +191,8 @@ public class Dectection : MonoBehaviour
                             else
                             {
                                 anim.SetBool("walk", false);
+                                anim.SetBool("run", false);
+
 
                                 transform.Rotate(Vector3.up * 10 * Time.deltaTime);
                             }
@@ -226,6 +229,8 @@ public class Dectection : MonoBehaviour
                         else
                         {
                             anim.SetBool("walk", false);
+                            anim.SetBool("run", false);
+
 
                             transform.Rotate(Vector3.up * 10 * Time.deltaTime);
                         }

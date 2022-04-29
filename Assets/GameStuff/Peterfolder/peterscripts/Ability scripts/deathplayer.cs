@@ -7,9 +7,13 @@ public class deathplayer : MonoBehaviour
     public bool acive = true;
     public bool stopped = false;
     public float heath;
+    public Rigidbody RB;
+
     // Start is called before the first frame update
     void Start()
     {
+        RB = GetComponent<Rigidbody>();
+
         heath = 100;
     }
 
@@ -26,8 +30,13 @@ public class deathplayer : MonoBehaviour
             if (stopped != true)
             {
                 GetComponent<InputHandler>().enabled = !GetComponent<InputHandler>().enabled;
-                stopped = true;
+                GetComponent<TopDownCharacterMover>().enabled = !GetComponent<TopDownCharacterMover>().enabled;
 
+                RB.velocity = Vector3.zero;
+                RB.angularVelocity = Vector3.zero;
+                RB.Sleep();
+                stopped = true;
+                Debug.Log("printthis");
                 StartCoroutine("Delaythis");
 
 
@@ -38,6 +47,13 @@ public class deathplayer : MonoBehaviour
             if (stopped == true)
             {
                 GetComponent<InputHandler>().enabled = !GetComponent<InputHandler>().enabled;
+                GetComponent<TopDownCharacterMover>().enabled = !GetComponent<TopDownCharacterMover>().enabled;
+
+                RB.velocity = Vector3.zero;
+                RB.angularVelocity = Vector3.zero;
+                RB.Sleep();
+                Debug.Log("printthis");
+
                 stopped = false;
 
             }
@@ -59,6 +75,8 @@ public class deathplayer : MonoBehaviour
     IEnumerator Delaythis()
     {
         yield return new WaitForSeconds(5);
+        Debug.Log("printthis");
+
         acive = true;
 
 

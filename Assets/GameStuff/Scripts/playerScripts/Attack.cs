@@ -65,7 +65,6 @@ public class Attack : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log(other.transform.tag);
         if (other.transform.gameObject.tag == "Enemy")
         {
             Debug.Log("in range");
