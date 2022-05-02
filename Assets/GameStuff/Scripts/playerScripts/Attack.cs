@@ -45,7 +45,12 @@ public class Attack : MonoBehaviour
         isCoolDown = false;
         Debug.Log("off coolDown");
     }
+    IEnumerator animcooldown()
+    {
+        yield return new WaitForSeconds(0.8f);
+        anim.SetBool("attack", false);
 
+    }
 
     // Update is called once per frame
     void Update()
@@ -79,11 +84,12 @@ public class Attack : MonoBehaviour
             target = other;
         }
     }
+
     private void FixedUpdate()
     {
         if (anim.GetBool("attack") == true)
         {
-            anim.SetBool("attack", false);
+            StartCoroutine("animcooldown");
 
         }
     }
