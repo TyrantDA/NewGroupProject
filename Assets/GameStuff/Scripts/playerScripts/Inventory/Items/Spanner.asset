@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Spanner
   description: Great now there's two of you
-  icon: {fileID: 21300000, guid: 061fcd6caac25954287291fffde7cd2c, type: 3}
+  icon: {fileID: 21300000, guid: aef4a416c5635da45b355afaea192bb6, type: 3}

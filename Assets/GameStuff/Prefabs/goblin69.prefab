@@ -1016,6 +1016,7 @@ MonoBehaviour:
   damageFromArrow: 8
   damageFromPoison: 5
   damageFromSpell: 10
+  heal: 0
   bar: {fileID: 0}
   releasePosion: {fileID: 1459188795}
 --- !u!114 &2506850016385535377
@@ -1051,6 +1052,7 @@ MonoBehaviour:
   Ammo: {fileID: 11400000, guid: a90bd24670b5c10499ea442ed154c2a8, type: 2}
   Poison: {fileID: 11400000, guid: 71f842d5fab8a1b46bcd249175a522a9, type: 2}
   HealingPotion: {fileID: 11400000, guid: 6849e0b8fc8899349ace3a9835c50627, type: 2}
+  Spanner: {fileID: 11400000, guid: 1950fd94c9f3dbd48b771044e529e09b, type: 2}
 --- !u!1 &3176257527860163209
 GameObject:
   m_ObjectHideFlags: 0

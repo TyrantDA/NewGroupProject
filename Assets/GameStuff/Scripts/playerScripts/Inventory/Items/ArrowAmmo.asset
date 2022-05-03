@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Arrow Ammo
   description: Pointy end go forward
-  icon: {fileID: 21300000, guid: 061fcd6caac25954287291fffde7cd2c, type: 3}
+  icon: {fileID: 21300000, guid: 8230c6f10a9806e4c9a4b6eb0e91e680, type: 3}

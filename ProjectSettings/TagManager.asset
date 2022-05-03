@@ -21,6 +21,7 @@ TagManager:
   - EnemyHealer
   - closer
   - Pot
+  - Spanner
   layers:
   - Default
   - TransparentFX
