@@ -8,7 +8,9 @@ public class Attack : MonoBehaviour
 
     private bool isCoolDown;
     private bool inRange;
+    private bool foundPot;
     private Collider target;
+    private Collider pot;
     public Animator anim;
 
     public float forwardForce;
@@ -33,6 +35,12 @@ public class Attack : MonoBehaviour
 
             inRange = false;
             StartCoroutine("cooldown");
+        }
+
+        if(foundPot)
+        {
+            pot.transform.gameObject.GetComponent<potBreak>().BreakPot();
+            foundPot = false;
         }
     }
 
@@ -82,6 +90,35 @@ public class Attack : MonoBehaviour
             //Debug.Log("in range");
             inRange = true;
             target = other;
+        }
+
+        if(other.transform.gameObject.tag == "Pot")
+        {
+            foundPot = true;
+            pot = other;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.gameObject.tag == "Enemy")
+        {
+            
+            inRange = false;
+            
+        }
+
+        if (other.transform.gameObject.tag == "EnemyHealer")
+        {
+            //Debug.Log("in range");
+            inRange = false;
+            
+        }
+
+        if (other.transform.gameObject.tag == "Pot")
+        {
+            foundPot = false;
+            
         }
     }
 

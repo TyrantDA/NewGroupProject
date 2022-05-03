@@ -13,6 +13,7 @@ public class HealthOfPlayer : MonoBehaviour
     [SerializeField] float damageFromArrow;
     [SerializeField] float damageFromPoison;
     [SerializeField] float damageFromSpell;
+    [SerializeField] float heal;
     public HealthBar bar;
     public AudioSource releasePosion;
     // Start is called before the first frame update
@@ -42,6 +43,16 @@ public class HealthOfPlayer : MonoBehaviour
         anim.SetBool("hurt", true);
 
         currentHealth -= damageFromSpell;
+    }
+
+    public bool HealPlayer()
+    {
+         if (currentHealth < totalHealth)
+        {
+            currentHealth += heal;
+            return true;
+        }
+        return false;
     }
 
     public void StartPoisonDamage()

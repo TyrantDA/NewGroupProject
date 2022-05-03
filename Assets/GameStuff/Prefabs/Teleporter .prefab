@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7890132279019062349}
   - component: {fileID: 7890132279019062346}
   - component: {fileID: 7890132279019062347}
+  - component: {fileID: 366683959725346869}
   m_Layer: 0
   m_Name: 'Teleporter '
   m_TagString: Untagged
@@ -49,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleporterExit: {fileID: 0}
+  incol: 0
 --- !u!65 &7890132279019062349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57,7 +59,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452392068106056933}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.84403867, y: 2.0048969, z: 0.8884268}
@@ -70,7 +72,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452392068106056933}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.84403867, y: 0.5772363, z: 2.1189048}
@@ -83,11 +85,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452392068106056933}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.84403867, y: 1.394664, z: 1.6586211}
   m_Center: {x: 0, y: -0.004365802, z: -0.008679032}
+--- !u!65 &366683959725346869
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452392068106056933}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4699936, y: 1.9908798, z: 1.9568462}
+  m_Center: {x: 0.7349968, y: -0.05846989, z: -0.060804367}
 --- !u!1 &1452392068163502228
 GameObject:
   m_ObjectHideFlags: 0

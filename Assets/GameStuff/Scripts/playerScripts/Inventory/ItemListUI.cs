@@ -11,6 +11,7 @@ public class ItemListUI : MonoBehaviour
     public int addAmount = 1; // amount to be added on button press used only in testing
     public ItemInfo Ammo; // an itemInfo object that can be added to the list each individual type of item will need to be add like this for use
     public ItemInfo Poison;
+    public ItemInfo HealingPotion;
 
 
     Dictionary<ItemInfo, int> items = new Dictionary<ItemInfo, int>();
@@ -59,6 +60,23 @@ public class ItemListUI : MonoBehaviour
             return 0;
     }
 
+    private void Update()
+    {
+        int hold = HasItem(HealingPotion);
+        if(hold > 0)
+        {
+            if(Input.GetKeyDown(KeyCode.H))
+            {
+                bool answer = gameObject.GetComponent<HealthOfPlayer>().HealPlayer();
+                if(answer)
+                {
+                    AddItem(HealingPotion, -1);
+                }
+
+            }
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("ArrowAmmo"))
@@ -71,6 +89,12 @@ public class ItemListUI : MonoBehaviour
         {
             Destroy(collision.gameObject);
             AddItem(Poison, 5);
+        }
+
+        if(collision.gameObject.CompareTag("Potion"))
+        {
+            Destroy(collision.gameObject);
+            AddItem(HealingPotion, 1);
         }
     }
 }

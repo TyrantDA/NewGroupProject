@@ -91,6 +91,17 @@ public class EnemyAttack : MonoBehaviour
             target = other;
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.gameObject.tag == "Player")
+        {
+            //Debug.Log("in range");
+            inRange = false;
+            
+        }
+    }
+
     private void FixedUpdate()
     {
         if (anim.GetBool("attack") == true)
