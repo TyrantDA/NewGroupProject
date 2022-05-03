@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b6d80518de2d64ab2200c53c5739b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakObject: {fileID: 6556340140714898368, guid: ce1d08a38cb853c4e87003387078f790, type: 3}
+  breakObject: {fileID: 7999501930940584873, guid: ce1d08a38cb853c4e87003387078f790, type: 3}
 --- !u!135 &5144451767163573505
 SphereCollider:
   m_ObjectHideFlags: 0

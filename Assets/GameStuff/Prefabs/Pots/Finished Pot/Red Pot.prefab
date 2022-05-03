@@ -26,7 +26,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b6d80518de2d64ab2200c53c5739b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakObject: {fileID: 3714990170404144122, guid: 33091b94a63c5b54a9ea0bd9d11abf06, type: 3}
+  breakObject: {fileID: 2495434172343329596, guid: 33091b94a63c5b54a9ea0bd9d11abf06, type: 3}
 --- !u!1001 &5490849159834123996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40,15 +40,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94c347db52872874bb2c86c298799cd9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.7036514
+      value: -264.53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94c347db52872874bb2c86c298799cd9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.39
+      value: 8.49
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94c347db52872874bb2c86c298799cd9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.633391
+      value: 35.85
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 94c347db52872874bb2c86c298799cd9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -84,7 +84,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 621255f89df997544ae77fc8fd7b2e06, type: 2}
     - target: {fileID: 919132149155446097, guid: 94c347db52872874bb2c86c298799cd9, type: 3}
       propertyPath: m_Name
-      value: Red Pot
+      value: Red Pot (6)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 94c347db52872874bb2c86c298799cd9, type: 3}
       propertyPath: m_TagString
