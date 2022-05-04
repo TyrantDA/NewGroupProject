@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,14 +8,17 @@ public class teleporter : MonoBehaviour
 {
     public GameObject teleporterExit;
     public Text textOutput;
+    public CinemachineFreeLook cam;
     Transform spawnPoint;
     GameObject player;
     bool incol;
+    
     // Start is called before the first frame update
     void Start()
     {
         spawnPoint = gameObject.transform.GetChild(0);
         incol = false;
+        
     }
 
     public Transform getSpawnPoint()
@@ -29,6 +33,7 @@ public class teleporter : MonoBehaviour
         {
             player = other.transform.gameObject;
             incol = true;
+            
         }
     }
 
@@ -50,6 +55,12 @@ public class teleporter : MonoBehaviour
         textOutput.text = "  ";
     }
 
+    IEnumerator restartCam()
+    {
+        cam.enabled = !cam.enabled;
+        yield return new WaitForSeconds(0.1f);
+        cam.enabled = !cam.enabled;
+    }
 
     private void Update()
     {
@@ -57,6 +68,7 @@ public class teleporter : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                StartCoroutine("restartCam");
                 player.transform.position = teleporterExit.GetComponent<teleporter>().getSpawnPoint().position;
                 incol = false;
                 player = null;
