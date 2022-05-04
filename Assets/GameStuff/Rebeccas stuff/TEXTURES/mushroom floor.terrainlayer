@@ -7,7 +7,7 @@ TerrainLayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: mushroom floor
-  m_DiffuseTexture: {fileID: 2800000, guid: 1ddfb849ce661604ba5f2f0882970bb4, type: 3}
+  m_DiffuseTexture: {fileID: 2800000, guid: ba0291bfb17044343bfaecd84344e49b, type: 3}
   m_NormalMapTexture: {fileID: 2800000, guid: 0327262144a73b94590e4af7d2bfb450, type: 3}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 25, y: 25}
