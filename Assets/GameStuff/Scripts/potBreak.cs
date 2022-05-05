@@ -15,7 +15,7 @@ public class potBreak : MonoBehaviour
     {
         gameObject.SetActive(false);
         GameObject hold = Instantiate(breakObject, transform.position, transform.rotation);
-        Destroy(hold, 60);
+        Destroy(hold, 5);
     }
 
     // Update is called once per frame

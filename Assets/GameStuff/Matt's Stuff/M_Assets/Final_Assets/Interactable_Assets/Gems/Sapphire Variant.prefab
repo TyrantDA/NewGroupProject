@@ -81,7 +81,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 30e2a6123e1f5a2448b55d795854364a, type: 3}
       propertyPath: m_Name
-      value: Sapphire
+      value: Sapphire Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 30e2a6123e1f5a2448b55d795854364a, type: 3}
+      propertyPath: m_TagString
+      value: BlueGem
       objectReference: {fileID: 0}
     - target: {fileID: 6804568738862522068, guid: 30e2a6123e1f5a2448b55d795854364a, type: 3}
       propertyPath: m_Materials.Array.data[0]

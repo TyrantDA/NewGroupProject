@@ -61,7 +61,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: cbd05b849fdd3da48a21277a600097da, type: 2}
     - target: {fileID: 919132149155446097, guid: 89a7dfaf9f00cd74fb218ac1160dc683, type: 3}
       propertyPath: m_Name
-      value: Tourmaline
+      value: Tourmaline Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 89a7dfaf9f00cd74fb218ac1160dc683, type: 3}
+      propertyPath: m_TagString
+      value: TurquoiseGem
       objectReference: {fileID: 0}
     - target: {fileID: 3140163916096261792, guid: 89a7dfaf9f00cd74fb218ac1160dc683, type: 3}
       propertyPath: m_LocalPosition.x
