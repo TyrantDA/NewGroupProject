@@ -118,42 +118,49 @@ public class ItemListUI : MonoBehaviour
         {
             gemList["YellowGem"] = true;
             healthBar.transform.Find("YellowGem").gameObject.SetActive(true);
+            Destroy(collision.gameObject);
         }
 
         if(collision.gameObject.CompareTag("GreenGem"))
         {
             gemList["GreenGem"] = true;
             healthBar.transform.Find("GreenGem").gameObject.SetActive(true);
+            Destroy(collision.gameObject);
         }
 
         if(collision.gameObject.CompareTag("TurquoiseGem"))
         {
             gemList["TurquoiseGem"] = true;
             healthBar.transform.Find("TurquoiseGem").gameObject.SetActive(true);
+            Destroy(collision.gameObject);
         }
 
         if(collision.gameObject.CompareTag("BlueGem"))
         {
             gemList["BlueGem"] = true;
             healthBar.transform.Find("BlueGem").gameObject.SetActive(true);
+            Destroy(collision.gameObject);
         }
 
         if(collision.gameObject.CompareTag("RedGem"))
         {
             gemList["RedGem"] = true;
             healthBar.transform.Find("RedGem").gameObject.SetActive(true);
+            Destroy(collision.gameObject);
         }
 
         if(collision.gameObject.CompareTag("WhiteGem"))
         {
             gemList["WHiteGem"] = true;
             healthBar.transform.Find("WhiteGem").gameObject.SetActive(true);
+            Destroy(collision.gameObject);
         }
 
         if(collision.gameObject.CompareTag("PurpleGem"))
         {
             gemList["PurpleGem"] = true;
             healthBar.transform.Find("PurpleGem").gameObject.SetActive(true);
+            Destroy(collision.gameObject);
         }
     }
 }
