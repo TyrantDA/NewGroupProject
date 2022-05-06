@@ -1053,6 +1053,14 @@ MonoBehaviour:
   Poison: {fileID: 11400000, guid: 71f842d5fab8a1b46bcd249175a522a9, type: 2}
   HealingPotion: {fileID: 11400000, guid: 6849e0b8fc8899349ace3a9835c50627, type: 2}
   Spanner: {fileID: 11400000, guid: 1950fd94c9f3dbd48b771044e529e09b, type: 2}
+  DamagePotion: {fileID: 11400000, guid: 611369c6fd3bd30498d858736d7b59f5, type: 2}
+  StarPotion: {fileID: 11400000, guid: 6de586316e4216247a5b941bc911c61b, type: 2}
+  ThroneCoin: {fileID: 11400000, guid: 720a7e7df3e0f4e4593e50152b515a72, type: 2}
+  SpiderCoin: {fileID: 11400000, guid: 4cffff7a3ed0cbc4586c8423f749ab73, type: 2}
+  SkullCoin: {fileID: 11400000, guid: e6c94a6845664c3468982117f72e28d0, type: 2}
+  MushroomCoin: {fileID: 11400000, guid: e9498473e98c2d04ea0903b8e8788303, type: 2}
+  DragonCoin: {fileID: 11400000, guid: b70faceaf06ed724e8e21fe7fea4cfeb, type: 2}
+  healthBar: {fileID: 0}
 --- !u!1 &3176257527860163209
 GameObject:
   m_ObjectHideFlags: 0

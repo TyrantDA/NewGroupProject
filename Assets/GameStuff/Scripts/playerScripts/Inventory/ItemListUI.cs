@@ -13,6 +13,15 @@ public class ItemListUI : MonoBehaviour
     public ItemInfo Poison;
     public ItemInfo HealingPotion;
     public ItemInfo Spanner;
+    public ItemInfo DamagePotion;
+    public ItemInfo StarPotion;
+
+    public ItemInfo ThroneCoin;
+    public ItemInfo SpiderCoin;
+    public ItemInfo SkullCoin;
+    public ItemInfo MushroomCoin;
+    public ItemInfo DragonCoin;
+
     public GameObject healthBar;
 
     Dictionary<ItemInfo, int> items = new Dictionary<ItemInfo, int>();
@@ -76,7 +85,7 @@ public class ItemListUI : MonoBehaviour
         int hold = HasItem(HealingPotion);
         if(hold > 0)
         {
-            if(Input.GetKeyDown(KeyCode.H))
+            if(Input.GetKeyDown(KeyCode.E))
             {
                 bool answer = gameObject.GetComponent<HealthOfPlayer>().HealPlayer();
                 if(answer)
@@ -114,7 +123,20 @@ public class ItemListUI : MonoBehaviour
             AddItem(Spanner, 1);
         }
 
-        if(collision.gameObject.CompareTag("YellowGem"))
+        if (collision.gameObject.CompareTag("DamagePotion"))
+        {
+            Destroy(collision.gameObject);
+            AddItem(DamagePotion, 1);
+        }
+
+        if (collision.gameObject.CompareTag("StarPotion"))
+        {
+            Destroy(collision.gameObject);
+            AddItem(StarPotion, 1);
+        }
+
+
+        if (collision.gameObject.CompareTag("YellowGem"))
         {
             gemList["YellowGem"] = true;
             healthBar.transform.Find("YellowGem").gameObject.SetActive(true);

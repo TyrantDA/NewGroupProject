@@ -29,6 +29,13 @@ TagManager:
   - RedGem
   - WhiteGem
   - PurpleGem
+  - DamagePotion
+  - StarPotion
+  - ThroneCoin
+  - SpiderCoin
+  - SkullCoin
+  - MushroomCoin
+  - DragonCoin
   layers:
   - Default
   - TransparentFX
