@@ -12,6 +12,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b927e24cb7c8d2944a2af7b787c584bf, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b927e24cb7c8d2944a2af7b787c584bf, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b927e24cb7c8d2944a2af7b787c584bf, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b927e24cb7c8d2944a2af7b787c584bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -110.129585
       objectReference: {fileID: 0}
@@ -61,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b105765fe4ab5d243bf34a438ee620af, type: 2}
     - target: {fileID: 919132149155446097, guid: b927e24cb7c8d2944a2af7b787c584bf, type: 3}
       propertyPath: m_Name
-      value: Eye_Sword
+      value: Eye_Sword Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b927e24cb7c8d2944a2af7b787c584bf, type: 3}

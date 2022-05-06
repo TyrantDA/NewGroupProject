@@ -12,6 +12,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8d67e4ab1f0e154aa64ee5da2dea73c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f8d67e4ab1f0e154aa64ee5da2dea73c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f8d67e4ab1f0e154aa64ee5da2dea73c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f8d67e4ab1f0e154aa64ee5da2dea73c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -102.783
       objectReference: {fileID: 0}
@@ -61,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 01ff31e9924d4e94ba5e8a498489c5ac, type: 2}
     - target: {fileID: 919132149155446097, guid: f8d67e4ab1f0e154aa64ee5da2dea73c, type: 3}
       propertyPath: m_Name
-      value: Goblin_Spear_Bone
+      value: Goblin_Spear_Bone Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8d67e4ab1f0e154aa64ee5da2dea73c, type: 3}
