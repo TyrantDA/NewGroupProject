@@ -12,6 +12,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f59e1000c3f9cbf41b0e71501af1913d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f59e1000c3f9cbf41b0e71501af1913d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f59e1000c3f9cbf41b0e71501af1913d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f59e1000c3f9cbf41b0e71501af1913d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -110.18957
       objectReference: {fileID: 0}
@@ -57,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 656870ab0cd38e749a090722db171244, type: 2}
     - target: {fileID: 919132149155446097, guid: f59e1000c3f9cbf41b0e71501af1913d, type: 3}
       propertyPath: m_Name
-      value: Grass_sword
+      value: Grass_sword Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f59e1000c3f9cbf41b0e71501af1913d, type: 3}

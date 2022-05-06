@@ -12,6 +12,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8da16242c78284e41bf185091af7147d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8da16242c78284e41bf185091af7147d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8da16242c78284e41bf185091af7147d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8da16242c78284e41bf185091af7147d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -110.13989
       objectReference: {fileID: 0}
@@ -61,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 5caf90d367357d046937dc69b1bafa72, type: 2}
     - target: {fileID: 919132149155446097, guid: 8da16242c78284e41bf185091af7147d, type: 3}
       propertyPath: m_Name
-      value: Tentacle_Sword
+      value: Tentacle_Sword Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8da16242c78284e41bf185091af7147d, type: 3}
