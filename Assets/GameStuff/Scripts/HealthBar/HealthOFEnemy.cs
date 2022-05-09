@@ -49,6 +49,15 @@ public class HealthOFEnemy : MonoBehaviour
             Dead();
         }
     }
+    public void lavaDamage()
+    {
+        anim.SetBool("hit", true);
+        currentHealth -= 300;
+        if (currentHealth <= 0)
+        {
+            Dead();
+        }
+    }
 
     public void SpellDamage()
     {

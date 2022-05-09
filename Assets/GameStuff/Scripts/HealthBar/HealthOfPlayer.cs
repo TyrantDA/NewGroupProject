@@ -29,6 +29,13 @@ public class HealthOfPlayer : MonoBehaviour
 
         currentHealth -= damageFromEnemy;
     }
+    public void lavaDamage()
+    {
+        anim.SetBool("hurt", true);
+
+        currentHealth -= 320;
+    }
+
 
     public void ArrowDamage()
     {
