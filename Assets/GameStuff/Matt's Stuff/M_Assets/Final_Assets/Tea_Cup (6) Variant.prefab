@@ -53,11 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 20c0cc8f0d612084489c1767a6be830d, type: 3}
       propertyPath: m_Name
-      value: Tea_Cup (6)
+      value: Tea_Cup (6) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 20c0cc8f0d612084489c1767a6be830d, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20c0cc8f0d612084489c1767a6be830d, type: 3}

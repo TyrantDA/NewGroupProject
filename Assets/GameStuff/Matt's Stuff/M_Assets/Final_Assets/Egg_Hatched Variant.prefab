@@ -59,9 +59,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 1127b9436d4c0eb4e9ae3734019b53ea, type: 2}
+    - target: {fileID: -6500164718012774068, guid: a2c83bb9b7262ec468d3ba899f4f59be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a2c83bb9b7262ec468d3ba899f4f59be, type: 3}
       propertyPath: m_Name
-      value: Egg_Hatched
+      value: Egg_Hatched Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a2c83bb9b7262ec468d3ba899f4f59be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305207569476479301, guid: a2c83bb9b7262ec468d3ba899f4f59be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2c83bb9b7262ec468d3ba899f4f59be, type: 3}

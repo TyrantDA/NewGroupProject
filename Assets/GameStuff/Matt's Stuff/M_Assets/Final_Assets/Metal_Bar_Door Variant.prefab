@@ -53,7 +53,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e92354d3b6bd49d45a01a6419d1bc321, type: 3}
       propertyPath: m_Name
-      value: Metal_Bar_Door
+      value: Metal_Bar_Door Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e92354d3b6bd49d45a01a6419d1bc321, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121498698527338858, guid: e92354d3b6bd49d45a01a6419d1bc321, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3967384496951854894, guid: e92354d3b6bd49d45a01a6419d1bc321, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e92354d3b6bd49d45a01a6419d1bc321, type: 3}

@@ -57,7 +57,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 58cc427e57804c448b49779245e42c12, type: 2}
     - target: {fileID: 919132149155446097, guid: 5dcce5fb1c1bdaf4ea178e8d7a722b5e, type: 3}
       propertyPath: m_Name
-      value: Fat_Bottle
+      value: Fat_Bottle Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5dcce5fb1c1bdaf4ea178e8d7a722b5e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dcce5fb1c1bdaf4ea178e8d7a722b5e, type: 3}

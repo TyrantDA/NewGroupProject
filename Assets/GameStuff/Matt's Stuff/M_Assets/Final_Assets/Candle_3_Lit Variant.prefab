@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8812025784596225119, guid: 93ef9e6b72e42504d9ee4c3c2c8e0843, type: 3}
       propertyPath: m_Name
-      value: Candle_3_Lit
+      value: Candle_3_Lit Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93ef9e6b72e42504d9ee4c3c2c8e0843, type: 3}
@@ -69,9 +69,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3057788525722502781}
     m_Modifications:
+    - target: {fileID: 2927686731159973025, guid: bb0b1d17df229f841b7afd28ea836edb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2927686731265508132, guid: bb0b1d17df229f841b7afd28ea836edb, type: 3}
       propertyPath: m_Name
       value: Fire_VFX (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927686731265508132, guid: bb0b1d17df229f841b7afd28ea836edb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2927686731265508133, guid: bb0b1d17df229f841b7afd28ea836edb, type: 3}
       propertyPath: m_RootOrder
@@ -140,6 +148,10 @@ PrefabInstance:
     - target: {fileID: 2927686732039550805, guid: bb0b1d17df229f841b7afd28ea836edb, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927686732039550807, guid: bb0b1d17df229f841b7afd28ea836edb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb0b1d17df229f841b7afd28ea836edb, type: 3}

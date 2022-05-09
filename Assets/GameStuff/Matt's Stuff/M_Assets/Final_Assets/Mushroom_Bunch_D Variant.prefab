@@ -57,7 +57,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a5f2b78c1beb0f74dae5fd998dac6b6f, type: 2}
     - target: {fileID: 919132149155446097, guid: d4a1fe8310b8c6046b822a8f60c4a4d8, type: 3}
       propertyPath: m_Name
-      value: Mushroom_Bunch_D
+      value: Mushroom_Bunch_D Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d4a1fe8310b8c6046b822a8f60c4a4d8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4a1fe8310b8c6046b822a8f60c4a4d8, type: 3}

@@ -57,7 +57,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 71fdfc159aac49549951a6d21e69d75c, type: 2}
     - target: {fileID: 919132149155446097, guid: 68f3885c168238d428e5aa9d66bd7299, type: 3}
       propertyPath: m_Name
-      value: Egg_Purple_Hatch_Top
+      value: Egg_Purple_Hatch_Top Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 68f3885c168238d428e5aa9d66bd7299, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736785295923105524, guid: 68f3885c168238d428e5aa9d66bd7299, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68f3885c168238d428e5aa9d66bd7299, type: 3}

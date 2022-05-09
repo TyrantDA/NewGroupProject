@@ -7,9 +7,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 542132170169749404, guid: b4a8e55f0ecb1b24494f9893103603dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556640462413150084, guid: b4a8e55f0ecb1b24494f9893103603dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354414304950367757, guid: b4a8e55f0ecb1b24494f9893103603dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983970671499528708, guid: b4a8e55f0ecb1b24494f9893103603dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4878873601468464504, guid: b4a8e55f0ecb1b24494f9893103603dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8204454622851711359, guid: b4a8e55f0ecb1b24494f9893103603dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8266617302023340484, guid: b4a8e55f0ecb1b24494f9893103603dd, type: 3}
       propertyPath: m_Name
-      value: Wall_Chain_With_Chain1
+      value: Wall_Chain_With_Chain1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8266617302023340484, guid: b4a8e55f0ecb1b24494f9893103603dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299540769089439863, guid: b4a8e55f0ecb1b24494f9893103603dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613795253270099442, guid: b4a8e55f0ecb1b24494f9893103603dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8787433336802073470, guid: b4a8e55f0ecb1b24494f9893103603dd, type: 3}
       propertyPath: m_RootOrder

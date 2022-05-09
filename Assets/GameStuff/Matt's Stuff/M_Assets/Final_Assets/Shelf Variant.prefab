@@ -61,7 +61,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 124ee9406a39138498d8f23b4b705a21, type: 2}
     - target: {fileID: 919132149155446097, guid: a08e4967b63bb4b4b872d11a682511e6, type: 3}
       propertyPath: m_Name
-      value: Shelf
+      value: Shelf Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a08e4967b63bb4b4b872d11a682511e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a08e4967b63bb4b4b872d11a682511e6, type: 3}

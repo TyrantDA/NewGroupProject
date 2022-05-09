@@ -89,6 +89,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Egg_Orange_Hatch_Bottom Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 939505bca319a5e488da96f8b7e91b11, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3150871578335892497, guid: 939505bca319a5e488da96f8b7e91b11, type: 3}
       propertyPath: m_LocalScale.x
       value: 4
@@ -100,6 +104,10 @@ PrefabInstance:
     - target: {fileID: 3150871578335892497, guid: 939505bca319a5e488da96f8b7e91b11, type: 3}
       propertyPath: m_LocalScale.z
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7650688996950224570, guid: 939505bca319a5e488da96f8b7e91b11, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 939505bca319a5e488da96f8b7e91b11, type: 3}

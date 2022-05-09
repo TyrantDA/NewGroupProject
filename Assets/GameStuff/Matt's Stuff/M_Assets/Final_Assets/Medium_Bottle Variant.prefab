@@ -57,7 +57,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 58cc427e57804c448b49779245e42c12, type: 2}
     - target: {fileID: 919132149155446097, guid: 88a128aee516c2c4b944bf50bd872a0c, type: 3}
       propertyPath: m_Name
-      value: Medium_Bottle
+      value: Medium_Bottle Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 88a128aee516c2c4b944bf50bd872a0c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88a128aee516c2c4b944bf50bd872a0c, type: 3}

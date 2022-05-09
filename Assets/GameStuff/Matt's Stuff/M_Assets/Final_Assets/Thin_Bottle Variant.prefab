@@ -51,6 +51,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8191943825543084482, guid: 10517456a6ce76b44bf7aecbeb2c66ad, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -8149687877750873153, guid: 10517456a6ce76b44bf7aecbeb2c66ad, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -59,13 +63,29 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 366aeb8b9f4be63459208eb881ddf225, type: 2}
+    - target: {fileID: -3607278182843583999, guid: 10517456a6ce76b44bf7aecbeb2c66ad, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -3274719845979063916, guid: 10517456a6ce76b44bf7aecbeb2c66ad, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 700e4f3cf767ead4d87f55c234708d7a, type: 2}
+    - target: {fileID: -925884558023903292, guid: 10517456a6ce76b44bf7aecbeb2c66ad, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: -758577150132083005, guid: 10517456a6ce76b44bf7aecbeb2c66ad, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 10517456a6ce76b44bf7aecbeb2c66ad, type: 3}
       propertyPath: m_Name
-      value: Thin_Bottle
+      value: Thin_Bottle Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10517456a6ce76b44bf7aecbeb2c66ad, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 988708673735648713, guid: 10517456a6ce76b44bf7aecbeb2c66ad, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -75,5 +95,9 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: aef7c7e30101c8344a1cf336fb85d291, type: 2}
+    - target: {fileID: 6875485265862269444, guid: 10517456a6ce76b44bf7aecbeb2c66ad, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10517456a6ce76b44bf7aecbeb2c66ad, type: 3}

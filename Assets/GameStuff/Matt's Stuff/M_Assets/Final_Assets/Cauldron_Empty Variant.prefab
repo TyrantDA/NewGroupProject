@@ -57,7 +57,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 440b04898b477824591f289df6c1db86, type: 2}
     - target: {fileID: 919132149155446097, guid: 1cc59c8414967cb4c949c38fb1918e6a, type: 3}
       propertyPath: m_Name
-      value: Cauldron_Empty
+      value: Cauldron_Empty Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1cc59c8414967cb4c949c38fb1918e6a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cc59c8414967cb4c949c38fb1918e6a, type: 3}

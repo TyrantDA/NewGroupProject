@@ -51,13 +51,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7428368982842107029, guid: 442ad8bcda44d1844abb886a49e6934b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -4215014354726269015, guid: 442ad8bcda44d1844abb886a49e6934b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dd2d509e44424684588e7f2b738c0791, type: 2}
+    - target: {fileID: -1855149526687423863, guid: 442ad8bcda44d1844abb886a49e6934b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 893811032086116345, guid: 442ad8bcda44d1844abb886a49e6934b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 442ad8bcda44d1844abb886a49e6934b, type: 3}
       propertyPath: m_Name
-      value: Rib_Cage
+      value: Rib_Cage Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 442ad8bcda44d1844abb886a49e6934b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950367278806118125, guid: 442ad8bcda44d1844abb886a49e6934b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503526307140469533, guid: 442ad8bcda44d1844abb886a49e6934b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 442ad8bcda44d1844abb886a49e6934b, type: 3}
