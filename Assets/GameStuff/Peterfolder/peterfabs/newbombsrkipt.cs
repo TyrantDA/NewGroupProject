@@ -5,6 +5,9 @@ using UnityEngine;
 public class newbombsrkipt : MonoBehaviour
 {
     public GameObject VFX;
+    public GameObject sposion;
+
+    public bool Hit;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +17,7 @@ public class newbombsrkipt : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         GameObject hold = Instantiate(VFX, this.transform.position, transform.rotation);
+        GameObject hold2 = Instantiate(sposion, this.transform.position, transform.rotation);
 
         Destroy(gameObject);
 

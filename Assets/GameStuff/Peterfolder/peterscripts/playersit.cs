@@ -7,7 +7,7 @@ public class playersit : MonoBehaviour
     public Animator anim;
     public Collider cap;
     public Collider shp;
-
+    public GameObject hold;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +31,30 @@ public class playersit : MonoBehaviour
             }
             else
             {
+                anim.SetBool("sit", false);
+                cap.enabled = !cap.enabled;
+                shp.enabled = !shp.enabled;
+                GetComponent<InputHandler>().enabled = !GetComponent<InputHandler>().enabled;
+                GetComponent<TopDownCharacterMover>().enabled = !GetComponent<TopDownCharacterMover>().enabled;
+
+            }
+
+        }
+        if (Input.GetKeyDown("m"))
+        {
+            if (anim.GetBool("sit") == false)
+            {
+                hold.gameObject.SetActive(true);
+                anim.SetBool("sit", true);
+                cap.enabled = !cap.enabled;
+                shp.enabled = !shp.enabled;
+                GetComponent<InputHandler>().enabled = !GetComponent<InputHandler>().enabled;
+                GetComponent<TopDownCharacterMover>().enabled = !GetComponent<TopDownCharacterMover>().enabled;
+
+            }
+            else
+            {
+                hold.gameObject.SetActive(false);
                 anim.SetBool("sit", false);
                 cap.enabled = !cap.enabled;
                 shp.enabled = !shp.enabled;

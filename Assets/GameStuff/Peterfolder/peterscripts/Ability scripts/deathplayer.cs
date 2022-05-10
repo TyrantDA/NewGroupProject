@@ -20,10 +20,7 @@ public class deathplayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (heath <= 0)
-        {
-            Destroy(this.gameObject);
-        }
+
         if (acive != true)
         {
 
@@ -31,6 +28,7 @@ public class deathplayer : MonoBehaviour
             {
                 GetComponent<InputHandler>().enabled = !GetComponent<InputHandler>().enabled;
                 GetComponent<TopDownCharacterMover>().enabled = !GetComponent<TopDownCharacterMover>().enabled;
+                GetComponent<Animator>().enabled = !GetComponent<Animator>().enabled;
 
                 RB.velocity = Vector3.zero;
                 RB.angularVelocity = Vector3.zero;
@@ -48,6 +46,7 @@ public class deathplayer : MonoBehaviour
             {
                 GetComponent<InputHandler>().enabled = !GetComponent<InputHandler>().enabled;
                 GetComponent<TopDownCharacterMover>().enabled = !GetComponent<TopDownCharacterMover>().enabled;
+                GetComponent<Animator>().enabled = !GetComponent<Animator>().enabled;
 
                 RB.velocity = Vector3.zero;
                 RB.angularVelocity = Vector3.zero;
@@ -60,13 +59,9 @@ public class deathplayer : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         //Check to see if the tag on the collider is equal to Enemy
-        if (collision.gameObject.CompareTag("kill"))
-        {
-            heath = heath - 20;
-        }
         if (collision.gameObject.CompareTag("stun"))
         {
             acive = false;

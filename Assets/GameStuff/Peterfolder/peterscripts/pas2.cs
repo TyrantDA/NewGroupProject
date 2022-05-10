@@ -27,6 +27,7 @@ public class pas2 : MonoBehaviour
                 GetComponent<Patrol>().enabled = !GetComponent<Patrol>().enabled;
                 GetComponent<HealerAI>().enabled = !GetComponent<HealerAI>().enabled;
                 GetComponent<NavMeshAgent>().enabled = !GetComponent<NavMeshAgent>().enabled;
+                transform.GetChild(0).gameObject.GetComponent<Animator>().enabled = !transform.GetChild(0).gameObject.GetComponent<Animator>().enabled;
 
                 RB.velocity = Vector3.zero;
                 RB.angularVelocity = Vector3.zero;
@@ -44,6 +45,8 @@ public class pas2 : MonoBehaviour
                 GetComponent<Patrol>().enabled = !GetComponent<Patrol>().enabled;
                 GetComponent<HealerAI>().enabled = !GetComponent<HealerAI>().enabled;
                 GetComponent<NavMeshAgent>().enabled = !GetComponent<NavMeshAgent>().enabled;
+                transform.GetChild(0).gameObject.GetComponent<Animator>().enabled = !transform.GetChild(0).gameObject.GetComponent<Animator>().enabled;
+
                 stopped = false;
 
             }

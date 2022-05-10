@@ -13,17 +13,8 @@ public class ge2 : MonoBehaviour
         lengthOfTime = 2.0f;
 
         startMarker = Vector3.one;
+        StartCoroutine("Bigger");
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        goingoff = this.GetComponentInParent<granadescript>().blowup;
-        if (goingoff == true)
-        {
-            StartCoroutine("Bigger");
-        }
     }
     public IEnumerator Bigger()
     {
@@ -32,7 +23,7 @@ public class ge2 : MonoBehaviour
         while ((Time.time - start) < lengthOfTime)
         {
             float fracJourney = (Time.time - start) / lengthOfTime;
-            transform.localScale = Vector3.Lerp(startMarker, startMarker * 20, fracJourney * 10);
+            transform.localScale = Vector3.Lerp(startMarker, startMarker * 10, fracJourney * 10);
             yield return null;
             StartCoroutine("Delaythis");
 
