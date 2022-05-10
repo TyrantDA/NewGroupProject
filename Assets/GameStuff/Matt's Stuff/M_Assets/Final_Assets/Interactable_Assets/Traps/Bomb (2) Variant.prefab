@@ -42,6 +42,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VFX: {fileID: 3464548974471814694, guid: d26c15b93c4cb694ebebc22b83c5dacb, type: 3}
+  sposion: {fileID: 5073131660556880204, guid: ba9571873b00ef641aba87435764ecc3, type: 3}
+  Hit: 0
 --- !u!114 &-7777226826176275310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +119,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 90f1e18aa1dd4a747a86dc5f923f110b, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 90f1e18aa1dd4a747a86dc5f923f110b, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90f1e18aa1dd4a747a86dc5f923f110b, type: 3}

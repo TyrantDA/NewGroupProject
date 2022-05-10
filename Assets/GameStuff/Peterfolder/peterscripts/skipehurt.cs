@@ -19,7 +19,6 @@ public class skipehurt : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("dddd");
             collision.gameObject.GetComponent<HealthOfPlayer>().ArrowDamage();
         }
         else if (collision.gameObject.CompareTag("Enemy"))
