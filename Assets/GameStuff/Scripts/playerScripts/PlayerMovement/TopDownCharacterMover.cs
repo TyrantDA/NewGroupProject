@@ -44,7 +44,7 @@ public class TopDownCharacterMover : MonoBehaviour
         {
             if (!notActive)
             {
-                if (Input.GetKeyDown("r"))
+                if (Input.GetKeyDown(KeyCode.LeftShift))
                 {
                     StartCoroutine("running");
                     MovementSpeed = 20;

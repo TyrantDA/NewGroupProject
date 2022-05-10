@@ -453,6 +453,7 @@ MonoBehaviour:
   RB: {fileID: 4707141303113474706}
   totalHealth: 100
   damageFromEnemy: 10
+  damageFromEnemyBoosted: 20
   damageFromArrow: 1
   damageFromPoison: 5
   damageFromPlayer: 8

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemListUI : MonoBehaviour
 {
@@ -25,12 +26,12 @@ public class ItemListUI : MonoBehaviour
     public GameObject healthBar;
     public Attack playerAttack;
 
+    public Text text;
+
     Dictionary<ItemInfo, int> items = new Dictionary<ItemInfo, int>();
     Dictionary<ItemInfo, UIItem> uiItems = new Dictionary<ItemInfo,UIItem>();
 
     Dictionary<string,bool> gemList = new Dictionary<string,bool>();
-
-    Dictionary<ItemInfo,UIItem> uiCoin = new Dictionary<ItemInfo, UIItem>();
 
     private void Start()
     {
@@ -76,33 +77,6 @@ public class ItemListUI : MonoBehaviour
         }
     }
 
-    void addCoin(ItemInfo newItem, int amount = 1)
-    {
-        if (!items.ContainsKey(newItem))
-        {
-            if (amount < 1)
-                return;
-            items.Add(newItem, amount);
-            uiCoin.Add(newItem, Instantiate(uiItemPrefab, listContent.transform).GetComponent<UIItem>());
-            uiCoin[newItem].SetItem(newItem, items[newItem]);
-        }
-        else
-        {
-            items[newItem] += amount;
-
-            if (items[newItem] <= 0)
-            {
-                items.Remove(newItem);
-                Destroy(uiCoin[newItem].gameObject);
-                uiCoin.Remove(newItem);
-            }
-            else
-            {
-                uiCoin[newItem].SetItem(newItem, items[newItem]);
-            }
-        }
-    }
-
     public int HasItem(ItemInfo myItem)
     {
         if (items.ContainsKey(myItem))
@@ -123,7 +97,7 @@ public class ItemListUI : MonoBehaviour
         int hold = HasItem(HealingPotion);
         if(hold > 0)
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if(Input.GetKeyDown(KeyCode.F))
             {
                 bool answer = gameObject.GetComponent<HealthOfPlayer>().HealPlayer();
                 if(answer)
@@ -149,42 +123,84 @@ public class ItemListUI : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("ArrowAmmo"))
+        if (uiItems.Count < 7)
         {
-            Destroy(collision.gameObject);
-            AddItem(Ammo,5);
-        }
+            if (collision.gameObject.CompareTag("ArrowAmmo"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(Ammo, 5);
+            }
 
-        if (collision.gameObject.CompareTag("PoisonAmmo"))
+            if (collision.gameObject.CompareTag("PoisonAmmo"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(Poison, 5);
+            }
+
+            if (collision.gameObject.CompareTag("Potion"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(HealingPotion, 1);
+            }
+
+            if (collision.gameObject.CompareTag("Spanner"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(Spanner, 1);
+            }
+
+            if (collision.gameObject.CompareTag("DamagePotion"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(DamagePotion, 1);
+            }
+
+            if (collision.gameObject.CompareTag("StarPotion"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(StarPotion, 1);
+            }
+
+
+            if (collision.gameObject.CompareTag("ThroneCoin"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(ThroneCoin, 1);
+            }
+
+            if (collision.gameObject.CompareTag("SpiderCoin"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(SpiderCoin, 1);
+            }
+
+            if (collision.gameObject.CompareTag("SkullCoin"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(SkullCoin, 1);
+            }
+
+            if (collision.gameObject.CompareTag("MushroomCoin"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(MushroomCoin, 1);
+            }
+
+            if (collision.gameObject.CompareTag("DragonCoin"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(DragonCoin, 1);
+            }
+        }
+        else
         {
-            Destroy(collision.gameObject);
-            AddItem(Poison, 5);
+            if (collision.gameObject.CompareTag("ArrowAmmo") || collision.gameObject.CompareTag("PoisonAmmo") || collision.gameObject.CompareTag("Potion") || collision.gameObject.CompareTag("Spanner") ||
+                collision.gameObject.CompareTag("DamagePotion") || collision.gameObject.CompareTag("StarPotion") || collision.gameObject.CompareTag("ThroneCoin") || collision.gameObject.CompareTag("SpiderCoin") ||
+                collision.gameObject.CompareTag("SkullCoin") || collision.gameObject.CompareTag("MushroomCoin") || collision.gameObject.CompareTag("DragonCoin"))
+            {
+                text.text = "Inventory Full";
+            }
         }
-
-        if(collision.gameObject.CompareTag("Potion"))
-        {
-            Destroy(collision.gameObject);
-            AddItem(HealingPotion, 1);
-        }
-
-        if(collision.gameObject.CompareTag("Spanner"))
-        {
-            Destroy(collision.gameObject);
-            AddItem(Spanner, 1);
-        }
-
-        if (collision.gameObject.CompareTag("DamagePotion"))
-        {
-            Destroy(collision.gameObject);
-            AddItem(DamagePotion, 1);
-        }
-
-        if (collision.gameObject.CompareTag("StarPotion"))
-        {
-            Destroy(collision.gameObject);
-            AddItem(StarPotion, 1);
-        }
-
 
         if (collision.gameObject.CompareTag("YellowGem"))
         {
@@ -233,6 +249,19 @@ public class ItemListUI : MonoBehaviour
             gemList["PurpleGem"] = true;
             healthBar.transform.Find("PurpleGem").gameObject.SetActive(true);
             Destroy(collision.gameObject);
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (uiItems.Count < 7)
+        {
+            if (collision.gameObject.CompareTag("ArrowAmmo") || collision.gameObject.CompareTag("PoisonAmmo") || collision.gameObject.CompareTag("Potion") || collision.gameObject.CompareTag("Spanner") ||
+                collision.gameObject.CompareTag("DamagePotion") || collision.gameObject.CompareTag("StarPotion") || collision.gameObject.CompareTag("ThroneCoin") || collision.gameObject.CompareTag("SpiderCoin") ||
+                collision.gameObject.CompareTag("SkullCoin") || collision.gameObject.CompareTag("MushroomCoin") || collision.gameObject.CompareTag("DragonCoin"))
+            {
+                text.text = null;
+            }
         }
     }
 }

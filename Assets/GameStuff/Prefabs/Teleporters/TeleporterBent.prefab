@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8743896340593088130}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.2680001, y: 0.24299991, z: -0.009000063}
+  m_LocalPosition: {x: 2.09, y: -0.99, z: -0.009000063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8743896340940382964}
@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 492753499}
   - component: {fileID: 492753500}
   - component: {fileID: 492753501}
-  - component: {fileID: 3760626995422828884}
   - component: {fileID: 261225342}
   m_Layer: 0
   m_Name: TeleporterBent
@@ -81,7 +80,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleporterExit: {fileID: 0}
-  incol: 0
+  textOutput: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!65 &492753499
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -121,19 +121,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.84403867, y: 1.394664, z: 1.6586211}
   m_Center: {x: 0, y: -0.004365802, z: -0.008679032}
---- !u!65 &3760626995422828884
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8743896340940382963}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.4699936, y: 1.9908798, z: 1.9568462}
-  m_Center: {x: 0.7349968, y: -0.05846989, z: -0.060804367}
 --- !u!65 &261225342
 BoxCollider:
   m_ObjectHideFlags: 0
