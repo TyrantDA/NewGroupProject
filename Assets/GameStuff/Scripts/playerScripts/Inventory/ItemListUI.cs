@@ -23,10 +23,14 @@ public class ItemListUI : MonoBehaviour
     public ItemInfo DragonCoin;
 
     public GameObject healthBar;
+    public Attack playerAttack;
 
     Dictionary<ItemInfo, int> items = new Dictionary<ItemInfo, int>();
     Dictionary<ItemInfo, UIItem> uiItems = new Dictionary<ItemInfo,UIItem>();
+
     Dictionary<string,bool> gemList = new Dictionary<string,bool>();
+
+    Dictionary<ItemInfo,UIItem> uiCoin = new Dictionary<ItemInfo, UIItem>();
 
     private void Start()
     {
@@ -72,12 +76,46 @@ public class ItemListUI : MonoBehaviour
         }
     }
 
+    void addCoin(ItemInfo newItem, int amount = 1)
+    {
+        if (!items.ContainsKey(newItem))
+        {
+            if (amount < 1)
+                return;
+            items.Add(newItem, amount);
+            uiCoin.Add(newItem, Instantiate(uiItemPrefab, listContent.transform).GetComponent<UIItem>());
+            uiCoin[newItem].SetItem(newItem, items[newItem]);
+        }
+        else
+        {
+            items[newItem] += amount;
+
+            if (items[newItem] <= 0)
+            {
+                items.Remove(newItem);
+                Destroy(uiCoin[newItem].gameObject);
+                uiCoin.Remove(newItem);
+            }
+            else
+            {
+                uiCoin[newItem].SetItem(newItem, items[newItem]);
+            }
+        }
+    }
+
     public int HasItem(ItemInfo myItem)
     {
         if (items.ContainsKey(myItem))
             return items[myItem];
         else
             return 0;
+    }
+
+    IEnumerator boost()
+    {
+        playerAttack.damageBoostSet(true);
+        yield return new WaitForSeconds(10);
+        playerAttack.damageBoostSet(false);
     }
 
     private void Update()
@@ -93,6 +131,18 @@ public class ItemListUI : MonoBehaviour
                     AddItem(HealingPotion, -1);
                 }
 
+            }
+        }
+        if (!playerAttack.damageBoosteGet())
+        {
+            hold = HasItem(DamagePotion);
+            if (hold > 0)
+            {
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    StartCoroutine("boost");
+                    AddItem(DamagePotion, -1);
+                }
             }
         }
     }

@@ -15,10 +15,21 @@ public class Attack : MonoBehaviour
 
     public float forwardForce;
     public float upforce;
+    [SerializeField] bool damagePotionOn = false;
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+    public void damageBoostSet(bool hold)
+    {
+        damagePotionOn = hold;
+    }
+
+    public bool damageBoosteGet()
+    {
+        return damagePotionOn;
     }
 
     void PlayerAttack()
@@ -29,7 +40,14 @@ public class Attack : MonoBehaviour
         if (inRange)
         {
             Debug.Log(target.name + " " + "attacking");
-            target.transform.gameObject.GetComponent<HealthOFEnemy>().PlayerDamage();
+            if (!damagePotionOn)
+            {
+                target.transform.gameObject.GetComponent<HealthOFEnemy>().PlayerDamage();
+            }
+            else
+            {
+                target.transform.gameObject.GetComponent<HealthOFEnemy>().DamagePlayerBoosted();
+            }
             target.transform.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * forwardForce);
             target.transform.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * upforce);
 

@@ -18,28 +18,42 @@ public class TopDownCharacterMover : MonoBehaviour
 
     [SerializeField]
     private Camera Camera;
+    ItemListUI playerInventory;
+    public ItemInfo StarPotion;
+    bool notActive = false;
 
     private void Awake()
     {
         _input = GetComponent<InputHandler>();
+        playerInventory = GetComponent<ItemListUI>();
     }
 
+
+    IEnumerator running()
+    {
+        notActive = true;
+        yield return new WaitForSeconds(10);
+        notActive = false;
+        MovementSpeed = 10;
+        anim.SetBool("run", false);
+    }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("r"))
+        if (playerInventory.HasItem(StarPotion) > 0)
         {
-            MovementSpeed = 20;
-            anim.SetBool("run", true);
+            if (!notActive)
+            {
+                if (Input.GetKeyDown("r"))
+                {
+                    StartCoroutine("running");
+                    MovementSpeed = 20;
+                    anim.SetBool("run", true);
+                    playerInventory.AddItem(StarPotion, -1);
 
+                }
+            }
         }
-        if (Input.GetKeyUp("r"))
-        {
-            MovementSpeed = 10;
-            anim.SetBool("run", false);
-
-        }
-
 
 
             var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);

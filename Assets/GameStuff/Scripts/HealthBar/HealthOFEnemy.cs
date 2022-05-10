@@ -13,6 +13,7 @@ public class HealthOFEnemy : MonoBehaviour
     [SerializeField] float totalHealth;
     
     [SerializeField] float damageFromEnemy;
+    [SerializeField] float damageFromEnemyBoosted;
     [SerializeField] float damageFromArrow;
     [SerializeField] float damageFromPoison;
     [SerializeField] float damageFromPlayer;
@@ -33,6 +34,17 @@ public class HealthOFEnemy : MonoBehaviour
         anim.SetBool("hit", true);
 
         currentHealth -= damageFromEnemy;
+        if (currentHealth <= 0)
+        {
+            Dead();
+        }
+    }
+
+    public void DamagePlayerBoosted()
+    {
+        anim.SetBool("hit", true);
+
+        currentHealth -= damageFromEnemyBoosted;
         if (currentHealth <= 0)
         {
             Dead();

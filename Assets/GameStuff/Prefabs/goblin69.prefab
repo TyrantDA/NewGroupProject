@@ -953,6 +953,7 @@ MonoBehaviour:
   MovementSpeed: 10
   RotationSpeed: 4
   Camera: {fileID: 0}
+  StarPotion: {fileID: 11400000, guid: 6de586316e4216247a5b941bc911c61b, type: 2}
 --- !u!114 &3317876525819218141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1061,6 +1062,7 @@ MonoBehaviour:
   MushroomCoin: {fileID: 11400000, guid: e9498473e98c2d04ea0903b8e8788303, type: 2}
   DragonCoin: {fileID: 11400000, guid: b70faceaf06ed724e8e21fe7fea4cfeb, type: 2}
   healthBar: {fileID: 0}
+  playerAttack: {fileID: 7793990507092540498}
 --- !u!1 &3176257527860163209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,6 +1896,7 @@ MonoBehaviour:
   anim: {fileID: 9178866790159748446}
   forwardForce: 0
   upforce: 0
+  damagePotionOn: 0
 --- !u!1 &7914044036676771207
 GameObject:
   m_ObjectHideFlags: 0
