@@ -128,13 +128,13 @@ public class ItemListUI : MonoBehaviour
             if (collision.gameObject.CompareTag("ArrowAmmo"))
             {
                 Destroy(collision.gameObject);
-                AddItem(Ammo, 5);
+                AddItem(Ammo, 15);
             }
 
             if (collision.gameObject.CompareTag("PoisonAmmo"))
             {
                 Destroy(collision.gameObject);
-                AddItem(Poison, 5);
+                AddItem(Poison, 10);
             }
 
             if (collision.gameObject.CompareTag("Potion"))
@@ -254,7 +254,7 @@ public class ItemListUI : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if (uiItems.Count < 7)
+        if (uiItems.Count >= 7)
         {
             if (collision.gameObject.CompareTag("ArrowAmmo") || collision.gameObject.CompareTag("PoisonAmmo") || collision.gameObject.CompareTag("Potion") || collision.gameObject.CompareTag("Spanner") ||
                 collision.gameObject.CompareTag("DamagePotion") || collision.gameObject.CompareTag("StarPotion") || collision.gameObject.CompareTag("ThroneCoin") || collision.gameObject.CompareTag("SpiderCoin") ||
