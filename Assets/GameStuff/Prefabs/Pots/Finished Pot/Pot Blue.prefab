@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5076168690101672219}
   - component: {fileID: 5076168690101672220}
-  - component: {fileID: 7026577646509545450}
   m_Layer: 0
   m_Name: Pot Blue
   m_TagString: Pot
@@ -46,19 +45,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   breakObject: {fileID: 4190338863512871191, guid: 6d1f5052a7048774392deb1c4a838181, type: 3}
---- !u!135 &7026577646509545450
-SphereCollider:
+--- !u!64 &7026800936535790652
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5076168690101672221}
+  m_GameObject: {fileID: 6701412666638932814}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.82
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1778311814602545369, guid: 4d5316998379a1d43b105b839a346286, type: 3}
 --- !u!1001 &5076168690312201246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -116,6 +116,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82a64756193ba534195c524889c0e444, type: 3}
+--- !u!1 &6701412666638932814 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1977678198511886160, guid: 82a64756193ba534195c524889c0e444, type: 3}
+  m_PrefabInstance: {fileID: 5076168690312201246}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6218314382168900084 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1169193707562698218, guid: 82a64756193ba534195c524889c0e444, type: 3}

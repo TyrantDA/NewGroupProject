@@ -5,23 +5,29 @@ using UnityEngine;
 public class Doorscript2 : MonoBehaviour
 {
     public bool close;
-    private Animation anim;
-    public bool go;
+    public bool close1;
+    public bool close2;
 
+    public bool going;
+
+    private Animation anim;
+    public newdoorscript hold2;
+    public newdoorscript hold1;
     // Start is called before the first frame update
     void Start()
     {
         close = true;
-        go = false;
+        going = false;
         anim = this.GetComponent<Animation>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (go == true)
+        if (hold1.go == true)
         {
-            go = false;
+            going = true;
+
             if (anim.isPlaying)
             {
                 return;
@@ -40,6 +46,34 @@ public class Doorscript2 : MonoBehaviour
                 anim.Play("Close2");
                 close = true;
             }
+        }
+        else if (hold2.go == true)
+        {
+            going = true;
+
+            if (anim.isPlaying)
+            {
+                return;
+            }
+            if (close == true)
+            {
+                anim.Play("openback2");
+                close = false;
+            }
+            if (anim.isPlaying)
+            {
+                return;
+            }
+            if (close != true)
+            {
+                anim.Play("closeback2");
+                close = true;
+            }
+        }
+        else
+        {
+            going = false;
+
         }
     }
 }

@@ -84,7 +84,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 621255f89df997544ae77fc8fd7b2e06, type: 2}
     - target: {fileID: 919132149155446097, guid: 94c347db52872874bb2c86c298799cd9, type: 3}
       propertyPath: m_Name
-      value: Red Pot (6)
+      value: Red Pot
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 94c347db52872874bb2c86c298799cd9, type: 3}
       propertyPath: m_TagString
