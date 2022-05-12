@@ -22,12 +22,15 @@ public class HealthOFEnemy : MonoBehaviour
 
     [SerializeField] float currentHealth;
     public AudioSource releasePoison;
+
+    EnemyInventroy ei;
     // Start is called before the first frame update
 
     void Start()
     {
         hold.alive = hold.alive + 1;
         currentHealth = totalHealth;
+        ei = GetComponent<EnemyInventroy>();
     }
     public void DamagePlayer()
     {
@@ -148,6 +151,7 @@ public class HealthOFEnemy : MonoBehaviour
     {
         hold.alive = hold.alive - 1;
         int achieve = PlayerPrefs.GetInt("That not how its suppose to go", 0);
+        ei.OnDeath();
         if(achieve == 0)
         {
             PlayerPrefs.SetInt("That not how its suppose to go", 1);

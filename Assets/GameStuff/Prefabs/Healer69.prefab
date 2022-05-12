@@ -287,6 +287,7 @@ GameObject:
   - component: {fileID: 3305936732174510904}
   - component: {fileID: 3305936732174510905}
   - component: {fileID: 3305936732174510906}
+  - component: {fileID: 883546382218791682}
   m_Layer: 0
   m_Name: Healer69
   m_TagString: Enemy
@@ -537,6 +538,23 @@ MonoBehaviour:
   acive: 1
   stopped: 0
   RB: {fileID: 4707141303113474706}
+--- !u!114 &883546382218791682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4707141303113474711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22ab8d0856a82ef40bf43053c3388229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThroneCoin: {fileID: 9201844919649918011, guid: 87a13ff517ceb6844910049f67d180f6, type: 3}
+  SpiderCoin: {fileID: 5014130458018830180, guid: 43aa17a04e59e914782d5813cd822a9d, type: 3}
+  SkullCoin: {fileID: 1194311198018802276, guid: 0cbe498568828ae4fb4c577fb0505cfe, type: 3}
+  MushroomCoin: {fileID: 1833170221090864902, guid: 627716b474b26fe489179001161c3524, type: 3}
+  DragonCoin: {fileID: 7327816573310207242, guid: e034bcb0b95b7494ebfceafdd8faae94, type: 3}
 --- !u!1 &4707141303464970992
 GameObject:
   m_ObjectHideFlags: 0

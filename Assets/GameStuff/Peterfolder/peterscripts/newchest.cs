@@ -12,6 +12,7 @@ public class newchest : MonoBehaviour
     public chestnumberopen chestnum;
     public GameObject chesttext1;
     public GameObject chesttext2;
+    public ItemInfo Coin;
 
     void Start()
     {
@@ -84,6 +85,7 @@ public class newchest : MonoBehaviour
                 go = true;
 
             }
+            other.GetComponent<EnemyInventroy>().AddItem(Coin);
 
         }
     }
