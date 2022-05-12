@@ -32,6 +32,7 @@ public class ItemListUI : MonoBehaviour
     Dictionary<ItemInfo, UIItem> uiItems = new Dictionary<ItemInfo,UIItem>();
 
     Dictionary<string,bool> gemList = new Dictionary<string,bool>();
+    
 
     private void Start()
     {

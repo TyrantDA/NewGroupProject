@@ -77,6 +77,7 @@ public class newchest : MonoBehaviour
         if (other.transform.CompareTag("Player"))
         {
             playhit = true;
+              
         }
         if (other.transform.CompareTag("Enemy"))
         {
@@ -87,6 +88,17 @@ public class newchest : MonoBehaviour
             }
             other.GetComponent<EnemyInventroy>().AddItem(Coin);
 
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.transform.CompareTag("Player"))
+        {
+            if (other.GetComponent<ItemListUI>().HasItem(Coin) > 0)
+            {
+                if (!close)
+                    other.GetComponent<ItemListUI>().AddItem(Coin, -1);
+            }
         }
     }
     private void OnTriggerExit(Collider other)
