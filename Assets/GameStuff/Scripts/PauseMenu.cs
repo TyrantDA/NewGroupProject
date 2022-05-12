@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject PauseMenuBackerIU;
+    public GameObject OptionMenuBackerIU;
 
     public static bool isPaused = false;
+    public static bool isOption = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,9 +31,32 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    public void Options()
+    {
+        PauseMenuBackerIU.SetActive(false);
+        OptionMenuBackerIU.SetActive(true);
+        isOption = true;
+    }
+
+    public void QUitToMainMenu()
+    {
+        SceneManager.LoadScene("throneroomanddoors");
+    }
     public void QuitGameToDesktop()
     {
         Application.Quit();
+    }
+
+    public void Back()
+    {
+        PauseMenuBackerIU.SetActive(true);
+        OptionMenuBackerIU.SetActive(false);
+        isOption = false;
+    }
+
+    public void Reset()
+    {
+        PlayerPrefs.DeleteAll();
     }
 
     // Update is called once per frame
@@ -40,7 +66,16 @@ public class PauseMenu : MonoBehaviour
         {
             if(isPaused)
             {
-                ResumeGame();
+                if (isOption)
+                {
+                    PauseMenuBackerIU.SetActive(true);
+                    OptionMenuBackerIU.SetActive(false);
+                    isOption = false;
+                }
+                else
+                {
+                    ResumeGame();
+                }
             }
             else
             {
