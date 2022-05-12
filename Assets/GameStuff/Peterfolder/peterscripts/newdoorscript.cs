@@ -25,11 +25,15 @@ public class newdoorscript : MonoBehaviour
         {
             if (close == false)
             {
+                chesttext2.gameObject.SetActive(false);
+
                 chesttext1.gameObject.SetActive(true);
 
             }
             if (close == true)
             {
+                chesttext1.gameObject.SetActive(false);
+
                 chesttext2.gameObject.SetActive(true);
 
             }
@@ -64,7 +68,7 @@ public class newdoorscript : MonoBehaviour
 
         }
     }
-    private void OnTriggerexit(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.transform.CompareTag("Player"))
         {

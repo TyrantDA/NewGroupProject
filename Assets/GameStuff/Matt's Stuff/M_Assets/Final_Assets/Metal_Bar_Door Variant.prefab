@@ -51,6 +51,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7402478211164062696, guid: e92354d3b6bd49d45a01a6419d1bc321, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.568
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e92354d3b6bd49d45a01a6419d1bc321, type: 3}
       propertyPath: m_Name
       value: Metal_Bar_Door Variant
