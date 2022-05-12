@@ -147,7 +147,11 @@ public class HealthOFEnemy : MonoBehaviour
     void Dead()
     {
         hold.alive = hold.alive - 1;
-
+        int achieve = PlayerPrefs.GetInt("That not how its suppose to go", 0);
+        if(achieve == 0)
+        {
+            PlayerPrefs.SetInt("That not how its suppose to go", 1);
+        }
         StartCoroutine("deadth");
     }
     IEnumerator deadth()

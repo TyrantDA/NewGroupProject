@@ -50,6 +50,11 @@ public class TopDownCharacterMover : MonoBehaviour
                     MovementSpeed = 20;
                     anim.SetBool("run", true);
                     playerInventory.AddItem(StarPotion, -1);
+                    int achieve = PlayerPrefs.GetInt("that company property", 0);
+                    if (achieve == 0)
+                    {
+                        PlayerPrefs.SetInt("that company property", 1);
+                    }
 
                 }
             }

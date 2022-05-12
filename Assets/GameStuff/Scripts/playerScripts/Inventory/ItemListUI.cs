@@ -103,6 +103,12 @@ public class ItemListUI : MonoBehaviour
                 if(answer)
                 {
                     AddItem(HealingPotion, -1);
+                    int achieve = PlayerPrefs.GetInt("that company property", 0);
+                    if(achieve == 0)
+                    {
+                        PlayerPrefs.SetInt("that company property", 1);
+                    }
+
                 }
 
             }
@@ -116,12 +122,57 @@ public class ItemListUI : MonoBehaviour
                 {
                     StartCoroutine("boost");
                     AddItem(DamagePotion, -1);
+                    int achieve = PlayerPrefs.GetInt("that company property", 0);
+                    if (achieve == 0)
+                    {
+                        PlayerPrefs.SetInt("that company property", 1);
+                    }
                 }
             }
         }
+
+        int have = 0;
+        if(gemList["YellowGem"] == true)
+        {
+            have++;
+        }
+        if(gemList["GreenGem"] == true)
+        {
+            have++;
+        }
+        if(gemList["TurquoiseGem"] == true)
+        {
+            have++;
+        }
+        if (gemList["BlueGem"] == true)
+        {
+            have++;
+        }
+        if(gemList["RedGem"] == true)
+        {
+            have++;
+        }
+        if (gemList["WhiteGem"] == true)
+        {
+            have++;
+        }
+        if (gemList["PurpleGem"] == true)
+        {
+            have++;
+        }
+
+        if(have == gemList.Count)
+        {
+            int achieve = PlayerPrefs.GetInt("My Precious", 0);
+            if(achieve == 0)
+            {
+                PlayerPrefs.SetInt("My Precious", 1);
+            }
+        }
+
     }
 
-    private void OnCollisionEnter(Collision collision)
+        private void OnCollisionEnter(Collision collision)
     {
         if (uiItems.Count < 7)
         {
@@ -202,6 +253,8 @@ public class ItemListUI : MonoBehaviour
             }
         }
 
+
+
         if (collision.gameObject.CompareTag("YellowGem"))
         {
             gemList["YellowGem"] = true;
@@ -239,7 +292,7 @@ public class ItemListUI : MonoBehaviour
 
         if(collision.gameObject.CompareTag("WhiteGem"))
         {
-            gemList["WHiteGem"] = true;
+            gemList["WhiteGem"] = true;
             healthBar.transform.Find("WhiteGem").gameObject.SetActive(true);
             Destroy(collision.gameObject);
         }

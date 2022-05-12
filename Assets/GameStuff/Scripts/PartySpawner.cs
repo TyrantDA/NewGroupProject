@@ -12,6 +12,8 @@ public class PartySpawner : MonoBehaviour
     public int checkTime;
 
     List<int> patrolHold = new List<int>();
+
+    int spawntime = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -98,13 +100,24 @@ public class PartySpawner : MonoBehaviour
                     spawnParty(i,1,h);
                     yield return new WaitForSeconds(2);
                     spawnParty(i,2,h);
+
+                    if(spawntime > 0)
+                    {
+                        int achieve = PlayerPrefs.GetInt("triple Kill", 0);
+                        if(achieve == 0)
+                        {
+                            PlayerPrefs.SetInt("triple Kill", 1);
+                        }
+                    }
                 }
                 yield return new WaitForSeconds(30);
                 h = nextPatrol();
             }
 
            yield return new WaitForSeconds(checkTime);
+           spawntime++;
         }
+        
     }
         // Update is called once per frame
     void Update()

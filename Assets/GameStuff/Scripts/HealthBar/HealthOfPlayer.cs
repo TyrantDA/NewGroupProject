@@ -16,6 +16,8 @@ public class HealthOfPlayer : MonoBehaviour
     [SerializeField] float heal;
     public HealthBar bar;
     public AudioSource releasePosion;
+
+    bool trapdamage = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,14 +28,16 @@ public class HealthOfPlayer : MonoBehaviour
     public void DamagePlayer()
     {
         anim.SetBool("hurt", true);
-
+        trapdamage = false;
         currentHealth -= damageFromEnemy;
+        
     }
     public void lavaDamage()
     {
         anim.SetBool("hurt", true);
-
+        trapdamage = false;
         currentHealth -= 320;
+        
     }
 
 
@@ -42,14 +46,16 @@ public class HealthOfPlayer : MonoBehaviour
         anim.SetBool("hurt", true);
 
         currentHealth -= damageFromArrow;
+        trapdamage = true;
         Debug.Log("hit");
     }
 
     public void SpellDamage()
     {
         anim.SetBool("hurt", true);
-
+        trapdamage = false;
         currentHealth -= damageFromSpell;
+        
     }
 
     public bool HealPlayer()
@@ -57,6 +63,7 @@ public class HealthOfPlayer : MonoBehaviour
          if (currentHealth < totalHealth)
         {
             currentHealth += heal;
+            trapdamage = false;
             return true;
         }
         return false;
@@ -65,14 +72,14 @@ public class HealthOfPlayer : MonoBehaviour
     public void StartPoisonDamage()
     {
         anim.SetBool("hurt", true);
-
+        trapdamage = true;
         StartCoroutine("poisonDamage");
     }
 
     public void EndPoisonDamage()
     {
         anim.SetBool("hurt", true);
-
+        trapdamage = false;
         StopCoroutine("poisonDamage");
     }
 
@@ -96,6 +103,20 @@ public class HealthOfPlayer : MonoBehaviour
         PlayerPrefs.SetInt("GobNumber", gobnumber);
         SceneManager.LoadScene("YouGotFired");
         Debug.Log("Player is dead");
+        if(trapdamage == true)
+        {
+            int achieve = PlayerPrefs.GetInt("work place accident", 0);
+            if(achieve == 0)
+            {
+                PlayerPrefs.SetInt("work place accident", 1);
+            }
+        }
+
+        int achieve2 = PlayerPrefs.GetInt("Next please", 0);
+        if(achieve2 == 0)
+        {
+            PlayerPrefs.SetInt("Next please", 1);
+        }
     }
 
 
