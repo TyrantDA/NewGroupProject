@@ -36,6 +36,11 @@ public class Doorscript2 : MonoBehaviour
             {
                 anim.Play("open2");
                 close = false;
+                hold2.close = false;
+                hold1.close = false;
+                close1 = true;
+                close2 = false;
+
             }
             if (anim.isPlaying)
             {
@@ -43,14 +48,28 @@ public class Doorscript2 : MonoBehaviour
             }
             if (close != true)
             {
-                anim.Play("Close2");
-                close = true;
+                if (close1 == true)
+                {
+                    anim.Play("Close2");
+                    close = true;
+                    hold2.close = true;
+                    hold1.close = true;
+                    close1 = false;
+                }
+                else if (close2 == true)
+                {
+                    anim.Play("closeback2");
+                    close = true;
+                    hold2.close = true;
+                    hold1.close = true;
+                    close2 = false;
+                }
+
             }
         }
         else if (hold2.go == true)
         {
             going = true;
-
             if (anim.isPlaying)
             {
                 return;
@@ -59,6 +78,10 @@ public class Doorscript2 : MonoBehaviour
             {
                 anim.Play("openback2");
                 close = false;
+                hold2.close = false;
+                hold1.close = false;
+                close1 = false;
+                close2 = true;
             }
             if (anim.isPlaying)
             {
@@ -66,8 +89,23 @@ public class Doorscript2 : MonoBehaviour
             }
             if (close != true)
             {
-                anim.Play("closeback2");
-                close = true;
+                if (close1 == true)
+                {
+                    anim.Play("Close2");
+                    close = true;
+                    hold2.close = true;
+                    hold1.close = true;
+                    close1 = false;
+                }
+                else if (close2 == true)
+                {
+                    anim.Play("closeback2");
+                    close = true;
+                    hold2.close = true;
+                    hold1.close = true;
+                    close2 = false;
+                }
+
             }
         }
         else

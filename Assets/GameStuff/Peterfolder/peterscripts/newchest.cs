@@ -87,7 +87,7 @@ public class newchest : MonoBehaviour
 
         }
     }
-    private void OnTriggerexit(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.transform.CompareTag("Player"))
         {
