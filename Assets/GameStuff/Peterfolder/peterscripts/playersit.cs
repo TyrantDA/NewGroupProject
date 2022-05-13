@@ -8,13 +8,18 @@ public class playersit : MonoBehaviour
     public Collider cap;
     public Collider shp;
     public GameObject hold;
+
+    bool sitting = false;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    
+    public bool getSitting()
+    {
+        return sitting;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -27,6 +32,7 @@ public class playersit : MonoBehaviour
                 shp.enabled = !shp.enabled;
                 GetComponent<InputHandler>().enabled = !GetComponent<InputHandler>().enabled;
                 GetComponent<TopDownCharacterMover>().enabled = !GetComponent<TopDownCharacterMover>().enabled;
+                sitting = true;
 
             }
             else
@@ -36,7 +42,7 @@ public class playersit : MonoBehaviour
                 shp.enabled = !shp.enabled;
                 GetComponent<InputHandler>().enabled = !GetComponent<InputHandler>().enabled;
                 GetComponent<TopDownCharacterMover>().enabled = !GetComponent<TopDownCharacterMover>().enabled;
-
+                sitting = false;
             }
 
         }
@@ -50,7 +56,7 @@ public class playersit : MonoBehaviour
                 shp.enabled = !shp.enabled;
                 GetComponent<InputHandler>().enabled = !GetComponent<InputHandler>().enabled;
                 GetComponent<TopDownCharacterMover>().enabled = !GetComponent<TopDownCharacterMover>().enabled;
-
+                sitting = true;
             }
             else
             {
@@ -60,7 +66,7 @@ public class playersit : MonoBehaviour
                 shp.enabled = !shp.enabled;
                 GetComponent<InputHandler>().enabled = !GetComponent<InputHandler>().enabled;
                 GetComponent<TopDownCharacterMover>().enabled = !GetComponent<TopDownCharacterMover>().enabled;
-
+                sitting = false;
             }
 
         }

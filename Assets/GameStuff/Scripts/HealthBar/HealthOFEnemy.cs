@@ -24,6 +24,7 @@ public class HealthOFEnemy : MonoBehaviour
     public AudioSource releasePoison;
 
     EnemyInventroy ei;
+    public bool hadChicken = false;
     // Start is called before the first frame update
 
     void Start()
@@ -57,7 +58,7 @@ public class HealthOFEnemy : MonoBehaviour
     public void ArrowDamage()
     {
         anim.SetBool("hit", true);
-        Debug.Log("f");
+        //Debug.Log("f");
         currentHealth -= damageFromArrow;
         if (currentHealth <= 0)
         {
@@ -147,15 +148,37 @@ public class HealthOFEnemy : MonoBehaviour
         }
     }
 
+    IEnumerator AtleastHeHadChicken()
+    {
+        hadChicken = true;
+        yield return new WaitForSeconds(10);
+        hadChicken = false;
+    }
+
+    public void startChicken()
+    {
+        StartCoroutine("AtleastHeHadChicken");
+    }
     void Dead()
     {
         hold.alive = hold.alive - 1;
-        int achieve = PlayerPrefs.GetInt("That not how its suppose to go", 0);
         ei.OnDeath();
+
+        int achieve = PlayerPrefs.GetInt("That not how its suppose to go", 0);
         if(achieve == 0)
         {
             PlayerPrefs.SetInt("That not how its suppose to go", 1);
         }
+
+        if(hadChicken)
+        {
+            int achieve2 = PlayerPrefs.GetInt("At least he had chicken", 0);
+            if(achieve2 == 0)
+            {
+                PlayerPrefs.SetInt("At least he had chicken", 1);
+            }
+        }
+
         StartCoroutine("deadth");
     }
     IEnumerator deadth()
