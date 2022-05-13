@@ -93,6 +93,82 @@ public class ItemListUI : MonoBehaviour
         playerAttack.damageBoostSet(false);
     }
 
+    void checkGems()
+    {
+        int have = 0;
+        if (gemList["YellowGem"] == true)
+        {
+            have++;
+        }
+        if (gemList["GreenGem"] == true)
+        {
+            have++;
+        }
+        if (gemList["TurquoiseGem"] == true)
+        {
+            have++;
+        }
+        if (gemList["BlueGem"] == true)
+        {
+            have++;
+        }
+        if (gemList["RedGem"] == true)
+        {
+            have++;
+        }
+        if (gemList["WhiteGem"] == true)
+        {
+            have++;
+        }
+        if (gemList["PurpleGem"] == true)
+        {
+            have++;
+        }
+
+        if (have == gemList.Count)
+        {
+            int achieve = PlayerPrefs.GetInt("My Precious", 0);
+            if (achieve == 0)
+            {
+                PlayerPrefs.SetInt("My Precious", 1);
+            }
+        }
+    }
+
+    void CoinCheck()
+    {
+        int check = 0;
+        if(HasItem(ThroneCoin) > 0)
+        {
+            check++;
+        }
+        if(HasItem(SpiderCoin) > 0)
+        {
+            check++;
+        }
+        if(HasItem(SkullCoin) > 0)
+        {
+            check++;
+        }
+        if(HasItem(MushroomCoin) > 0)
+        {
+            check++;
+        }
+        if(HasItem(DragonCoin) > 0)
+        {
+            check++;
+        }
+
+        if (check == 5)
+        {
+            int achieve = PlayerPrefs.GetInt("Mcduck money coin", 0);
+            if (achieve == 0)
+            {
+                PlayerPrefs.SetInt("Mcduck money coin", 1);
+            }
+        }
+    }
+
     private void Update()
     {
         int hold = HasItem(HealingPotion);
@@ -132,45 +208,8 @@ public class ItemListUI : MonoBehaviour
             }
         }
 
-        int have = 0;
-        if(gemList["YellowGem"] == true)
-        {
-            have++;
-        }
-        if(gemList["GreenGem"] == true)
-        {
-            have++;
-        }
-        if(gemList["TurquoiseGem"] == true)
-        {
-            have++;
-        }
-        if (gemList["BlueGem"] == true)
-        {
-            have++;
-        }
-        if(gemList["RedGem"] == true)
-        {
-            have++;
-        }
-        if (gemList["WhiteGem"] == true)
-        {
-            have++;
-        }
-        if (gemList["PurpleGem"] == true)
-        {
-            have++;
-        }
-
-        if(have == gemList.Count)
-        {
-            int achieve = PlayerPrefs.GetInt("My Precious", 0);
-            if(achieve == 0)
-            {
-                PlayerPrefs.SetInt("My Precious", 1);
-            }
-        }
-
+        checkGems();
+        CoinCheck();
     }
 
         private void OnCollisionEnter(Collision collision)
