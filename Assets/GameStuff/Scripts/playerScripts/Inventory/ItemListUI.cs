@@ -372,7 +372,8 @@ public class ItemListUI : MonoBehaviour
                 collision.gameObject.CompareTag("DamagePotion") || collision.gameObject.CompareTag("StarPotion") || collision.gameObject.CompareTag("ThroneCoin") || collision.gameObject.CompareTag("SpiderCoin") ||
                 collision.gameObject.CompareTag("SkullCoin") || collision.gameObject.CompareTag("MushroomCoin") || collision.gameObject.CompareTag("DragonCoin") || collision.gameObject.CompareTag("GoblinSpear") || 
                 collision.gameObject.CompareTag("StoneSpear") || collision.gameObject.CompareTag("GrassSpear") || collision.gameObject.CompareTag("BoneSpear") || collision.gameObject.CompareTag("TentacleSword") ||
-                collision.gameObject.CompareTag("GrassSword") || collision.gameObject.CompareTag("FairySword") || collision.gameObject.CompareTag("EyeSword") || collision.gameObject.CompareTag("HoopStaff"))
+                collision.gameObject.CompareTag("GrassSword") || collision.gameObject.CompareTag("FairySword") || collision.gameObject.CompareTag("EyeSword") || collision.gameObject.CompareTag("HoopStaff") || 
+                collision.gameObject.CompareTag("Skull"))
             {
                 text.text = "Inventory Full";
             }
@@ -438,7 +439,8 @@ public class ItemListUI : MonoBehaviour
                collision.gameObject.CompareTag("DamagePotion") || collision.gameObject.CompareTag("StarPotion") || collision.gameObject.CompareTag("ThroneCoin") || collision.gameObject.CompareTag("SpiderCoin") ||
                collision.gameObject.CompareTag("SkullCoin") || collision.gameObject.CompareTag("MushroomCoin") || collision.gameObject.CompareTag("DragonCoin") || collision.gameObject.CompareTag("GoblinSpear") ||
                collision.gameObject.CompareTag("StoneSpear") || collision.gameObject.CompareTag("GrassSpear") || collision.gameObject.CompareTag("BoneSpear") || collision.gameObject.CompareTag("TentacleSword") ||
-               collision.gameObject.CompareTag("GrassSword") || collision.gameObject.CompareTag("FairySword") || collision.gameObject.CompareTag("EyeSword") || collision.gameObject.CompareTag("HoopStaff"))
+               collision.gameObject.CompareTag("GrassSword") || collision.gameObject.CompareTag("FairySword") || collision.gameObject.CompareTag("EyeSword") || collision.gameObject.CompareTag("HoopStaff") ||
+               collision.gameObject.CompareTag("Skull"))
             {
                 text.text = null;
             }

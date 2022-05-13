@@ -12,6 +12,7 @@ public class Patrol : MonoBehaviour
     public GameObject Patroller; //  game object that will be the enemy AI
     public float speed; // not used
     public Animator anim;
+    public float distance;
 
     int currentMovingTo;
     int holdWait;
@@ -19,6 +20,7 @@ public class Patrol : MonoBehaviour
     NavMeshAgent agent;
     bool patrolling;
     bool delayWait;
+    private NavMeshPath path;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,7 @@ public class Patrol : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         patrolling = false;
         delayWait = false;
+        path = new NavMeshPath();
     }
 
     public void SetPatrolList(List<GameObject> hold, List<int> hold2)
@@ -97,7 +100,7 @@ public class Patrol : MonoBehaviour
     }
 
     // find the next patrol point to move two
-    GameObject nextTarget()
+    void nextTarget()
     {
 
         holdWait = currentMovingTo;
@@ -109,7 +112,10 @@ public class Patrol : MonoBehaviour
             currentMovingTo = 0;
         }
 
-        return patrolList[currentMovingTo];
+        target = patrolList[currentMovingTo];
+        NavMesh.CalculatePath(transform.position, target.transform.position, NavMesh.AllAreas, path);
+        agent.SetPath(path);
+        anim.SetBool("walk", true);
     }
 
     IEnumerator delay()
@@ -129,17 +135,13 @@ public class Patrol : MonoBehaviour
     {
         if (!delayWait)
         {
-            agent.destination = target.transform.position;
-            anim.SetBool("walk", true);
-
-            //float step = speed * Time.deltaTime;
-            //transform.position = Vector3.MoveTowards(transform.position, target.transform.position, step);
-
-            //Debug.Log("patrol pos: " + transform.position.x + " : " + transform.position.z + " | point pos : "+ target.transform.position.x + " : " + target.transform.position.z);
-
-            if (transform.position.x == target.transform.position.x && transform.position.z == target.transform.position.z)
+            distance = agent.remainingDistance;
+            //Debug.Log("point " + currentMovingTo + " | target " + target.name + " | Distance " + distance);
+            if (distance < 0.5f)
             {
-                target = nextTarget();
+                Debug.Log("next target");
+                nextTarget();
+
             }
         }
     }
