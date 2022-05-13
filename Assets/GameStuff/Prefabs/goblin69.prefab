@@ -1072,6 +1072,7 @@ MonoBehaviour:
   EyeSword: {fileID: 11400000, guid: 75ea04b8f40339a49b9e6deb5d9cef66, type: 2}
   HoopStaff: {fileID: 11400000, guid: 4c0de5c5578330540bc75435f94c1001, type: 2}
   Skull: {fileID: 11400000, guid: 2b7f4714fea906b40a913d800d645bb3, type: 2}
+  lobster: {fileID: 11400000, guid: 0280524070d4c574283f983047ea74fa, type: 2}
   healthBar: {fileID: 0}
   playerAttack: {fileID: 7793990507092540498}
   text: {fileID: 0}
