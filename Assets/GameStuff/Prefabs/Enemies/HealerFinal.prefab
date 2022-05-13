@@ -143,7 +143,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1876123659005964704}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50ab9f3cece76884bbc00da582ca9608, type: 3}
   m_Name: 
@@ -235,6 +235,8 @@ MonoBehaviour:
   SkullCoin: {fileID: 1194311198018802276, guid: 0cbe498568828ae4fb4c577fb0505cfe, type: 3}
   MushroomCoin: {fileID: 1833170221090864902, guid: 627716b474b26fe489179001161c3524, type: 3}
   DragonCoin: {fileID: 7327816573310207242, guid: e034bcb0b95b7494ebfceafdd8faae94, type: 3}
+  FairySword: {fileID: 0}
+  HoopSatff: {fileID: 0}
 --- !u!1 &1876123659163521451
 GameObject:
   m_ObjectHideFlags: 0
