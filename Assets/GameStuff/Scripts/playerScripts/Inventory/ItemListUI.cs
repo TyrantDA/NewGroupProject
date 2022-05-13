@@ -23,6 +23,18 @@ public class ItemListUI : MonoBehaviour
     public ItemInfo MushroomCoin;
     public ItemInfo DragonCoin;
 
+    public ItemInfo GoblinSpear;
+    public ItemInfo StoneSpear;
+    public ItemInfo GrassSpear;
+    public ItemInfo BoneSpear;
+
+    public ItemInfo TentacleSword;
+    public ItemInfo GrassSword;
+    public ItemInfo FairySword;
+    public ItemInfo EyeSword;
+
+    public ItemInfo HoopStaff;
+
     public GameObject healthBar;
     public Attack playerAttack;
 
@@ -84,6 +96,11 @@ public class ItemListUI : MonoBehaviour
             return items[myItem];
         else
             return 0;
+    }
+
+    public bool checkGems(string name)
+    {
+        return gemList[name];
     }
 
     IEnumerator boost()
@@ -282,12 +299,71 @@ public class ItemListUI : MonoBehaviour
                 Destroy(collision.gameObject);
                 AddItem(DragonCoin, 1);
             }
+
+
+            if(collision.gameObject.CompareTag("GoblinSpear"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(GoblinSpear, 1);
+            }
+
+            if(collision.gameObject.CompareTag("StoneSpear"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(StoneSpear, 1);
+            }
+
+            if(collision.gameObject.CompareTag("GrassSpear"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(GrassSpear,1);
+            }
+
+            if(collision.gameObject.CompareTag("BoneSpear"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(BoneSpear, 1);
+            }
+
+
+            if(collision.gameObject.CompareTag("TentacleSword"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(TentacleSword, 1);
+            }
+
+            if(collision.gameObject.CompareTag("GrassSword"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(GrassSword, 1);
+            }
+
+            if(collision.gameObject.CompareTag("FairySword"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(FairySword, 1);
+            }
+
+            if(collision.gameObject.CompareTag("EyeSword"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(EyeSword, 1);
+            }
+
+
+            if(collision.gameObject.CompareTag("HoopStaff"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(HoopStaff, 1);
+            }
         }
         else
         {
             if (collision.gameObject.CompareTag("ArrowAmmo") || collision.gameObject.CompareTag("PoisonAmmo") || collision.gameObject.CompareTag("Potion") || collision.gameObject.CompareTag("Spanner") ||
                 collision.gameObject.CompareTag("DamagePotion") || collision.gameObject.CompareTag("StarPotion") || collision.gameObject.CompareTag("ThroneCoin") || collision.gameObject.CompareTag("SpiderCoin") ||
-                collision.gameObject.CompareTag("SkullCoin") || collision.gameObject.CompareTag("MushroomCoin") || collision.gameObject.CompareTag("DragonCoin"))
+                collision.gameObject.CompareTag("SkullCoin") || collision.gameObject.CompareTag("MushroomCoin") || collision.gameObject.CompareTag("DragonCoin") || collision.gameObject.CompareTag("GoblinSpear") || 
+                collision.gameObject.CompareTag("StoneSpear") || collision.gameObject.CompareTag("GrassSpear") || collision.gameObject.CompareTag("BoneSpear") || collision.gameObject.CompareTag("TentacleSword") ||
+                collision.gameObject.CompareTag("GrassSword") || collision.gameObject.CompareTag("FairySword") || collision.gameObject.CompareTag("EyeSword") || collision.gameObject.CompareTag("HoopStaff"))
             {
                 text.text = "Inventory Full";
             }
@@ -350,8 +426,10 @@ public class ItemListUI : MonoBehaviour
         if (uiItems.Count >= 7)
         {
             if (collision.gameObject.CompareTag("ArrowAmmo") || collision.gameObject.CompareTag("PoisonAmmo") || collision.gameObject.CompareTag("Potion") || collision.gameObject.CompareTag("Spanner") ||
-                collision.gameObject.CompareTag("DamagePotion") || collision.gameObject.CompareTag("StarPotion") || collision.gameObject.CompareTag("ThroneCoin") || collision.gameObject.CompareTag("SpiderCoin") ||
-                collision.gameObject.CompareTag("SkullCoin") || collision.gameObject.CompareTag("MushroomCoin") || collision.gameObject.CompareTag("DragonCoin"))
+               collision.gameObject.CompareTag("DamagePotion") || collision.gameObject.CompareTag("StarPotion") || collision.gameObject.CompareTag("ThroneCoin") || collision.gameObject.CompareTag("SpiderCoin") ||
+               collision.gameObject.CompareTag("SkullCoin") || collision.gameObject.CompareTag("MushroomCoin") || collision.gameObject.CompareTag("DragonCoin") || collision.gameObject.CompareTag("GoblinSpear") ||
+               collision.gameObject.CompareTag("StoneSpear") || collision.gameObject.CompareTag("GrassSpear") || collision.gameObject.CompareTag("BoneSpear") || collision.gameObject.CompareTag("TentacleSword") ||
+               collision.gameObject.CompareTag("GrassSword") || collision.gameObject.CompareTag("FairySword") || collision.gameObject.CompareTag("EyeSword") || collision.gameObject.CompareTag("HoopStaff"))
             {
                 text.text = null;
             }

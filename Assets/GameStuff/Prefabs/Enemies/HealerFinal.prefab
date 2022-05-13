@@ -72,10 +72,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.68278646
-  m_Height: 3.19678
+  m_Radius: 0.5
+  m_Height: 3.2577195
   m_Direction: 1
-  m_Center: {x: 0, y: 0.1435622, z: -0.18278646}
+  m_Center: {x: 0, y: 0.62885976, z: 0}
 --- !u!54 &1876123659005964712
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1876123659005964704}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50ab9f3cece76884bbc00da582ca9608, type: 3}
   m_Name: 
@@ -184,6 +184,7 @@ MonoBehaviour:
   heal: 5
   currentHealth: 0
   releasePoison: {fileID: 1876123659163521450}
+  hadChicken: 0
 --- !u!114 &1876123659005964709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,7 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 960f3424c977f8b48a3ff1bca1ba845c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 1876123659575761180}
 --- !u!1 &1876123659795132150
 GameObject:
   m_ObjectHideFlags: 0
