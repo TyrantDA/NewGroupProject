@@ -35,6 +35,8 @@ public class ItemListUI : MonoBehaviour
 
     public ItemInfo HoopStaff;
 
+    public ItemInfo Skull;
+
     public GameObject healthBar;
     public Attack playerAttack;
 
@@ -355,6 +357,13 @@ public class ItemListUI : MonoBehaviour
             {
                 Destroy(collision.gameObject);
                 AddItem(HoopStaff, 1);
+            }
+
+
+            if(collision.gameObject.CompareTag("Skull"))
+            {
+                Destroy(collision.gameObject);
+                AddItem(Skull, 1);
             }
         }
         else
