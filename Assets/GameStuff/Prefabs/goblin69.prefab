@@ -1035,6 +1035,7 @@ MonoBehaviour:
   anim: {fileID: 9178866790159748446}
   cap: {fileID: 3317876525819218137}
   shp: {fileID: 2506850016385535376}
+  hold: {fileID: 0}
 --- !u!114 &1798760857911921421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1061,8 +1062,19 @@ MonoBehaviour:
   SkullCoin: {fileID: 11400000, guid: e6c94a6845664c3468982117f72e28d0, type: 2}
   MushroomCoin: {fileID: 11400000, guid: e9498473e98c2d04ea0903b8e8788303, type: 2}
   DragonCoin: {fileID: 11400000, guid: b70faceaf06ed724e8e21fe7fea4cfeb, type: 2}
+  GoblinSpear: {fileID: 11400000, guid: ea0ed1be39f97d54f8bf2ee7d6e64556, type: 2}
+  StoneSpear: {fileID: 11400000, guid: 827689c770a66ff4da4127ce6a3de6f0, type: 2}
+  GrassSpear: {fileID: 11400000, guid: 12b279ad63c076b49810dcc14ef56180, type: 2}
+  BoneSpear: {fileID: 11400000, guid: 7451c351dce4b2d47af734dcb6ea5e16, type: 2}
+  TentacleSword: {fileID: 11400000, guid: c32baa8d63046c440a56bbe43c88fcfb, type: 2}
+  GrassSword: {fileID: 11400000, guid: fd543a29827275c41885c521b0ad9097, type: 2}
+  FairySword: {fileID: 11400000, guid: 9658448d56960d449b7fb7c97d8b774c, type: 2}
+  EyeSword: {fileID: 11400000, guid: 75ea04b8f40339a49b9e6deb5d9cef66, type: 2}
+  HoopStaff: {fileID: 11400000, guid: 4c0de5c5578330540bc75435f94c1001, type: 2}
+  Skull: {fileID: 11400000, guid: 2b7f4714fea906b40a913d800d645bb3, type: 2}
   healthBar: {fileID: 0}
   playerAttack: {fileID: 7793990507092540498}
+  text: {fileID: 0}
 --- !u!1 &3176257527860163209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,6 +1906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeDelay: 0
   anim: {fileID: 9178866790159748446}
+  hop: {fileID: 0}
   forwardForce: 0
   upforce: 0
   damagePotionOn: 0
