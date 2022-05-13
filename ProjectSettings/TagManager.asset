@@ -38,6 +38,15 @@ TagManager:
   - DragonCoin
   - Gpot
   - GPot
+  - GoblinSpear
+  - StoneSpear
+  - GrassSpear
+  - BoneSpear
+  - TentacleSword
+  - HoopStaff
+  - GrassSword
+  - FairySword
+  - EyeSword
   layers:
   - Default
   - TransparentFX

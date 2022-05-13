@@ -11,6 +11,8 @@ public class EnemyInventroy : MonoBehaviour
     public GameObject SkullCoin;
     public GameObject MushroomCoin;
     public GameObject DragonCoin;
+    public GameObject FairySword;
+    public GameObject HoopSatff;
 
     // Start is called before the first frame update
     void Start()
@@ -41,9 +43,17 @@ public class EnemyInventroy : MonoBehaviour
         {
             return MushroomCoin;
         }
-        else
+        else if(item.title == "Dragon Coin")
         {
             return DragonCoin;
+        }
+        else if(item.title == "I like rings staff")
+        {
+            return HoopSatff;
+        }
+        else
+        {
+            return FairySword;
         }
     }
 

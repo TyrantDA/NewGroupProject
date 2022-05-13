@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Skull
   description: To be or no to be
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: cff7476046c746a45b1bc4655918252f, type: 3}
