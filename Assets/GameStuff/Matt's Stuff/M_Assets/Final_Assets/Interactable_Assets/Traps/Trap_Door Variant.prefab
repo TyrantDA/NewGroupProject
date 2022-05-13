@@ -109,7 +109,7 @@ Animation:
   - {fileID: 7400000, guid: 6db18d35f214c424eaa797c8f1e6517f, type: 2}
   - {fileID: 7400000, guid: 6085100ffa9d10b41b9ff3d3b060aac9, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!114 &1800339470
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  resttime: 0
+  resttime: 4
 --- !u!1 &7719292037859390725
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 6780109119788493354}
   - component: {fileID: 36703734280827100}
   - component: {fileID: 401507305138595067}
+  - component: {fileID: 393971196537388281}
   m_Layer: 0
   m_Name: Trapdoor_Frame
   m_TagString: Untagged
@@ -222,6 +223,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3509629572233223740, guid: 2c6402a078cf87646907daae4c105658, type: 3}
+--- !u!114 &393971196537388281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7719292037859390725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b6f7051d27d7294ab638cad090f3498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tool: {fileID: 11400000, guid: 1950fd94c9f3dbd48b771044e529e09b, type: 2}
+  fixholder: {fileID: 146935103}
+  fixtext: {fileID: 0}
+  col: 0
+  p: {fileID: 0}
 --- !u!1 &8979472546118126467
 GameObject:
   m_ObjectHideFlags: 0

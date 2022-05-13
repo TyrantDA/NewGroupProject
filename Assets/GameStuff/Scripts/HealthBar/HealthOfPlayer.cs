@@ -57,6 +57,11 @@ public class HealthOfPlayer : MonoBehaviour
         currentHealth -= damageFromSpell;
         
     }
+    public void potdam()
+    {
+        currentHealth -= 1;
+
+    }
 
     public bool HealPlayer()
     {

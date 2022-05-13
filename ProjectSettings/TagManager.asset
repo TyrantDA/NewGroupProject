@@ -36,6 +36,8 @@ TagManager:
   - SkullCoin
   - MushroomCoin
   - DragonCoin
+  - Gpot
+  - GPot
   layers:
   - Default
   - TransparentFX

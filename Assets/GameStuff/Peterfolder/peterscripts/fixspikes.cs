@@ -11,8 +11,6 @@ public class fixspikes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fix = true;
-        count = 160;
         running = false;
         transform.GetChild(1).gameObject.GetComponent<Animation>().enabled = false;
 
@@ -20,9 +18,9 @@ public class fixspikes : MonoBehaviour
     IEnumerator delay()
     {
         running = true;
-        Debug.Log("gg");
         yield return new WaitForSeconds(count);
         transform.GetChild(1).gameObject.GetComponent<Animation>().enabled = false;
+
         Debug.Log("ff");
         running = false;
 
@@ -32,7 +30,6 @@ public class fixspikes : MonoBehaviour
     {
         if (fix == true)
         {
-            fix = false;
             if(running == true)
             {
                 StopCoroutine("delay");

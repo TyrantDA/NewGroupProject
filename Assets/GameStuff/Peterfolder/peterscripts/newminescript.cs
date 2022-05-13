@@ -13,7 +13,6 @@ public class newminescript : MonoBehaviour
     void Start()
     {
 
-        armed = true;
     }
     IEnumerator Delaythis()
     {

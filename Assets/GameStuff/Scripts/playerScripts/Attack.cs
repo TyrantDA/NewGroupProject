@@ -9,10 +9,14 @@ public class Attack : MonoBehaviour
     private bool isCoolDown;
     private bool inRange;
     private bool foundPot;
+    private bool foundGPot;
+
     private Collider target;
     private Collider pot;
-    public Animator anim;
+    private Collider Gpot;
 
+    public Animator anim;
+    public HealthOfPlayer hop;
     public float forwardForce;
     public float upforce;
     [SerializeField] bool damagePotionOn = false;
@@ -59,6 +63,12 @@ public class Attack : MonoBehaviour
         {
             pot.transform.gameObject.GetComponent<potBreak>().BreakPot();
             foundPot = false;
+        }
+        if (foundGPot)
+        {
+            hop.potdam();
+            Gpot.transform.gameObject.GetComponent<potBreak>().BreakPot();
+            foundGPot = false;
         }
     }
 
@@ -115,6 +125,11 @@ public class Attack : MonoBehaviour
             foundPot = true;
             pot = other;
         }
+        if (other.transform.gameObject.tag == "GPot")
+        {
+            foundGPot = true;
+            Gpot = other;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -137,6 +152,11 @@ public class Attack : MonoBehaviour
         {
             foundPot = false;
             
+        }
+        if (other.transform.gameObject.tag == "GPot")
+        {
+            foundGPot = false;
+
         }
     }
 
