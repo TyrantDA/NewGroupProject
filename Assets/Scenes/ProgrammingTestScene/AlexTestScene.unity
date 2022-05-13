@@ -3416,7 +3416,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628238484}
-  m_LocalRotation: {x: -0.0803866, y: 0.630532, z: -0.40191138, w: 0.6591166}
+  m_LocalRotation: {x: -0.080386594, y: 0.630532, z: -0.40191147, w: 0.65911657}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5690,7 +5690,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153486609}
   m_LocalRotation: {x: 0.33756724, y: 0.017699096, z: -0.006540416, w: 0.94111234}
-  m_LocalPosition: {x: 78.91049, y: 8, z: 11.824257}
+  m_LocalPosition: {x: 78.91049, y: 8, z: 11.824258}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1492059967}
@@ -6103,6 +6103,14 @@ PrefabInstance:
     - target: {fileID: 5076168690101672221, guid: ab22ae41c1bc2c4489e4dd2624eabdc1, type: 3}
       propertyPath: m_Name
       value: Pot Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218314382168900084, guid: ab22ae41c1bc2c4489e4dd2624eabdc1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6218314382168900084, guid: ab22ae41c1bc2c4489e4dd2624eabdc1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab22ae41c1bc2c4489e4dd2624eabdc1, type: 3}
@@ -6991,7 +6999,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492059965}
-  m_LocalRotation: {x: -0.056391135, y: 0.6155164, z: -0.4245503, w: 0.6616016}
+  m_LocalRotation: {x: -0.056391135, y: 0.6155165, z: -0.42455035, w: 0.66160154}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8077,6 +8085,10 @@ PrefabInstance:
       propertyPath: breakObject
       value: 
       objectReference: {fileID: 8844328734337391203, guid: 9e028ba3a0414914f95a9fd6bc87c237, type: 3}
+    - target: {fileID: 2464182493259410753, guid: 5ae9fe7c6c921cf43a625da20a4c20b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.74
+      objectReference: {fileID: 0}
     - target: {fileID: 5523879648378371374, guid: 5ae9fe7c6c921cf43a625da20a4c20b1, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -8284,8 +8296,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763560851}
-  m_LocalRotation: {x: 0.15532552, y: 0.73809016, z: -0.18170498, w: 0.6309361}
-  m_LocalPosition: {x: 78.91049, y: 8, z: 11.824257}
+  m_LocalRotation: {x: 0.15532549, y: 0.73809016, z: -0.18170494, w: 0.6309361}
+  m_LocalPosition: {x: 78.91049, y: 8, z: 11.824258}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10488,6 +10500,10 @@ PrefabInstance:
       propertyPath: hold
       value: 
       objectReference: {fileID: 1122445427}
+    - target: {fileID: 1876123659005964711, guid: 41eabd550556fbf4997e5f75bce4b5ba, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1876123659005964713, guid: 41eabd550556fbf4997e5f75bce4b5ba, type: 3}
       propertyPath: patrolList.Array.data[0]
       value: 
@@ -11109,6 +11125,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4503074927501566652, guid: 60afade0b7b36c348b1504886b93843c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4503074927501566655, guid: 60afade0b7b36c348b1504886b93843c, type: 3}
       propertyPath: patrolList.Array.data[0]
       value: 
@@ -11510,6 +11530,10 @@ PrefabInstance:
     - target: {fileID: 5482518667572090352, guid: f2831dd96f9d8324a898901748d0f2e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482518667572090356, guid: f2831dd96f9d8324a898901748d0f2e9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5482518667572090359, guid: f2831dd96f9d8324a898901748d0f2e9, type: 3}
       propertyPath: patrolList.Array.data[0]
