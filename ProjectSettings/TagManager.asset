@@ -47,6 +47,7 @@ TagManager:
   - GrassSword
   - FairySword
   - EyeSword
+  - Skull
   layers:
   - Default
   - TransparentFX
