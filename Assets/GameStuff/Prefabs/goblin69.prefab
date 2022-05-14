@@ -950,6 +950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 9178866790159748446}
   RotateTowardMouse: 0
+  falling: 0
   MovementSpeed: 10
   RotationSpeed: 4
   Camera: {fileID: 0}

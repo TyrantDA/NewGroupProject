@@ -23,13 +23,14 @@ public class TopDownCharacterMover : MonoBehaviour
     public ItemInfo StarPotion;
     bool notActive = false;
     Rigidbody m_Rigidbody;
-
+    public bool timeout;
     private void Awake()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
 
         _input = GetComponent<InputHandler>();
         playerInventory = GetComponent<ItemListUI>();
+        timeout = false;
     }
 
 
@@ -41,14 +42,24 @@ public class TopDownCharacterMover : MonoBehaviour
         MovementSpeed = 10;
         anim.SetBool("run", false);
     }
+    IEnumerator cooldown()
+    {
+        yield return new WaitForSeconds(4);
+        timeout = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && falling == false)
         {
-            Debug.Log("d");
-            m_Rigidbody.AddForce(transform.up * 3000);
-            falling = true;
+            if (timeout == false)
+            {
+                timeout = true;
+                StartCoroutine("cooldown");
+                m_Rigidbody.AddForce(transform.up * 3000);
+                falling = true;
+            }
         }
         if (playerInventory.HasItem(StarPotion) > 0)
         {

@@ -42,6 +42,7 @@ public class ItemListUI : MonoBehaviour
     public Attack playerAttack;
 
     public Text text;
+    public imm7 bluenumber;
 
     Dictionary<ItemInfo, int> items = new Dictionary<ItemInfo, int>();
     Dictionary<ItemInfo, UIItem> uiItems = new Dictionary<ItemInfo,UIItem>();
@@ -439,6 +440,8 @@ public class ItemListUI : MonoBehaviour
 
         if (collision.gameObject.CompareTag("BlueEye"))
         {
+            Destroy(collision.gameObject);
+            bluenumber.num = bluenumber.num + 1;
 
         }
     }

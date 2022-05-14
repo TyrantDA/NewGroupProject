@@ -50,6 +50,7 @@ TagManager:
   - Skull
   - Lobster
   - BlueEye
+  - Crypt
   layers:
   - Default
   - TransparentFX
