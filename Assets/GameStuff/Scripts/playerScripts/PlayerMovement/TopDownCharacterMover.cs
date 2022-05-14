@@ -24,6 +24,9 @@ public class TopDownCharacterMover : MonoBehaviour
     bool notActive = false;
     Rigidbody m_Rigidbody;
     public bool timeout;
+
+    public GameObject Map;
+    bool mapOpen = false;
     private void Awake()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
@@ -81,6 +84,21 @@ public class TopDownCharacterMover : MonoBehaviour
             }
         }
 
+        if(Input.GetKeyDown(KeyCode.M))
+        {
+            if(!mapOpen)
+            {
+                Map.SetActive(true);
+                mapOpen = true;
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                Map.SetActive(false);
+                mapOpen = false;
+                Time.timeScale = 1f;
+            }
+        }
 
             var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);
         var movementVector = MoveTowardTarget(targetVector);
