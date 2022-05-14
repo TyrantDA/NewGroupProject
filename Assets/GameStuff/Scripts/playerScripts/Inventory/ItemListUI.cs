@@ -37,6 +37,7 @@ public class ItemListUI : MonoBehaviour
 
     public ItemInfo Skull;
     public ItemInfo lobster;
+    public ItemInfo BlueEyes;
 
     public GameObject healthBar;
     public Attack playerAttack;
