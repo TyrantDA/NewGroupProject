@@ -7,7 +7,8 @@ public class poisonTrapTrigger : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] int Ammuntion;
     public ItemInfo Poison;
-    public ParticleSystem gas; 
+    public ParticleSystem gas;
+    public AudioSource GasRelease;
 
     void Start()
     {
@@ -28,11 +29,13 @@ public class poisonTrapTrigger : MonoBehaviour
             {
                 other.gameObject.GetComponent<HealthOfPlayer>().StartPoisonDamage();
                 gas.Play();
+                GasRelease.Play();
             }
             else if (other.transform.CompareTag("Enemy"))
             {
                 other.gameObject.GetComponent<HealthOFEnemy>().StartPoisonDamage();
                 gas.Play();
+                GasRelease.Play();
             }
         }
         else

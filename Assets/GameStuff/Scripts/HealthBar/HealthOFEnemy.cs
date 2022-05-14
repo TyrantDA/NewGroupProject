@@ -21,7 +21,6 @@ public class HealthOFEnemy : MonoBehaviour
     [SerializeField] float heal;
 
     [SerializeField] float currentHealth;
-    public AudioSource releasePoison;
 
     EnemyInventroy ei;
     public bool hadChicken = false;
@@ -113,7 +112,6 @@ public class HealthOFEnemy : MonoBehaviour
         while (true)
         {
             currentHealth -= damageFromPoison;
-            releasePoison.Play();
             if (currentHealth <= 0 && !dead)
             {
                 Dead();
