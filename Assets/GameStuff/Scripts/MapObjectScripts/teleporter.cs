@@ -10,6 +10,7 @@ public class teleporter : MonoBehaviour
     public Text textOutput;
     public GameObject pauseScreen;
     public CinemachineFreeLook cam;
+    public bool pauseon;
     Transform spawnPoint;
     GameObject player;
     bool incol;
@@ -45,7 +46,7 @@ public class teleporter : MonoBehaviour
         {
             player = other.transform.gameObject;
             incol = true;
-            textOutput.text = "Press E";
+            textOutput.text = "Press \"E\" to use pipe";
         }
     }
 
@@ -82,6 +83,12 @@ public class teleporter : MonoBehaviour
         cam.enabled = !cam.enabled;
         pauseScreen.SetActive(false);
     }
+    IEnumerator restartCam2()
+    {
+        cam.enabled = !cam.enabled;
+        yield return new WaitForSeconds(0.1f);
+        cam.enabled = !cam.enabled;
+    }
 
     private void Update()
     {
@@ -89,8 +96,18 @@ public class teleporter : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                
-                StartCoroutine("restartCam");
+
+                if (pauseon == false)
+                {
+
+                    StartCoroutine("restartCam");
+
+                }
+                else
+                {
+                    StartCoroutine("restartCam2");
+
+                }
                 player.transform.position = teleporterExit.GetComponent<teleporter>().getSpawnPoint().position;
                 incol = false;
                 player = null;
