@@ -8,6 +8,7 @@ public class teleporter : MonoBehaviour
 {
     public GameObject teleporterExit;
     public Text textOutput;
+    public GameObject pauseScreen;
     public CinemachineFreeLook cam;
     Transform spawnPoint;
     GameObject player;
@@ -44,7 +45,7 @@ public class teleporter : MonoBehaviour
         {
             player = other.transform.gameObject;
             incol = true;
-            textOutput.text = "Press Spacebar";
+            textOutput.text = "Press E";
         }
     }
 
@@ -57,17 +58,38 @@ public class teleporter : MonoBehaviour
 
     IEnumerator restartCam()
     {
+        pauseScreen.SetActive(true);
         cam.enabled = !cam.enabled;
-        yield return new WaitForSeconds(0.1f);
+        InputHandler ih = player.GetComponent<InputHandler>();
+        TopDownCharacterMover tdcm = player.GetComponent<TopDownCharacterMover>();
+        Animator a = player.GetComponent<Animator>();
+        Rigidbody rb = player.GetComponent<Rigidbody>();
+
+        ih.enabled = false;
+        tdcm.enabled = false;
+        a.enabled = false;
+
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        rb.Sleep();
+
+        yield return new WaitForSeconds(2f);
+        ih.enabled = true;
+        ih.enabled = true;
+        tdcm.enabled = true;
+        a.enabled = true;
+
         cam.enabled = !cam.enabled;
+        pauseScreen.SetActive(false);
     }
 
     private void Update()
     {
         if (incol)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.E))
             {
+                
                 StartCoroutine("restartCam");
                 player.transform.position = teleporterExit.GetComponent<teleporter>().getSpawnPoint().position;
                 incol = false;
