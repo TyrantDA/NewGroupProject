@@ -49,6 +49,7 @@ TagManager:
   - EyeSword
   - Skull
   - Lobster
+  - BlueEye
   layers:
   - Default
   - TransparentFX

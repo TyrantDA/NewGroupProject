@@ -10,6 +10,7 @@ public class TopDownCharacterMover : MonoBehaviour
     public Animator anim;
     [SerializeField]
     private bool RotateTowardMouse;
+    public bool falling;
 
     [SerializeField]
     private float MovementSpeed;
@@ -21,9 +22,12 @@ public class TopDownCharacterMover : MonoBehaviour
     ItemListUI playerInventory;
     public ItemInfo StarPotion;
     bool notActive = false;
+    Rigidbody m_Rigidbody;
 
     private void Awake()
     {
+        m_Rigidbody = GetComponent<Rigidbody>();
+
         _input = GetComponent<InputHandler>();
         playerInventory = GetComponent<ItemListUI>();
     }
@@ -40,6 +44,12 @@ public class TopDownCharacterMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space) && falling == false)
+        {
+            Debug.Log("d");
+            m_Rigidbody.AddForce(transform.up * 3000);
+            falling = true;
+        }
         if (playerInventory.HasItem(StarPotion) > 0)
         {
             if (!notActive)
@@ -116,5 +126,9 @@ public class TopDownCharacterMover : MonoBehaviour
         if(movementDirection.magnitude == 0) { return; }
         var rotation = Quaternion.LookRotation(movementDirection);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, RotationSpeed);
+    }
+    void OnCollisionStay(Collision other)
+    {
+        falling = false;
     }
 }

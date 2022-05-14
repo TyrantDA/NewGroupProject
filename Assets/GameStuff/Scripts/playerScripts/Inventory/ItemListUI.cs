@@ -37,7 +37,6 @@ public class ItemListUI : MonoBehaviour
 
     public ItemInfo Skull;
     public ItemInfo lobster;
-    public ItemInfo BlueEyes;
 
     public GameObject healthBar;
     public Attack playerAttack;
@@ -436,6 +435,11 @@ public class ItemListUI : MonoBehaviour
             gemList["PurpleGem"] = true;
             healthBar.transform.Find("PurpleGem").gameObject.SetActive(true);
             Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("BlueEye"))
+        {
+
         }
     }
 
