@@ -28,7 +28,7 @@ public class imm7 : MonoBehaviour
     void Update()
     {
         numtwo = 4 - num;
-        GetComponent<Text>().text = (numtwo).ToString();
+        GetComponent<Text>().text = (((int)numtwo)).ToString();
         if(numtwo == 3)
         {
             blue1.SetActive(true);
