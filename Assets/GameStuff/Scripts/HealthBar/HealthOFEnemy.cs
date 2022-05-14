@@ -25,6 +25,7 @@ public class HealthOFEnemy : MonoBehaviour
 
     EnemyInventroy ei;
     public bool hadChicken = false;
+    bool dead = false;
     // Start is called before the first frame update
 
     void Start()
@@ -38,7 +39,7 @@ public class HealthOFEnemy : MonoBehaviour
         anim.SetBool("hit", true);
 
         currentHealth -= damageFromEnemy;
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !dead)
         {
             Dead();
         }
@@ -49,7 +50,7 @@ public class HealthOFEnemy : MonoBehaviour
         anim.SetBool("hit", true);
 
         currentHealth -= damageFromEnemyBoosted;
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !dead)
         {
             Dead();
         }
@@ -60,7 +61,7 @@ public class HealthOFEnemy : MonoBehaviour
         anim.SetBool("hit", true);
         //Debug.Log("f");
         currentHealth -= damageFromArrow;
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !dead)
         {
             Dead();
         }
@@ -69,7 +70,7 @@ public class HealthOFEnemy : MonoBehaviour
     {
         anim.SetBool("hit", true);
         currentHealth -= 300;
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !dead)
         {
             Dead();
         }
@@ -80,7 +81,7 @@ public class HealthOFEnemy : MonoBehaviour
         anim.SetBool("hit", true);
 
         currentHealth -= damageFromSpell;
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !dead)
         {
             Dead();
         }
@@ -91,7 +92,7 @@ public class HealthOFEnemy : MonoBehaviour
         anim.SetBool("hit", true);
 
         StartCoroutine("poisonDamage");
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !dead)
         {
             Dead();
         }
@@ -100,7 +101,7 @@ public class HealthOFEnemy : MonoBehaviour
     public void EndPoisonDamage()
     {
         StopCoroutine("poisonDamage");
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !dead)
         {
             Dead();
         }
@@ -113,7 +114,7 @@ public class HealthOFEnemy : MonoBehaviour
         {
             currentHealth -= damageFromPoison;
             releasePoison.Play();
-            if (currentHealth <= 0)
+            if (currentHealth <= 0 && !dead)
             {
                 Dead();
             }
@@ -130,7 +131,7 @@ public class HealthOFEnemy : MonoBehaviour
             {
                 currentHealth += heal;
             }
-            if (currentHealth <= 0)
+            if (currentHealth <= 0 && !dead)
             {
                 Dead();
             }
@@ -161,6 +162,7 @@ public class HealthOFEnemy : MonoBehaviour
     }
     void Dead()
     {
+        dead = true;
         hold.alive = hold.alive - 1;
         ei.OnDeath();
 
@@ -195,6 +197,18 @@ public class HealthOFEnemy : MonoBehaviour
         yield return new WaitForSeconds(1);
         anim.SetBool("hit", false);
 
+    }
+
+    public bool missingHealth()
+    {
+        if(currentHealth < totalHealth)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     private void FixedUpdate()
     {
