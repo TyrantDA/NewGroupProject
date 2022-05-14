@@ -4877,7 +4877,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6472406998105670576
 Transform:
   m_ObjectHideFlags: 0
@@ -4973,7 +4973,7 @@ VFXRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2315464503186186674}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -5033,7 +5033,7 @@ Transform:
   m_GameObject: {fileID: 2951858864214100725}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.6769996, y: 4.084, z: -36.429996}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 6472406998344960246}
   - {fileID: 6472406998105670576}
@@ -5051,6 +5051,8 @@ GameObject:
   - component: {fileID: 6472406998344960246}
   - component: {fileID: 7194444520730482971}
   - component: {fileID: 3880898330549056271}
+  - component: {fileID: 8049395033341785539}
+  - component: {fileID: 5062232444767026128}
   m_Layer: 0
   m_Name: Spider_Torch
   m_TagString: Untagged
@@ -5121,3 +5123,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8049395033341785539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3074897742002162422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc3e01c6402ff5c4e96b3ec905b8bc5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playhit: 0
+  go: 0
+  lit: 0
+  firetext1: {fileID: 0}
+  p: {fileID: 0}
+  firetext2: {fileID: 0}
+  firetext3: {fileID: 0}
+  flame: {fileID: 2065859992628647864}
+--- !u!64 &5062232444767026128
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3074897742002162422}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3191843991455854740, guid: 6ea2afba0a6285a47aea5cbc039992dd, type: 3}

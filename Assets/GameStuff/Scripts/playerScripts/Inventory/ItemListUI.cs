@@ -232,7 +232,7 @@ public class ItemListUI : MonoBehaviour
         CoinCheck();
     }
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnCollisionStay(Collision collision)
     {
         if (uiItems.Count < 7)
         {

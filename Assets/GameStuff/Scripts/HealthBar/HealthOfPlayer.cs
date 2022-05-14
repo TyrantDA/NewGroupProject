@@ -62,6 +62,11 @@ public class HealthOfPlayer : MonoBehaviour
         currentHealth -= 1;
 
     }
+    public void hot()
+    {
+        currentHealth -= 0.05f;
+
+    }
 
     public bool HealPlayer()
     {
