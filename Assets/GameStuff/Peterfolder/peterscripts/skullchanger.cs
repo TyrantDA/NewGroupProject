@@ -6,10 +6,12 @@ public class skullchanger : MonoBehaviour
 {
     public bool playhit;
     public GameObject invtext;
+    public Rigidbody m_Rigidbody;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_Rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -32,6 +34,8 @@ public class skullchanger : MonoBehaviour
             invtext.gameObject.SetActive(false);
 
             this.gameObject.tag = "Skull";
+            m_Rigidbody.AddForce(transform.up);
+
         }
     }
     void OnCollisionEnter(Collision other)
