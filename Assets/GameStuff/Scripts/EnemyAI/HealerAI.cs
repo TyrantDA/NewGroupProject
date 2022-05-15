@@ -277,30 +277,30 @@ public class HealerAI : MonoBehaviour
         }
     }
 
-    //private void OnDrawGizmos()
-    //{
-    //    if (_bHasDetectedEnnemy)
-    //    {
-    //        if (_mHitInfo.transform.CompareTag("Player"))
-    //        {
-    //            Gizmos.color = Color.red;
-    //        }
-    //        else
-    //        {
-    //            Gizmos.color = Color.yellow;
-    //        }
-    //    }
-    //    else
-    //    {
-    //        Gizmos.color = Color.green;
-    //    }
+    private void OnDrawGizmos()
+    {
+        if (_bHasDetectedEnnemy)
+        {
+            if (_mHitInfo.transform.CompareTag("Player"))
+            {
+                Gizmos.color = Color.red;
+            }
+            else
+            {
+                Gizmos.color = Color.yellow;
+            }
+        }
+        else
+        {
+            Gizmos.color = Color.green;
+        }
 
-    //    Gizmos.matrix = transform.localToWorldMatrix;
+        Gizmos.matrix = transform.localToWorldMatrix;
 
-    //    Gizmos.DrawCube(new Vector3(0f, 0f, mTargetDetectionDistance / 2f), new Vector3(mRaycastRadius, mRaycastRadius, mTargetDetectionDistance));
-    //}
+        Gizmos.DrawCube(new Vector3(0f, 0f, mTargetDetectionDistance / 2f), new Vector3(mRaycastRadius, mRaycastRadius, mTargetDetectionDistance));
+    }
 
-    // Update is called once per frame
+    //Update is called once per frame
     void Update()
     {
         anim.SetBool("run", false);

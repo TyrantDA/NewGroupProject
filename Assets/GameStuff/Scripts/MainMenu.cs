@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Petertest3donttouchthismatt");
+        SceneManager.LoadScene("AlexStroy");
     }
 
     public void Achievement()
