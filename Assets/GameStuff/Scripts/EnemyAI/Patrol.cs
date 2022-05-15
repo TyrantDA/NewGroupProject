@@ -21,18 +21,25 @@ public class Patrol : MonoBehaviour
     bool patrolling;
     bool delayWait;
     private NavMeshPath path;
+    bool go = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        target = closest(Patroller);
-        Debug.Log(target.name);
+        StartCoroutine("wait");
+        //Debug.Log(target.name);
         agent = GetComponent<NavMeshAgent>();
         patrolling = false;
         delayWait = false;
         path = new NavMeshPath();
     }
 
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(4);
+        go = true;
+        target = closest(Patroller);
+    }
     public void SetPatrolList(List<GameObject> hold, List<int> hold2)
     {
         patrolList = hold;
@@ -133,15 +140,18 @@ public class Patrol : MonoBehaviour
         // run when patrolling. set the position to go to and check if they have reach in if so the next target function is run
         public void PatrolRunning()
     {
-        if (!delayWait)
+        if (go)
         {
-            distance = agent.remainingDistance;
-            //Debug.Log("point " + currentMovingTo + " | target " + target.name + " | Distance " + distance);
-            if (distance < 0.5f)
+            if (!delayWait)
             {
-                Debug.Log("next target");
-                nextTarget();
+                distance = agent.remainingDistance;
+                //Debug.Log("point " + currentMovingTo + " | target " + target.name + " | Distance " + distance);
+                if (distance < 0.5f)
+                {
+                    Debug.Log("next target");
+                    nextTarget();
 
+                }
             }
         }
     }
