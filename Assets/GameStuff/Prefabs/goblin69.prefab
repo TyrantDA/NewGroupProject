@@ -955,6 +955,8 @@ MonoBehaviour:
   RotationSpeed: 4
   Camera: {fileID: 0}
   StarPotion: {fileID: 11400000, guid: 6de586316e4216247a5b941bc911c61b, type: 2}
+  timeout: 0
+  Map: {fileID: 0}
 --- !u!114 &3317876525819218141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1020,7 +1022,6 @@ MonoBehaviour:
   damageFromSpell: 10
   heal: 0
   bar: {fileID: 0}
-  releasePosion: {fileID: 1459188795}
 --- !u!114 &2506850016385535377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1077,6 +1078,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   playerAttack: {fileID: 7793990507092540498}
   text: {fileID: 0}
+  bluenumber: {fileID: 0}
 --- !u!1 &3176257527860163209
 GameObject:
   m_ObjectHideFlags: 0
