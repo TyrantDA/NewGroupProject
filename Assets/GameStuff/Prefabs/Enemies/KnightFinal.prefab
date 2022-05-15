@@ -109,9 +109,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mRaycastRadius: 5
-  mTargetDetectionDistance: 7
+  mTargetDetectionDistance: 20
   anim: {fileID: 2125492348470429234}
-  radiusDetect: 3
+  radiusDetect: 7
   detectLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -153,7 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80569d08af357184792f63d30584df85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hold: {fileID: 0}
   anim: {fileID: 2125492348470429234}
   RB: {fileID: 5482518667572090358}
   totalHealth: 100

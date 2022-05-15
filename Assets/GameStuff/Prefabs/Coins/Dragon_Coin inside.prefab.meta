@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/GameStuff/Prefabs/Coins/Dragon_Coin inside.prefab.meta
 guid: bba7ab3dbf5128346879615a0d4d372b
 PrefabImporter:
+========
+guid: 50a26780d0248364bbb1fce95300a931
+DefaultImporter:
+>>>>>>>> f07221d6cf8ab8f73286ebfda4027c11bc70549d:Assets/Scenes/StoryTestScene/AlexStroy.unity.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

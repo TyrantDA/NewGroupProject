@@ -151,11 +151,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mRaycastRadius: 5
   mTargetDetectionDistance: 20
-  radiusDetect: 6
+  radiusDetect: 7
   detectLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  followRange: 2.5
+  followRange: 3
   combatRange: 2
   anim: {fileID: 1876123659575761180}
   hitBox: {fileID: 1876123659795132153}
@@ -172,7 +172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80569d08af357184792f63d30584df85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hold: {fileID: 0}
   anim: {fileID: 1876123659575761180}
   RB: {fileID: 1876123659005964712}
   totalHealth: 100
