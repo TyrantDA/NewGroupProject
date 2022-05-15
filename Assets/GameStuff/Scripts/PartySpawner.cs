@@ -109,9 +109,8 @@ public class PartySpawner : MonoBehaviour
                             PlayerPrefs.SetInt("triple Kill", 1);
                         }
                     }
-                    yield return new WaitForSeconds(60);
                 }
-
+                yield return new WaitForSeconds(30);
                 h = nextPatrol();
             }
 
