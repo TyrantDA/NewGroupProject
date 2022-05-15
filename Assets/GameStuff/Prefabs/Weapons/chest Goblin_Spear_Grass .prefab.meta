@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/GameStuff/Prefabs/Weapons/chest Goblin_Spear_Grass .prefab.meta
 guid: b7dd3b134d9ac03458c28dc469076dc4
 PrefabImporter:
+========
+guid: 2240468d7afd0b54aad60621454d7fed
+folderAsset: yes
+DefaultImporter:
+>>>>>>>> f07221d6cf8ab8f73286ebfda4027c11bc70549d:Assets/GameStuff/images/Story/crowd.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/GameStuff/Peterfolder/Lever Variant.prefab.meta
 guid: cb94ebb714a35fa469f0d84912ccba05
+========
+guid: ec63795e5f12c634fa66b0a63fba4c8f
+>>>>>>>> f07221d6cf8ab8f73286ebfda4027c11bc70549d:Assets/GameStuff/Prefabs/doorsnew/Door.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
