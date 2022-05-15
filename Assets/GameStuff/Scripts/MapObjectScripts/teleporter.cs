@@ -46,7 +46,7 @@ public class teleporter : MonoBehaviour
         {
             player = other.transform.gameObject;
             incol = true;
-            textOutput.text = "Press \"E\" to use pipe";
+            textOutput.text = "Press 'E' to use pipe";
         }
     }
 

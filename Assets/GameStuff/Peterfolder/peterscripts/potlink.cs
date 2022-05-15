@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class potlink : MonoBehaviour
 {
     public ptosnumber hold;
+    public GameObject hold2;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,10 @@ public class potlink : MonoBehaviour
     void Update()
     {
         GetComponent<Text>().text = (hold.remain).ToString();
-
+        if (hold.remain == 0)
+        {
+            hold2.gameObject.SetActive(false);
+        }
 
     }
 }

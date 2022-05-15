@@ -15,6 +15,9 @@ public class imm : MonoBehaviour
     void Update()
     {
         GetComponent<Text>().text = (14 - hold.left).ToString();
-
+        if (hold.left == 14)
+        {
+            hold.gameObject.SetActive(false);
+        }
     }
 }

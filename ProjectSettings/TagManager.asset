@@ -51,8 +51,8 @@ TagManager:
   - Lobster
   - BlueEye
   - Crypt
-  - Bomb
-  - Mine
+  - skull
+  - coffin
   layers:
   - Default
   - TransparentFX
@@ -63,8 +63,8 @@ TagManager:
   - tiggers
   - crystal
   - bomb
-  - 
-  - 
+  - lava
+  - player
   - 
   - 
   - 

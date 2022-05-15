@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2116816176415026844}
   m_Layer: 0
   m_Name: Skull_torch
-  m_TagString: Untagged
+  m_TagString: skull
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,26 +46,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6590055069928923904, guid: 2b16566c2604ff54f83c7a3b380546ed, type: 3}
---- !u!114 &1343102810757777572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3945891342344063374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc3e01c6402ff5c4e96b3ec905b8bc5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playhit: 0
-  go: 0
-  lit: 0
-  firetext1: {fileID: 0}
-  p: {fileID: 0}
-  firetext2: {fileID: 0}
-  firetext3: {fileID: 0}
-  flame: {fileID: 5325960378615415923}
 --- !u!64 &1150853264229727991
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80,6 +60,28 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7087271138916236341, guid: 2b16566c2604ff54f83c7a3b380546ed, type: 3}
+--- !u!114 &1343102810757777572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3945891342344063374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc3e01c6402ff5c4e96b3ec905b8bc5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playhit: 0
+  go: 0
+  first: 0
+  lit: 0
+  firetext1: {fileID: 0}
+  p: {fileID: 0}
+  firetext2: {fileID: 0}
+  firetext3: {fileID: 0}
+  flame: {fileID: 5325960378615415923}
+  count: {fileID: 0}
 --- !u!1001 &2402217385785326253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -131,9 +133,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8658024091287701356, guid: 2b16566c2604ff54f83c7a3b380546ed, type: 3}
+      propertyPath: m_TagString
+      value: skull
+      objectReference: {fileID: 0}
+    - target: {fileID: -7524111205263903965, guid: 2b16566c2604ff54f83c7a3b380546ed, type: 3}
+      propertyPath: m_TagString
+      value: skull
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2b16566c2604ff54f83c7a3b380546ed, type: 3}
       propertyPath: m_Name
       value: Skull_Torch
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2b16566c2604ff54f83c7a3b380546ed, type: 3}
+      propertyPath: m_TagString
+      value: skull
       objectReference: {fileID: 0}
     - target: {fileID: 6477100587160600210, guid: 2b16566c2604ff54f83c7a3b380546ed, type: 3}
       propertyPath: m_Materials.Array.data[0]
