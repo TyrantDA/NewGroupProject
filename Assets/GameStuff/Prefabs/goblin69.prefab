@@ -955,6 +955,8 @@ MonoBehaviour:
   RotationSpeed: 4
   Camera: {fileID: 0}
   StarPotion: {fileID: 11400000, guid: 6de586316e4216247a5b941bc911c61b, type: 2}
+  timeout: 0
+  Map: {fileID: 0}
 --- !u!114 &3317876525819218141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1020,7 +1022,6 @@ MonoBehaviour:
   damageFromSpell: 10
   heal: 0
   bar: {fileID: 0}
-  releasePosion: {fileID: 1459188795}
 --- !u!114 &2506850016385535377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1074,9 +1075,12 @@ MonoBehaviour:
   HoopStaff: {fileID: 11400000, guid: 4c0de5c5578330540bc75435f94c1001, type: 2}
   Skull: {fileID: 11400000, guid: 2b7f4714fea906b40a913d800d645bb3, type: 2}
   lobster: {fileID: 11400000, guid: 0280524070d4c574283f983047ea74fa, type: 2}
+  bomb: {fileID: 11400000, guid: 01d671f3501e9d64baed2ed76acc1626, type: 2}
+  mine: {fileID: 11400000, guid: cf7c0ce3afe02b84187369fa8eb1fa78, type: 2}
   healthBar: {fileID: 0}
   playerAttack: {fileID: 7793990507092540498}
   text: {fileID: 0}
+  bluenumber: {fileID: 0}
 --- !u!1 &3176257527860163209
 GameObject:
   m_ObjectHideFlags: 0

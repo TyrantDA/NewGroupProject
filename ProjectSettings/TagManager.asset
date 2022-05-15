@@ -51,6 +51,8 @@ TagManager:
   - Lobster
   - BlueEye
   - Crypt
+  - Bomb
+  - Mine
   layers:
   - Default
   - TransparentFX
