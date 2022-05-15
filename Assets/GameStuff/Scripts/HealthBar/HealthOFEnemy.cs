@@ -6,7 +6,6 @@ using UnityEngine.AI;
 
 public class HealthOFEnemy : MonoBehaviour
 {
-    public enimyalive hold;
     public Animator anim;
     public Rigidbody RB;
 
@@ -29,7 +28,6 @@ public class HealthOFEnemy : MonoBehaviour
 
     void Start()
     {
-        hold.alive = hold.alive + 1;
         currentHealth = totalHealth;
         ei = GetComponent<EnemyInventroy>();
     }
@@ -161,7 +159,6 @@ public class HealthOFEnemy : MonoBehaviour
     void Dead()
     {
         dead = true;
-        hold.alive = hold.alive - 1;
         ei.OnDeath();
 
         int achieve = PlayerPrefs.GetInt("That not how its suppose to go", 0);

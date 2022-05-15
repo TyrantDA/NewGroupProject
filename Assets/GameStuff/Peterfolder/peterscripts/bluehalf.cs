@@ -7,6 +7,7 @@ public class bluehalf : MonoBehaviour
     public RectTransform panelRectTransform;
     public imm7 hold;
     public bool going;
+    public bool left;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,11 @@ public class bluehalf : MonoBehaviour
     {
         if(going== false)
         {
+            if(left == true)
+            {
+                hold.left = true;
+
+            }
             going = true;
             panelRectTransform.SetAsLastSibling();
             hold.num = hold.num + 0.5f;

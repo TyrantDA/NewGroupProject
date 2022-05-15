@@ -20,7 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/transitionScenes/WelcomGoblin.unity
     guid: e69415067bcccb445bcddb39f2c5df7b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ProgrammingTestScene/Petertest2donttouchthismatt.unity
     guid: 08ec74002fba1254e982e5893d9e7822
+  - enabled: 1
+    path: Assets/Scenes/ProgrammingTestScene/Petertest3donttouchthismatt.unity
+    guid: cccaef7cf412c7145a34e9cae399fc1f
   m_configObjects: {}

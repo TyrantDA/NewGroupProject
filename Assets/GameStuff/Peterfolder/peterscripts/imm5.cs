@@ -16,7 +16,10 @@ public class imm5 : MonoBehaviour
     void Update()
     {
         GetComponent<Text>().text = (hold.count).ToString();
-
+        if (hold.count == 0)
+        {
+            hold.gameObject.SetActive(false);
+        }
 
     }
 }

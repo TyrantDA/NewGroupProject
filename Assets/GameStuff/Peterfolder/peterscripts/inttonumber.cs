@@ -15,6 +15,9 @@ public class inttonumber : MonoBehaviour
     void Update()
     {
         GetComponent<Text>().text = (8 - hold.left).ToString();
-
+        if (hold.left == 8)
+        {
+            hold.gameObject.SetActive(false);
+        }
     }
 }

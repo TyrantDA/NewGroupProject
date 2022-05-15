@@ -7,16 +7,21 @@ public class newchest : MonoBehaviour
 {
     public bool close = true;
     public bool playhit;
+    public bool work;
+    public bool breaks;
     private Animation anim;
     public bool go;
     public chestnumberopen chestnum;
     public GameObject chesttext1;
     public GameObject chesttext2;
     public ItemInfo Coin;
-
+    public GameObject inside;
+    public GameObject place;
     void Start()
     {
         go = false;
+        work = true;
+
         anim = this.GetComponent<Animation>();
     }
 
@@ -40,6 +45,7 @@ public class newchest : MonoBehaviour
         {
 
             go = true;
+
         }
         if (go == true)
         {
@@ -51,7 +57,14 @@ public class newchest : MonoBehaviour
             if (close == true)
             {
                 chesttext2.gameObject.SetActive(false);
+                if (breaks == true)
+                {
+                    work = false;
 
+                }
+                Vector3 hold = place.transform.position;
+                var newinside = Instantiate(inside, hold, Quaternion.identity);
+                newinside.transform.parent = this.transform.parent.gameObject.transform;
                 anim.Play("open");
                 close = false;
                 chestnum.openr = chestnum.openr + 1;
@@ -74,35 +87,54 @@ public class newchest : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.CompareTag("Player"))
+        if(work == true)
         {
-            playhit = true;
-              
-        }
-        if (other.transform.CompareTag("Enemy"))
-        {
-            if (close == true)
+            if (other.transform.CompareTag("Player"))
             {
-                go = true;
+
+                playhit = true;
 
             }
-            other.GetComponent<EnemyInventroy>().AddItem(Coin);
+            if (other.transform.CompareTag("Enemy"))
+            {
+                if (breaks == true)
+                {
+                    work = false;
+                }
+                if (close == true)
+                {
+                    go = true;
+
+                }
+                other.GetComponent<EnemyInventroy>().AddItem(Coin);
+                Vector3 hold = place.transform.position;
+                var newinside = Instantiate(inside, hold, Quaternion.identity);
+                newinside.transform.parent = this.transform.parent.gameObject.transform;
+
+            }
 
         }
+
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.transform.CompareTag("Player"))
+        if (work == true)
         {
-            if (other.GetComponent<ItemListUI>().HasItem(Coin) > 0)
+            if (other.transform.CompareTag("Player"))
             {
-                if (!close)
-                    other.GetComponent<ItemListUI>().AddItem(Coin, -1);
+                if (other.GetComponent<ItemListUI>().HasItem(Coin) > 0)
+                {
+                    if (!close)
+                        other.GetComponent<ItemListUI>().AddItem(Coin, -1);
+                }
             }
+
         }
+
     }
     private void OnTriggerExit(Collider other)
     {
+
         if (other.transform.CompareTag("Player"))
         {
             playhit = false;
@@ -110,5 +142,6 @@ public class newchest : MonoBehaviour
             chesttext2.gameObject.SetActive(false);
 
         }
+
     }
 }
