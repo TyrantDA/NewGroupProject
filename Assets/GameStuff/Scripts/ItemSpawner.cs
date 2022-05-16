@@ -12,7 +12,7 @@ public class ItemSpawner : MonoBehaviour
         
     }
 
-    void spawnItem()
+    public void spawnItem()
     {
         Instantiate(item, spawnPoint.position, spawnPoint.rotation);
     }
