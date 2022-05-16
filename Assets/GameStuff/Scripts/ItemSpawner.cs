@@ -6,6 +6,9 @@ public class ItemSpawner : MonoBehaviour
 {
     public GameObject item;
      public Transform spawnPoint;
+    public bool skull;
+    public GameObject skulltext;
+    public scaryindex ind;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +17,12 @@ public class ItemSpawner : MonoBehaviour
 
     public void spawnItem()
     {
-        Instantiate(item, spawnPoint.position, spawnPoint.rotation);
+        var drop = Instantiate(item, spawnPoint.position, spawnPoint.rotation);
+        if (skull == true)
+        {
+            drop.GetComponent<skullchanger>().invtext = skulltext;
+            drop.GetComponent<skullchanger>().ind = ind;
+        }
     }
 
     // Update is called once per frame

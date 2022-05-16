@@ -6,6 +6,7 @@ public class throwingproj : MonoBehaviour
 {
     public GameObject projprfab;
     public GameObject bombfab;
+    public ItemInfo Bomb;
 
     public Vector3 forward;
     public static throwingproj x;
@@ -21,22 +22,28 @@ public class throwingproj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        forward = transform.forward;
+        int hold = this.gameObject.GetComponent<ItemListUI>().HasItem(Bomb);
+        if (hold > 0)
+        {
+            forward = transform.forward;
             if (Input.GetKey("g"))
-        {
-            if(going != true)
             {
-                going = true;
-                StartCoroutine("Delaythis");
+                if (going != true)
+                {
+                    going = true;
+                    StartCoroutine("Delaythis");
+                }
             }
-        }
-        if (Input.GetKeyUp("g"))
-        {
-            going = false;
+            if (Input.GetKeyUp("g"))
+            {
+                going = false;
+                this.gameObject.GetComponent<ItemListUI>().AddItem(Bomb, -1);
 
-            StopCoroutine("Delaythis");
-            var newSquare2 = Instantiate(bombfab, (this.transform.position + transform.forward + transform.up), Quaternion.identity);
+                StopCoroutine("Delaythis");
 
+                var newSquare2 = Instantiate(bombfab, (this.transform.position + transform.forward + transform.up), Quaternion.identity);
+
+            }
         }
 
 

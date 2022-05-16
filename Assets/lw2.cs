@@ -22,7 +22,9 @@ public class lw2 : MonoBehaviour
     public ItemSpawner hold12;
 
 
-    public GameObject Clicktext;
+    public GameObject Clicktext1;
+    public GameObject Clicktext2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,12 +36,27 @@ public class lw2 : MonoBehaviour
     {
         if (col == true)
         {
-            Clicktext.gameObject.SetActive(true);
+            if (check == true)
+            {
+                Clicktext1.gameObject.SetActive(false);
+
+                Clicktext2.gameObject.SetActive(true);
+
+            }
+            if (check == false)
+            {
+                Clicktext2.gameObject.SetActive(false);
+
+                Clicktext1.gameObject.SetActive(true);
+
+            }
 
         }
         else
         {
-            Clicktext.gameObject.SetActive(false);
+            Clicktext1.gameObject.SetActive(false);
+            Clicktext2.gameObject.SetActive(false);
+
 
         }
         if (col == true && Input.GetKey(KeyCode.E))
@@ -49,29 +66,35 @@ public class lw2 : MonoBehaviour
         }
         if (go == true)
         {
+            go = false;
+            if (anim.isPlaying)
+            {
+                return;
+            }
             if (check == true)
             {
                 check = false;
 
                 anim.Play("leaver");
+                hold1.spawnItem();
+                hold2.spawnItem();
+                hold3.spawnItem();
+                hold4.spawnItem();
+                hold5.spawnItem();
+                hold6.spawnItem();
+                hold7.spawnItem();
+                hold8.spawnItem();
+                hold9.spawnItem();
+                hold10.spawnItem();
+                hold11.spawnItem();
+                hold12.spawnItem();
             }
             else
             {
                 check = true;
                 anim.Play("leaver2");
             }
-            hold1.spawnItem();
-            hold2.spawnItem();
-            hold3.spawnItem();
-            hold4.spawnItem();
-            hold5.spawnItem();
-            hold6.spawnItem();
-            hold7.spawnItem();
-            hold8.spawnItem();
-            hold9.spawnItem();
-            hold10.spawnItem();
-            hold11.spawnItem();
-            hold12.spawnItem();
+
 
 
         }
@@ -93,8 +116,8 @@ public class lw2 : MonoBehaviour
         {
             col = false;
 
-            Clicktext.gameObject.SetActive(false);
-
+            Clicktext1.gameObject.SetActive(false);
+            Clicktext2.gameObject.SetActive(false);
         }
     }
 }
