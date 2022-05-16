@@ -46,7 +46,7 @@ public class playersit : MonoBehaviour
             }
 
         }
-        if (Input.GetKeyDown("n"))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (anim.GetBool("sit") == false)
             {

@@ -47,7 +47,7 @@ public class TopDownCharacterMover : MonoBehaviour
     }
     IEnumerator cooldown()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(1);
         timeout = false;
     }
 
