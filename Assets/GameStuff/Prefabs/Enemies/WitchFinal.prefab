@@ -1257,12 +1257,12 @@ MonoBehaviour:
   anim: {fileID: 4503074926432866632}
   RB: {fileID: 4503074927501566654}
   totalHealth: 100
-  damageFromEnemy: 10
+  damageFromEnemy: 0
   damageFromEnemyBoosted: 0
-  damageFromArrow: 8
-  damageFromPoison: 8
-  damageFromPlayer: 8
-  damageFromSpell: 10
+  damageFromArrow: 0
+  damageFromPoison: 0
+  damageFromPlayer: 0
+  damageFromSpell: 0
   heal: 5
   currentHealth: 0
   hadChicken: 0

@@ -66,6 +66,16 @@ public class cagedoor : MonoBehaviour
             }
 
         }
+        if (other.transform.CompareTag("EnemyHealer"))
+        {
+            if (close == true)
+            {
+                go = true;
+                StopCoroutine("delay");
+
+            }
+
+        }
     }
     private void OnTriggerExit(Collider other)
     {

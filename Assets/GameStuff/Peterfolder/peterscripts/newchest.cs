@@ -112,6 +112,23 @@ public class newchest : MonoBehaviour
                 newinside.transform.parent = this.transform.parent.gameObject.transform;
 
             }
+            if (other.transform.CompareTag("EnemyHealer"))
+            {
+                if (breaks == true)
+                {
+                    work = false;
+                }
+                if (close == true)
+                {
+                    go = true;
+
+                }
+                other.GetComponent<EnemyInventroy>().AddItem(Coin);
+                Vector3 hold = place.transform.position;
+                var newinside = Instantiate(inside, hold, Quaternion.identity);
+                newinside.transform.parent = this.transform.parent.gameObject.transform;
+
+            }
 
         }
 

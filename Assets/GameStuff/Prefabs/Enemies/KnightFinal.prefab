@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 5482518667572090356}
   - component: {fileID: 5482518667572090357}
   - component: {fileID: 5482518667572090362}
-  - component: {fileID: 5482518667572090363}
   - component: {fileID: 5482518667572090360}
   - component: {fileID: 5482518667572090361}
   - component: {fileID: 5482518667572090366}
@@ -156,29 +155,15 @@ MonoBehaviour:
   anim: {fileID: 2125492348470429234}
   RB: {fileID: 5482518667572090358}
   totalHealth: 100
-  damageFromEnemy: 10
+  damageFromEnemy: 0
   damageFromEnemyBoosted: 0
-  damageFromArrow: 8
-  damageFromPoison: 8
-  damageFromPlayer: 8
-  damageFromSpell: 5
+  damageFromArrow: 0
+  damageFromPoison: 0
+  damageFromPlayer: 0
+  damageFromSpell: 0
   heal: 5
   currentHealth: 0
   hadChicken: 0
---- !u!114 &5482518667572090363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5482518667572090367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820ab48953ea0564ba9f077f14cf4999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radiusDetect: 0
-  maxium: 0
 --- !u!114 &5482518667572090360
 MonoBehaviour:
   m_ObjectHideFlags: 0

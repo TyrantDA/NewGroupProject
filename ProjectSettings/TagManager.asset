@@ -53,6 +53,8 @@ TagManager:
   - Crypt
   - skull
   - coffin
+  - Bomb
+  - Mine
   layers:
   - Default
   - TransparentFX
