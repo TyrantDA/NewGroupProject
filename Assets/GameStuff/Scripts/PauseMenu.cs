@@ -40,6 +40,7 @@ public class PauseMenu : MonoBehaviour
 
     public void QUitToMainMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("throneroomanddoors");
     }
     public void QuitGameToDesktop()
