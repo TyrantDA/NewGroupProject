@@ -36,7 +36,7 @@ public class Patrol : MonoBehaviour
 
     IEnumerator wait()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(8);
         go = true;
         target = closest(Patroller);
     }

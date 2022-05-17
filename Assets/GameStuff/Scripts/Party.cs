@@ -9,13 +9,13 @@ public class Party : MonoBehaviour
     public GameObject EnemyPrefab;
     public GameObject EnemyRangedPrefab;
     public GameObject EnemyHealerPrefab;
-    [SerializeField] GameObject[] listOfenemy;
     private int NumberOfEnemy = 3;
+    [SerializeField] GameObject[] listOfenemy = new GameObject[3];
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        listOfenemy = new GameObject[NumberOfEnemy];
 
     }
 
