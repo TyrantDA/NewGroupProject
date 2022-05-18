@@ -1360,7 +1360,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 60.28572
-    y: 73.548874
+    y: 83.548874
     width: 102
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1579,7 +1579,7 @@ MonoBehaviour:
   itemId: 8
   indentLevel: 0
   storyText: "through servitude\r and subordination. You, like my\r treasure, can
-    become secure in these\r fragile times"
+    become secure in these\r fragile times."
   description: 
   character: {fileID: 1030325178}
   portrait: {fileID: 0}
@@ -1660,7 +1660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 0
-  storyText: The goblin looks at his empty money pouch
+  storyText: The goblin looks at his empty money pouch.
   description: 
   character: {fileID: 1421106488}
   portrait: {fileID: 0}
@@ -1748,7 +1748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 15
   indentLevel: 0
-  storyText: 'A crowd of monsters gather around a large tree Infront of a
+  storyText: 'A crowd of monsters gather around a large tree in front of a
 
     dark
     cavernous entrance. The scrum of monsters holds picket
@@ -1819,10 +1819,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 17
   indentLevel: 0
-  storyText: 'A particularly Haggard looking goblin thrusts a monster union
+  storyText: 'A particularly haggard looking goblin thrusts a monster union
 
     pamphlet
-    towards the Player Goblin'
+    towards the Goblin.'
   description: 
   character: {fileID: 1421106488}
   portrait: {fileID: 0}
@@ -2250,7 +2250,7 @@ MonoBehaviour:
   itemId: 30
   indentLevel: 0
   storyText: "However, since it is 10 minutes after\r the shift start, legally I
-    am aloud to\r follow through with disciplinary\r action."
+    am allowed to\r follow through with disciplinary\r action."
   description: 
   character: {fileID: 1745397750}
   portrait: {fileID: 0}
@@ -3108,7 +3108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 68
   indentLevel: 0
-  storyText: The manager scribbles something on the CV
+  storyText: The manager scribbles something on the CV.
   description: 
   character: {fileID: 1421106488}
   portrait: {fileID: 0}
@@ -3292,9 +3292,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 74
   indentLevel: 0
-  storyText: "Our company prides\r itself on maintaining Elon Husks\r treasures,
+  storyText: "Our company prides\r itself on maintaining Elon Husk's\r treasures,
     stopping Raiders, and\r keeping the Magical Free Market\r stable. Dungeon management
-    is not for\r the faint hearted"
+    is not for\r the faint hearted."
   description: 
   character: {fileID: 1745397750}
   portrait: {fileID: 0}
@@ -3350,7 +3350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 80
   indentLevel: 0
-  storyText: The manager shuffles through several papers on his desk
+  storyText: The manager shuffles through several papers on his desk.
   description: 
   character: {fileID: 1421106488}
   portrait: {fileID: 0}
@@ -3450,7 +3450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 76
   indentLevel: 0
-  storyText: "Let\u2019s see. What else is there to say"
+  storyText: "Let\u2019s see. What else is there to say?"
   description: 
   character: {fileID: 1745397750}
   portrait: {fileID: 0}
@@ -3537,7 +3537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 91
   indentLevel: 0
-  storyText: "and given the recent, Ahem, unionised activity, Elon Husk\r himself
+  storyText: "and given the recent, ahem, unionised activity, Elon Husk\r himself
     has kindly offered to ensure that each of his\r Dungeons offer free Union training
     sessions. They are quite\r fascinating. Very eye opening indeed. "
   description: 
@@ -3804,7 +3804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 98
   indentLevel: 0
-  storyText: None good then get out there and show use what you can do. Remember
+  storyText: None? good then get out there and show use what you can do. Remember
     to complete all your tasks and to prevent anyone from leaving the dungeon with
     company property.
   description: 
@@ -3863,7 +3863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 96
   indentLevel: 0
-  storyText: Any question?
+  storyText: Any questions?
   description: 
   character: {fileID: 1745397750}
   portrait: {fileID: 0}
@@ -3920,8 +3920,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 95
   indentLevel: 0
-  storyText: "These sessions cannot interfere with\r work hours, therefore, are deducted\r
-    from your monthly break."
+  storyText: "These sessions cannot interfere with\r work hours, therefore, they
+    are deducted\r from your monthly break."
   description: 
   character: {fileID: 1745397750}
   portrait: {fileID: 0}
