@@ -60,11 +60,12 @@ public class newchest : MonoBehaviour
                 if (breaks == true)
                 {
                     work = false;
+                    Vector3 hold = place.transform.position;
+                    var newinside = Instantiate(inside, hold, Quaternion.identity);
+                    newinside.transform.parent = this.transform.parent.gameObject.transform;
 
                 }
-                Vector3 hold = place.transform.position;
-                var newinside = Instantiate(inside, hold, Quaternion.identity);
-                newinside.transform.parent = this.transform.parent.gameObject.transform;
+
                 anim.Play("open");
                 close = false;
                 chestnum.openr = chestnum.openr + 1;
