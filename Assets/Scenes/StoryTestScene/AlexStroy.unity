@@ -1301,8 +1301,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 674798320}
-  selectedCommands: []
+  - {fileID: 674798364}
+  selectedCommands:
+  - {fileID: 674798411}
   variables: []
   description: 
   stepPause: 0
@@ -2563,7 +2564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -55.71428
+    x: -56.71428
     y: 273.5489
     width: 121
     height: 40
@@ -3803,7 +3804,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 98
   indentLevel: 0
-  storyText: None good then get out there and show use what you can do
+  storyText: None good then get out there and show use what you can do. Remember
+    to complete all your tasks and to prevent anyone from leaving the dungeon with
+    company property.
   description: 
   character: {fileID: 1745397750}
   portrait: {fileID: 0}
