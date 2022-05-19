@@ -10,9 +10,11 @@ public class MainMenu : MonoBehaviour
     public GameObject AchievementUI;
     public GameObject spawnPoint;
     public GameObject OptionMenuBackerIU;
+    public GameObject ControlsUI;
 
     bool AchievementOn = false;
     bool isOption = false;
+    bool isControls = false;
 
     void Start()
     {
@@ -50,6 +52,7 @@ public class MainMenu : MonoBehaviour
 
     public void Options()
     {
+        isOption = true;
         OptionMenuBackerIU.SetActive(true);
     }
 
@@ -68,6 +71,12 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void Controls()
+    {
+        ControlsUI.SetActive(true);
+        isControls = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -79,6 +88,19 @@ public class MainMenu : MonoBehaviour
                 AchievementUI.SetActive(false);
                 AchievementOn = false;
             }
+            else if(isOption)
+            {
+                if (isControls)
+                {
+                    ControlsUI.SetActive(false);
+                    isControls = false;
+                }
+                else
+                {
+                    Back();
+                }
+            }
+
         }
     }
 }

@@ -15,12 +15,15 @@ public class EnemyAttack : MonoBehaviour
 
     public float forwardForce;
     public float upforce;
-    
+    public AudioSource hitNoise;
+    public AudioSource spellNoise;
+    public bool hasSword;
     // Start is called before the first frame update
     void Start()
     {
 
     }
+
 
     void PlayerAttack()
     {
@@ -31,6 +34,10 @@ public class EnemyAttack : MonoBehaviour
         {
             Debug.Log("hit");
             target.transform.gameObject.GetComponent<HealthOfPlayer>().DamagePlayer();
+            if (hasSword)
+            {
+                hitNoise.Play();
+            }
             target.transform.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * forwardForce);
             target.transform.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * upforce);
             inRange = false;
@@ -73,6 +80,7 @@ public class EnemyAttack : MonoBehaviour
             anim.SetBool("attack", true);
 
             GameObject hold = Instantiate(Spell, spawnPoint.transform.position, transform.rotation);
+            spellNoise.Play();
             hold.GetComponent<spell>().target = target;
             StartCoroutine("cooldown");
         }

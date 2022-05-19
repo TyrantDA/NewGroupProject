@@ -15,6 +15,10 @@ public class HealthOfPlayer : MonoBehaviour
     [SerializeField] float damageFromSpell;
     [SerializeField] float heal;
     public HealthBar bar;
+    public AudioSource oof;
+    public AudioSource ouch1;
+    public AudioSource ouch2;
+    public AudioSource ouch3;
 
 
     bool trapdamage = false;
@@ -25,9 +29,32 @@ public class HealthOfPlayer : MonoBehaviour
         bar.SetMaxHealth(currentHealth);
     }
 
+    void PlaySounds()
+    {
+        int soundPlay = Random.Range(0, 4);
+
+        if(soundPlay == 0)
+        {
+            oof.Play();
+        }
+        else if(soundPlay == 1)
+        {
+            ouch1.Play();
+        }
+        else if(soundPlay == 2)
+        {
+            ouch2.Play();
+        }
+        else if(soundPlay == 3)
+        {
+            ouch3.Play();
+        }
+    }
+
     public void DamagePlayer()
     {
         anim.SetBool("hurt", true);
+        PlaySounds();
         trapdamage = false;
         currentHealth -= damageFromEnemy;
         
@@ -35,6 +62,7 @@ public class HealthOfPlayer : MonoBehaviour
     public void lavaDamage()
     {
         anim.SetBool("hurt", true);
+        PlaySounds();
         trapdamage = false;
         currentHealth -= 320;
         
@@ -44,7 +72,7 @@ public class HealthOfPlayer : MonoBehaviour
     public void ArrowDamage()
     {
         anim.SetBool("hurt", true);
-
+        PlaySounds();
         currentHealth -= damageFromArrow;
         trapdamage = true;
         Debug.Log("hit");
@@ -53,6 +81,7 @@ public class HealthOfPlayer : MonoBehaviour
     public void SpellDamage()
     {
         anim.SetBool("hurt", true);
+        PlaySounds();
         trapdamage = false;
         currentHealth -= damageFromSpell;
         
@@ -60,11 +89,13 @@ public class HealthOfPlayer : MonoBehaviour
     public void potdam()
     {
         currentHealth -= 1;
+        PlaySounds();
 
     }
     public void hot()
     {
         currentHealth -= 0.05f;
+        PlaySounds();
 
     }
 
@@ -98,7 +129,7 @@ public class HealthOfPlayer : MonoBehaviour
         while (true)
         {
             currentHealth -= damageFromPoison;
-
+            PlaySounds();
             yield return new WaitForSeconds(1); 
         }
     }

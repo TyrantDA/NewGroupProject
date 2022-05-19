@@ -23,6 +23,8 @@ public class Dectection : MonoBehaviour
 
     float walkingSpeed;
     public float runningSpeed;
+    public AudioSource walking;
+    bool ifWalkPlaying = false;
 
     float currentTime;
     float minTimeBetweenSpawns = 10;
@@ -276,6 +278,22 @@ public class Dectection : MonoBehaviour
         agent.speed = walkingSpeed;
         CheckForTargetInLineOfSight();
 
-        Debug.Log(agent.speed);
+        if (agent.velocity.x != 0 || agent.velocity.z != 0)
+        {
+            if (!ifWalkPlaying)
+            {
+                Debug.Log("play walking");
+                walking.Play();
+                ifWalkPlaying = true;
+            }
+        }
+        else
+        {
+            if (ifWalkPlaying)
+            {
+                walking.Pause();
+                ifWalkPlaying = false;
+            }
+        }
     }
 }

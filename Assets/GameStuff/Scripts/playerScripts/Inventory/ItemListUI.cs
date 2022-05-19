@@ -47,6 +47,10 @@ public class ItemListUI : MonoBehaviour
     public Text text;
     public imm7 bluenumber;
 
+    public AudioSource pickup;
+    public AudioSource Gem;
+    public AudioSource Coin;
+
     Dictionary<ItemInfo, int> items = new Dictionary<ItemInfo, int>();
     Dictionary<ItemInfo, UIItem> uiItems = new Dictionary<ItemInfo,UIItem>();
 
@@ -244,36 +248,42 @@ public class ItemListUI : MonoBehaviour
             {
                 Destroy(collision.gameObject);
                 AddItem(Ammo, 15);
+                pickup.Play();
             }
 
             if (collision.gameObject.CompareTag("PoisonAmmo"))
             {
                 Destroy(collision.gameObject);
                 AddItem(Poison, 10);
+                pickup.Play();
             }
 
             if (collision.gameObject.CompareTag("Potion"))
             {
                 Destroy(collision.gameObject);
                 AddItem(HealingPotion, 1);
+                pickup.Play();
             }
 
             if (collision.gameObject.CompareTag("Spanner"))
             {
                 Destroy(collision.gameObject);
                 AddItem(Spanner, 1);
+                pickup.Play();
             }
 
             if (collision.gameObject.CompareTag("DamagePotion"))
             {
                 Destroy(collision.gameObject);
                 AddItem(DamagePotion, 1);
+                pickup.Play();
             }
 
             if (collision.gameObject.CompareTag("StarPotion"))
             {
                 Destroy(collision.gameObject);
                 AddItem(StarPotion, 1);
+                pickup.Play();
             }
 
 
@@ -281,30 +291,35 @@ public class ItemListUI : MonoBehaviour
             {
                 Destroy(collision.gameObject);
                 AddItem(ThroneCoin, 1);
+                Coin.Play();
             }
 
             if (collision.gameObject.CompareTag("SpiderCoin"))
             {
                 Destroy(collision.gameObject);
                 AddItem(SpiderCoin, 1);
+                Coin.Play();
             }
 
             if (collision.gameObject.CompareTag("SkullCoin"))
             {
                 Destroy(collision.gameObject);
                 AddItem(SkullCoin, 1);
+                Coin.Play();
             }
 
             if (collision.gameObject.CompareTag("MushroomCoin"))
             {
                 Destroy(collision.gameObject);
                 AddItem(MushroomCoin, 1);
+                Coin.Play();
             }
 
             if (collision.gameObject.CompareTag("DragonCoin"))
             {
                 Destroy(collision.gameObject);
                 AddItem(DragonCoin, 1);
+                Coin.Play();
             }
 
 
@@ -312,24 +327,28 @@ public class ItemListUI : MonoBehaviour
             {
                 Destroy(collision.gameObject);
                 AddItem(GoblinSpear, 1);
+                pickup.Play();
             }
 
             if(collision.gameObject.CompareTag("StoneSpear"))
             {
                 Destroy(collision.gameObject);
                 AddItem(StoneSpear, 1);
+                pickup.Play();
             }
 
             if(collision.gameObject.CompareTag("GrassSpear"))
             {
                 Destroy(collision.gameObject);
                 AddItem(GrassSpear,1);
+                pickup.Play();
             }
 
             if(collision.gameObject.CompareTag("BoneSpear"))
             {
                 Destroy(collision.gameObject);
                 AddItem(BoneSpear, 1);
+                pickup.Play();
             }
 
 
@@ -337,24 +356,28 @@ public class ItemListUI : MonoBehaviour
             {
                 Destroy(collision.gameObject);
                 AddItem(TentacleSword, 1);
+                pickup.Play();
             }
 
             if(collision.gameObject.CompareTag("GrassSword"))
             {
                 Destroy(collision.gameObject);
                 AddItem(GrassSword, 1);
+                pickup.Play();
             }
 
             if(collision.gameObject.CompareTag("FairySword"))
             {
                 Destroy(collision.gameObject);
                 AddItem(FairySword, 1);
+                pickup.Play();
             }
 
             if(collision.gameObject.CompareTag("EyeSword"))
             {
                 Destroy(collision.gameObject);
                 AddItem(EyeSword, 1);
+                pickup.Play();
             }
 
 
@@ -362,6 +385,7 @@ public class ItemListUI : MonoBehaviour
             {
                 Destroy(collision.gameObject);
                 AddItem(HoopStaff, 1);
+                pickup.Play();
             }
 
 
@@ -369,24 +393,28 @@ public class ItemListUI : MonoBehaviour
             {
                 Destroy(collision.gameObject);
                 AddItem(Skull, 1);
+                pickup.Play();
             }
 
             if (collision.gameObject.CompareTag("Lobster"))
             {
                 Destroy(collision.gameObject);
                 AddItem(lobster, 1);
+                pickup.Play();
             }
 
             if(collision.gameObject.CompareTag("Bomb"))
             {
                 Destroy(collision.gameObject);
                 AddItem(bomb, 5);
+                pickup.Play();
             }
 
             if(collision.gameObject.CompareTag("Mine"))
             {
                 Destroy(collision.gameObject);
                 AddItem(mine, 1);
+                pickup.Play();
             }
         }
         else
@@ -409,6 +437,7 @@ public class ItemListUI : MonoBehaviour
             gemList["YellowGem"] = true;
             healthBar.transform.Find("YellowGem").gameObject.SetActive(true);
             Destroy(collision.gameObject);
+            Gem.Play();
         }
 
         if(collision.gameObject.CompareTag("GreenGem"))
@@ -416,6 +445,7 @@ public class ItemListUI : MonoBehaviour
             gemList["GreenGem"] = true;
             healthBar.transform.Find("GreenGem").gameObject.SetActive(true);
             Destroy(collision.gameObject);
+            Gem.Play();
         }
 
         if(collision.gameObject.CompareTag("TurquoiseGem"))
@@ -423,6 +453,7 @@ public class ItemListUI : MonoBehaviour
             gemList["TurquoiseGem"] = true;
             healthBar.transform.Find("TurquoiseGem").gameObject.SetActive(true);
             Destroy(collision.gameObject);
+            Gem.Play();
         }
 
         if(collision.gameObject.CompareTag("BlueGem"))
@@ -430,6 +461,7 @@ public class ItemListUI : MonoBehaviour
             gemList["BlueGem"] = true;
             healthBar.transform.Find("BlueGem").gameObject.SetActive(true);
             Destroy(collision.gameObject);
+            Gem.Play();
         }
 
         if(collision.gameObject.CompareTag("RedGem"))
@@ -437,6 +469,7 @@ public class ItemListUI : MonoBehaviour
             gemList["RedGem"] = true;
             healthBar.transform.Find("RedGem").gameObject.SetActive(true);
             Destroy(collision.gameObject);
+            Gem.Play();
         }
 
         if(collision.gameObject.CompareTag("WhiteGem"))
@@ -444,6 +477,7 @@ public class ItemListUI : MonoBehaviour
             gemList["WhiteGem"] = true;
             healthBar.transform.Find("WhiteGem").gameObject.SetActive(true);
             Destroy(collision.gameObject);
+            Gem.Play();
         }
 
         if(collision.gameObject.CompareTag("PurpleGem"))
@@ -451,12 +485,14 @@ public class ItemListUI : MonoBehaviour
             gemList["PurpleGem"] = true;
             healthBar.transform.Find("PurpleGem").gameObject.SetActive(true);
             Destroy(collision.gameObject);
+            Gem.Play();
         }
 
         if (collision.gameObject.CompareTag("BlueEye"))
         {
             Destroy(collision.gameObject);
             bluenumber.num = bluenumber.num + 1;
+            pickup.Play();
 
         }
     }

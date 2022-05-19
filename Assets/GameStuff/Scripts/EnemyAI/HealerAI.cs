@@ -19,6 +19,8 @@ public class HealerAI : MonoBehaviour
 
     float walkingSpeed;
     public float RunningSpeed;
+    public AudioSource walking;
+    bool ifWalkPlaying = false;
 
     private RaycastHit _mHitInfo;   // allocating memory for the raycasthit
     // to avoid Garbage
@@ -73,6 +75,7 @@ public class HealerAI : MonoBehaviour
 
             agent.velocity = Vector3.zero;
             agent.destination = transform.position;
+
             var lookPos = lastSeen - transform.position;
             lookPos.y = 0;
             var rotation = Quaternion.LookRotation(lookPos);
@@ -89,6 +92,8 @@ public class HealerAI : MonoBehaviour
             anim.SetBool("run", true);
             agent.speed = RunningSpeed;
             agent.destination = lastSeen;
+
+
             hitRange = false;
         }
         else
@@ -97,6 +102,7 @@ public class HealerAI : MonoBehaviour
 
             agent.velocity = Vector3.zero;
             agent.destination = transform.position;
+
             var lookPos = lastSeen - transform.position;
             lookPos.y = 0;
             var rotation = Quaternion.LookRotation(lookPos);
@@ -233,6 +239,7 @@ public class HealerAI : MonoBehaviour
     {
        // Debug.Log("start searching");
         agent.destination = lastSeen;
+
         if (transform.position.x == lastSeen.x && transform.position.z == lastSeen.z)
         {
             currentTime -= Time.deltaTime;
@@ -354,6 +361,24 @@ public class HealerAI : MonoBehaviour
             
         }
 
+        if (agent.velocity.x != 0 || agent.velocity.z != 0)
+        {
+            if (!ifWalkPlaying)
+            {
+                Debug.Log("play walking");
+                walking.Play();
+                ifWalkPlaying = true;
+            }
+        }
+        else
+        {
+            if (ifWalkPlaying)
+            {
+                walking.Pause();
+                ifWalkPlaying = false;
+            }
+        }
+        
 
     }
 }

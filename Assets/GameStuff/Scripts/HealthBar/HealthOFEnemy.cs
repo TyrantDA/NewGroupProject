@@ -23,6 +23,7 @@ public class HealthOFEnemy : MonoBehaviour
 
     EnemyInventroy ei;
     public bool hadChicken = false;
+    public AudioSource damageNoise;
     bool dead = false;
     // Start is called before the first frame update
 
@@ -34,7 +35,7 @@ public class HealthOFEnemy : MonoBehaviour
     public void DamagePlayer()
     {
         anim.SetBool("hit", true);
-
+        damageNoise.Play();
         currentHealth -= damageFromEnemy;
         if (currentHealth <= 0 && !dead)
         {
@@ -45,7 +46,7 @@ public class HealthOFEnemy : MonoBehaviour
     public void DamagePlayerBoosted()
     {
         anim.SetBool("hit", true);
-
+        damageNoise.Play();
         currentHealth -= damageFromEnemyBoosted;
         if (currentHealth <= 0 && !dead)
         {
@@ -56,7 +57,7 @@ public class HealthOFEnemy : MonoBehaviour
     public void ArrowDamage()
     {
         anim.SetBool("hit", true);
-        //Debug.Log("f");
+        damageNoise.Play();
         currentHealth -= damageFromArrow;
         if (currentHealth <= 0 && !dead)
         {
@@ -66,6 +67,7 @@ public class HealthOFEnemy : MonoBehaviour
     public void lavaDamage()
     {
         anim.SetBool("hit", true);
+        damageNoise.Play();
         currentHealth -= 300;
         if (currentHealth <= 0 && !dead)
         {
@@ -76,7 +78,7 @@ public class HealthOFEnemy : MonoBehaviour
     public void SpellDamage()
     {
         anim.SetBool("hit", true);
-
+        damageNoise.Play();
         currentHealth -= damageFromSpell;
         if (currentHealth <= 0 && !dead)
         {
@@ -87,7 +89,7 @@ public class HealthOFEnemy : MonoBehaviour
     public void StartPoisonDamage()
     {
         anim.SetBool("hit", true);
-
+       
         StartCoroutine("poisonDamage");
         if (currentHealth <= 0 && !dead)
         {
@@ -109,6 +111,7 @@ public class HealthOFEnemy : MonoBehaviour
 
         while (true)
         {
+            damageNoise.Play();
             currentHealth -= damageFromPoison;
             if (currentHealth <= 0 && !dead)
             {
@@ -137,7 +140,7 @@ public class HealthOFEnemy : MonoBehaviour
     public void PlayerDamage()
     {
         anim.SetBool("hit", true);
-
+        damageNoise.Play();
         currentHealth -= damageFromPlayer;
         if (currentHealth <= 0)
         {
