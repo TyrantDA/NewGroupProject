@@ -8,6 +8,11 @@ public class playersit : MonoBehaviour
     public Collider cap;
     public Collider shp;
     public GameObject hold;
+    public AudioSource laugh;
+    public AudioSource celebration1;
+    public AudioSource celebration2;
+    bool playingLoop = false;
+    bool playingSound = false;
 
     bool sitting = false;
     // Start is called before the first frame update
@@ -46,6 +51,7 @@ public class playersit : MonoBehaviour
             }
 
         }
+
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (anim.GetBool("sit") == false)
@@ -72,24 +78,55 @@ public class playersit : MonoBehaviour
         }
         if (Input.GetKeyUp("h"))
         {
+            laugh.Pause();
             anim.SetBool("dance", false);
+            playingSound = false;
 
         }
-        if (Input.GetKeyDown("h"))
+        if (Input.GetKeyDown(KeyCode.H))
         {
+            laugh.Play();
             anim.SetBool("dance", true);
-                    
+            playingSound = true;
 
         }
         if (Input.GetKeyUp("h"))
         {
+            laugh.Pause();
             anim.SetBool("dance", false);
-
+            playingSound = false;
         }
 
+        if (playingSound)
+        {
+            if (!playingLoop)
+            {
+                StartCoroutine("playDanceSound");
+            }
+        }
+        else
+        {
+            if(playingLoop)
+            {
+                StopCoroutine("playDanceSound");
+                laugh.Stop();
+                celebration1.Stop();
+                celebration2.Stop();
+            }
 
-
-
-
+        }
     }
+
+    IEnumerator playDanceSound()
+    {
+        playingLoop = true;
+        laugh.Play();
+        yield return new WaitForSeconds(laugh.clip.length);
+        celebration1.Play();
+        yield return new WaitForSeconds(celebration1.clip.length);
+        celebration2.Play();
+        yield return new WaitForSeconds(celebration2.clip.length);
+        playingLoop = false;
+    }
+
 }

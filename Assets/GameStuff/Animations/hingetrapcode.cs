@@ -6,6 +6,8 @@ public class hingetrapcode : MonoBehaviour
 {
     public Animation anim;
     public float resttime;
+    public AudioSource open;
+    public AudioSource close;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +17,10 @@ public class hingetrapcode : MonoBehaviour
     }
     IEnumerator Go()
     {
+        open.Play();
         anim.Play("hingtrap");
         yield return new WaitForSeconds(resttime);
+        close.Play();
         anim.Play("hingtrap2");
         yield return new WaitForSeconds(resttime);
         StartCoroutine("Go");

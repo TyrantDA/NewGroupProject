@@ -12,6 +12,9 @@ public class Doorscript1 : MonoBehaviour
     private Animation anim;
     public newdoorscript hold2;
     public newdoorscript hold1;
+
+    public AudioSource openSong;
+    public AudioSource closeSong;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +40,8 @@ public class Doorscript1 : MonoBehaviour
             if (close == true)
             {
                 anim.Play("open");
+                openSong.Play();
+
                 close = false;
                 hold2.close = false;
                 hold1.close = false;
@@ -53,6 +58,8 @@ public class Doorscript1 : MonoBehaviour
                 if (close1 == true)
                 {
                     anim.Play("Close");
+                    closeSong.Play();
+
                     close = true;
                     hold2.close = true;
                     hold1.close = true;
@@ -61,6 +68,8 @@ public class Doorscript1 : MonoBehaviour
                 else if (close2 == true)
                 {
                     anim.Play("closeback");
+                    closeSong.Play();
+
                     close = true;
                     hold2.close = true;
                     hold1.close = true;
@@ -79,6 +88,8 @@ public class Doorscript1 : MonoBehaviour
             if (close == true)
             {
                 anim.Play("openback");
+                openSong.Play();
+
                 close = false;
                 hold2.close = false;
                 hold1.close = false;
@@ -94,6 +105,8 @@ public class Doorscript1 : MonoBehaviour
                 if (close1 == true)
                 {
                     anim.Play("Close");
+                    closeSong.Play();
+
                     close = true;
                     hold2.close = true;
                     hold1.close = true;
@@ -102,6 +115,8 @@ public class Doorscript1 : MonoBehaviour
                 else if (close2 == true)
                 {
                     anim.Play("closeback");
+                    closeSong.Play();
+
                     close = true;
                     hold2.close = true;
                     hold1.close = true;

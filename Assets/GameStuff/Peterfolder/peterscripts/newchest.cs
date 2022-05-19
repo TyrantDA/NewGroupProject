@@ -45,7 +45,6 @@ public class newchest : MonoBehaviour
         {
 
             go = true;
-
         }
         if (go == true)
         {
@@ -105,6 +104,7 @@ public class newchest : MonoBehaviour
                 if (close == true)
                 {
                     go = true;
+
 
                 }
                 other.GetComponent<EnemyInventroy>().AddItem(Coin);

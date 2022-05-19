@@ -20,10 +20,35 @@ public class Attack : MonoBehaviour
     public float forwardForce;
     public float upforce;
     [SerializeField] bool damagePotionOn = false;
+    public AudioSource attackSound1;
+    public AudioSource attackSound2;
+    public AudioSource attackSound3;
+    public AudioSource hitNoise;
+
+
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+    void pickSound()
+    {
+        int sound = Random.Range(0, 3);
+
+        if(sound == 0)
+        {
+            attackSound1.Play();
+        }
+        else if(sound == 1)
+        {
+            attackSound2.Play();
+        }
+        else if(sound == 2)
+        {
+            attackSound3.Play();
+        }
+
     }
 
     public void damageBoostSet(bool hold)
@@ -52,6 +77,7 @@ public class Attack : MonoBehaviour
             {
                 target.transform.gameObject.GetComponent<HealthOFEnemy>().DamagePlayerBoosted();
             }
+            hitNoise.Play();
             target.transform.gameObject.GetComponent<Rigidbody>().AddForce(transform.forward * forwardForce);
             target.transform.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * upforce);
 
@@ -96,6 +122,7 @@ public class Attack : MonoBehaviour
             if (!isCoolDown)
             {
                 PlayerAttack();
+                pickSound();
             }
             else
             {

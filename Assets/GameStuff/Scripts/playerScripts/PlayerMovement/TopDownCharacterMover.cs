@@ -21,12 +21,14 @@ public class TopDownCharacterMover : MonoBehaviour
     private Camera Camera;
     ItemListUI playerInventory;
     public ItemInfo StarPotion;
-    bool notActive = false;
+    public bool notActive = false;
     Rigidbody m_Rigidbody;
     public bool timeout;
 
     public GameObject Map;
     bool mapOpen = false;
+
+   
     private void Awake()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
