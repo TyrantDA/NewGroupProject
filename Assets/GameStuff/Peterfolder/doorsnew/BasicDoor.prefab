@@ -205,8 +205,8 @@ MonoBehaviour:
   close2: 0
   hold2: {fileID: 4607803233200991075}
   hold1: {fileID: 4607803233551330653}
-  openSong: {fileID: 0}
-  closeSong: {fileID: 0}
+  openSong: {fileID: 1128245274630898940}
+  closeSong: {fileID: 3156218099434469184}
 --- !u!1 &2967274743061534012
 GameObject:
   m_ObjectHideFlags: 0
