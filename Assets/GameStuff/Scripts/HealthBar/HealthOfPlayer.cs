@@ -190,7 +190,7 @@ public class HealthOfPlayer : MonoBehaviour
         anim.SetBool("hurt", true);
         if (anim.GetBool("hurt") == true)
         {
-      //      anim.SetBool("hurt", false);
+           anim.SetBool("hurt", false);
 
         }
     }
