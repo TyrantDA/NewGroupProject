@@ -86,6 +86,12 @@ public class TopDownCharacterMover : MonoBehaviour
             }
         }
 
+        if(Input.GetKeyDown(KeyCode.F1))
+        {
+            ScreenCapture.CaptureScreenshot(Application.dataPath + "/screenshots/" + DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss") + ".png");
+            UnityEditor.AssetDatabase.Refresh();
+        }
+
         if(Input.GetKeyDown(KeyCode.M))
         {
             if(!mapOpen)

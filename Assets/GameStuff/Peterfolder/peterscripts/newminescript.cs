@@ -8,15 +8,16 @@ public class newminescript : MonoBehaviour
     public GameObject spawnpoint;
     public GameObject VFX;
     public List<GameObject> AffectedObjects;
+    public AudioSource bang;
 
     // Start is called before the first frame update
     void Start()
     {
 
     }
-    IEnumerator Delaythis()
+    void Delaythis()
     {
-        yield return new WaitForSeconds(0.5f);
+        bang.Play();
         GameObject hold = Instantiate(VFX, spawnpoint.transform.position, transform.rotation);
         foreach (GameObject objet in AffectedObjects)
         {
@@ -24,7 +25,8 @@ public class newminescript : MonoBehaviour
             objet.GetComponent<HealthOfPlayer>().ArrowDamage();
 
         }
-        Destroy(gameObject);
+        
+        Destroy(gameObject, 0.5f);
 
     }
     private void OnCollisionEnter(Collision collision)
@@ -33,18 +35,18 @@ public class newminescript : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                StartCoroutine("Delaythis");
+                Delaythis();
                 AffectedObjects.Add(collision.gameObject);
 
             }
             if (collision.gameObject.CompareTag("Enemy"))
             {
-                StartCoroutine("Delaythis");
+                Delaythis();
                 AffectedObjects.Add(collision.gameObject);
             }
             else if (collision.transform.CompareTag("EnemyHealer"))
             {
-                StartCoroutine("Delaythis");
+                Delaythis();
                 AffectedObjects.Add(collision.gameObject);
             }
         }

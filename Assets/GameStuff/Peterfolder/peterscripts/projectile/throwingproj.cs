@@ -12,6 +12,7 @@ public class throwingproj : MonoBehaviour
     public static throwingproj x;
     public bool going = false;
     public float i;
+    public AudioSource bang;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +43,7 @@ public class throwingproj : MonoBehaviour
                 StopCoroutine("Delaythis");
 
                 var newSquare2 = Instantiate(bombfab, (this.transform.position + transform.forward + transform.up), Quaternion.identity);
-
+                //newSquare2.GetComponent<newbombsrkipt>().bang = bang;
             }
         }
 

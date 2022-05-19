@@ -9,6 +9,7 @@ public class pas2 : MonoBehaviour
     public bool acive = true;
     public bool stopped = false;
     public Rigidbody RB;
+    public AudioSource stun;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class pas2 : MonoBehaviour
 
             if (stopped != true)
             {
+                stun.Play();
                 GetComponent<Patrol>().enabled = !GetComponent<Patrol>().enabled;
                 GetComponent<HealerAI>().enabled = !GetComponent<HealerAI>().enabled;
                 GetComponent<NavMeshAgent>().enabled = !GetComponent<NavMeshAgent>().enabled;

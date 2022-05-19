@@ -8,6 +8,7 @@ public class deathplayer : MonoBehaviour
     public bool stopped = false;
     public float heath;
     public Rigidbody RB;
+    public AudioSource stun;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class deathplayer : MonoBehaviour
 
             if (stopped != true)
             {
+                stun.Play();
                 GetComponent<InputHandler>().enabled = !GetComponent<InputHandler>().enabled;
                 GetComponent<TopDownCharacterMover>().enabled = !GetComponent<TopDownCharacterMover>().enabled;
 

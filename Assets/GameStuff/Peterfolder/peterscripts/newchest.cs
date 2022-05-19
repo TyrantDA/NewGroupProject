@@ -17,6 +17,9 @@ public class newchest : MonoBehaviour
     public ItemInfo Coin;
     public GameObject inside;
     public GameObject place;
+
+    public AudioSource openSound;
+    public AudioSource CloseSound;
     void Start()
     {
         go = false;
@@ -66,6 +69,7 @@ public class newchest : MonoBehaviour
                 }
 
                 anim.Play("open");
+                openSound.Play();
                 close = false;
                 chestnum.openr = chestnum.openr + 1;
 
@@ -79,6 +83,7 @@ public class newchest : MonoBehaviour
                 chesttext1.gameObject.SetActive(false);
 
                 anim.Play("Close");
+                CloseSound.Play();
                 close = true;
                 chestnum.openr = chestnum.openr - 1;
 

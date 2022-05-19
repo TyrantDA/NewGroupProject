@@ -3153,6 +3153,7 @@ MonoBehaviour:
   acive: 1
   stopped: 0
   RB: {fileID: 600489291}
+  Stun: {fileID: 0}
 --- !u!114 &600489296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3202,6 +3203,7 @@ MonoBehaviour:
   acive: 1
   stopped: 0
   RB: {fileID: 600489291}
+  stun: {fileID: 0}
 --- !u!1 &603657795
 GameObject:
   m_ObjectHideFlags: 0
@@ -7583,7 +7585,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492059965}
-  m_LocalRotation: {x: -0.056391127, y: 0.6155165, z: -0.42455027, w: 0.6616016}
+  m_LocalRotation: {x: -0.056391142, y: 0.6155164, z: -0.4245502, w: 0.6616016}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

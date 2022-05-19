@@ -9,6 +9,7 @@ public class Passivication : MonoBehaviour
     public bool acive = true;
     public bool stopped = false;
     public Rigidbody RB;
+    public AudioSource Stun;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class Passivication : MonoBehaviour
 
             if (stopped != true)
             {
+                Stun.Play();
                 GetComponent<Patrol>().enabled = !GetComponent<Patrol>().enabled;
                 GetComponent<Dectection>().enabled = !GetComponent<Dectection>().enabled;
                 GetComponent<NavMeshAgent>().enabled = !GetComponent<NavMeshAgent>().enabled;

@@ -6,6 +6,7 @@ public class newbombsrkipt : MonoBehaviour
 {
     public GameObject VFX;
     public GameObject sposion;
+    public AudioSource bang;
 
     public bool Hit;
     // Start is called before the first frame update
@@ -13,14 +14,14 @@ public class newbombsrkipt : MonoBehaviour
     {
 
     }
-    IEnumerator Delaythis()
+    void Delaythis()
     {
-        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject, 0.5f);
         GameObject hold = Instantiate(VFX, this.transform.position, transform.rotation);
         GameObject hold2 = Instantiate(sposion, this.transform.position, transform.rotation);
-
-        Destroy(gameObject);
-
+        
+        
+        bang.Play();
     }
     // Update is called once per frame
     void Update()
@@ -31,7 +32,7 @@ public class newbombsrkipt : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("floor"))
         {
-            StartCoroutine("Delaythis");
+            Delaythis();
         }
 
     }
