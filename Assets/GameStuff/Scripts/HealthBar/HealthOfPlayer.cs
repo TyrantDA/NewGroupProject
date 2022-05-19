@@ -156,9 +156,10 @@ public class HealthOfPlayer : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        anim.SetBool("hurt", true);
         if (anim.GetBool("hurt") == true)
         {
-            anim.SetBool("hurt", false);
+      //      anim.SetBool("hurt", false);
 
         }
     }

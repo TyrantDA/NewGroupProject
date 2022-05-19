@@ -28,7 +28,6 @@ public class deathplayer : MonoBehaviour
             {
                 GetComponent<InputHandler>().enabled = !GetComponent<InputHandler>().enabled;
                 GetComponent<TopDownCharacterMover>().enabled = !GetComponent<TopDownCharacterMover>().enabled;
-                GetComponent<Animator>().enabled = !GetComponent<Animator>().enabled;
 
                 RB.velocity = Vector3.zero;
                 RB.angularVelocity = Vector3.zero;
@@ -46,7 +45,6 @@ public class deathplayer : MonoBehaviour
             {
                 GetComponent<InputHandler>().enabled = !GetComponent<InputHandler>().enabled;
                 GetComponent<TopDownCharacterMover>().enabled = !GetComponent<TopDownCharacterMover>().enabled;
-                GetComponent<Animator>().enabled = !GetComponent<Animator>().enabled;
 
                 RB.velocity = Vector3.zero;
                 RB.angularVelocity = Vector3.zero;
