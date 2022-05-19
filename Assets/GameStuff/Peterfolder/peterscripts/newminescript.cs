@@ -22,7 +22,6 @@ public class newminescript : MonoBehaviour
         foreach (GameObject objet in AffectedObjects)
         {
             objet.GetComponent<Rigidbody>().AddForce(transform.up * 6000);
-            objet.GetComponent<HealthOfPlayer>().ArrowDamage();
 
         }
         
@@ -37,17 +36,22 @@ public class newminescript : MonoBehaviour
             {
                 Delaythis();
                 AffectedObjects.Add(collision.gameObject);
+                collision.gameObject.GetComponent<HealthOfPlayer>().ArrowDamage();
 
             }
             if (collision.gameObject.CompareTag("Enemy"))
             {
                 Delaythis();
                 AffectedObjects.Add(collision.gameObject);
+                collision.gameObject.GetComponent<HealthOFEnemy>().ArrowDamage();
+
             }
             else if (collision.transform.CompareTag("EnemyHealer"))
             {
                 Delaythis();
                 AffectedObjects.Add(collision.gameObject);
+                collision.gameObject.GetComponent<HealthOFEnemy>().ArrowDamage();
+
             }
         }
         //Check to see if the tag on the collider is equal to Enemy
