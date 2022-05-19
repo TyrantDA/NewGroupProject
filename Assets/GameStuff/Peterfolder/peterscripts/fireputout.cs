@@ -33,9 +33,7 @@ public class fireputout : MonoBehaviour
         }
         else
         {
-            anim.SetBool("hurt", false);
 
-            outtext.gameObject.SetActive(false);
 
         }
         if (playhit && Input.GetKey(KeyCode.E))
@@ -66,6 +64,7 @@ public class fireputout : MonoBehaviour
         if (other.transform.CompareTag("Player"))
         {
             playhit = false;
+            outtext.gameObject.SetActive(false);
 
         }
     }
