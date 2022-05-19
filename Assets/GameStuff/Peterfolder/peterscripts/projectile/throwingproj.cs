@@ -50,9 +50,16 @@ public class throwingproj : MonoBehaviour
     }
     IEnumerator Delaythis()
     {
+
         i = 0;
         while(i < 6)
         {
+            int hold = this.gameObject.GetComponent<ItemListUI>().HasItem(Bomb);
+            if (hold == 0)
+            {
+                StopCoroutine("Delaythis");
+
+            }
             yield return new WaitForSeconds(0.25f);
             var newSquare = Instantiate(projprfab, (this.transform.position + transform.forward + transform.up), Quaternion.identity);
 
@@ -60,6 +67,12 @@ public class throwingproj : MonoBehaviour
         }
         while (i > 5)
         {
+            int hold = this.gameObject.GetComponent<ItemListUI>().HasItem(Bomb);
+            if (hold == 0)
+            {
+                StopCoroutine("Delaythis");
+
+            }
             yield return new WaitForSeconds(0.25f);
             var newSquare = Instantiate(projprfab, (this.transform.position + transform.forward + transform.up), Quaternion.identity);
 
