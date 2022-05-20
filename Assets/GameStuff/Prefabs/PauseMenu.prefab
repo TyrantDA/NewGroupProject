@@ -581,7 +581,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Quit to Destop
+  m_Text: Quit to Desktop
 --- !u!1 &5517151502373218105
 GameObject:
   m_ObjectHideFlags: 0
