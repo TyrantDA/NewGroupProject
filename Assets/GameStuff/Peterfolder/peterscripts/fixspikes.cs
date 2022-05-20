@@ -8,6 +8,8 @@ public class fixspikes : MonoBehaviour
     public bool running;
 
     public int count;
+    public bool spikesound;
+    public AudioSource soundssp;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,6 @@ public class fixspikes : MonoBehaviour
         yield return new WaitForSeconds(count);
         transform.GetChild(1).gameObject.GetComponent<Animation>().enabled = false;
 
-        Debug.Log("ff");
         running = false;
 
 
@@ -38,7 +39,10 @@ public class fixspikes : MonoBehaviour
             }
             StartCoroutine("delay");
             transform.GetChild(1).gameObject.GetComponent<Animation>().enabled = true;
-
+            if (spikesound == true)
+            {
+            soundssp.enabled = true;
+            }
         }
     }
 

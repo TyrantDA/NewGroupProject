@@ -36,6 +36,14 @@ public class sc4 : MonoBehaviour
     public Animation anim82;
     public Animation anim83;
     public Animation anim84;
+    public AudioSource Spike1;
+    public AudioSource Spike2;
+    public AudioSource Spike3;
+
+    public bool up1;
+    public bool up2;
+    public bool up3;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +64,8 @@ public class sc4 : MonoBehaviour
         anim72.Play("spikelee");
         anim73.Play("spikelee");
         anim74.Play("spikelee");
+        up1 = true;
+
         yield return new WaitForSeconds(1f);
         anim21.Play("spikelee");
         anim22.Play("spikelee");
@@ -68,7 +78,9 @@ public class sc4 : MonoBehaviour
         anim81.Play("spikelee");
         anim82.Play("spikelee");
         anim83.Play("spikelee");
-        anim84.Play("spikelee"); 
+        anim84.Play("spikelee");
+        up2 = true;
+
         yield return new WaitForSeconds(1f);
         anim31.Play("spikelee");
         anim32.Play("spikelee");
@@ -78,6 +90,8 @@ public class sc4 : MonoBehaviour
         anim62.Play("spikelee");
         anim63.Play("spikelee");
         anim64.Play("spikelee");
+        up3 = true;
+
         yield return new WaitForSeconds(1f);
 
         StartCoroutine("Go");
@@ -85,6 +99,23 @@ public class sc4 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (up1 == true)
+        {
+            up1 = false;
+            Spike1.Play();
+
+        }
+        if (up2 == true)
+        {
+            up2 = false;
+            Spike2.Play();
+
+        }
+        if (up3 == true)
+        {
+            up3 = false;
+            Spike3.Play();
+
+        }
     }
 }
