@@ -7,9 +7,11 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject PauseMenuBackerIU;
     public GameObject OptionMenuBackerIU;
+    public GameObject ControlUI;
 
     public static bool isPaused = false;
     public static bool isOption = false;
+    public static bool isControl = false;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +62,12 @@ public class PauseMenu : MonoBehaviour
         PlayerPrefs.DeleteAll();
     }
 
+    public void Control()
+    {
+        ControlUI.SetActive(true);
+        isControl = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -69,9 +77,17 @@ public class PauseMenu : MonoBehaviour
             {
                 if (isOption)
                 {
-                    PauseMenuBackerIU.SetActive(true);
-                    OptionMenuBackerIU.SetActive(false);
-                    isOption = false;
+                    if (isControl)
+                    {
+                        ControlUI.SetActive(false);
+                        isControl = false;
+                    }
+                    else
+                    {
+                        PauseMenuBackerIU.SetActive(true);
+                        OptionMenuBackerIU.SetActive(false);
+                        isOption = false;
+                    }
                 }
                 else
                 {

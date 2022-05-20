@@ -62,7 +62,8 @@ public class EnemyInventroy : MonoBehaviour
         for(int x = 0; x < items.Count; x++)
         {
             GameObject hold = getCoin(items[x]);
-            Instantiate(hold, new Vector3(Random.Range(transform.position.x, (transform.position.x + 3)), 1.27f, Random.Range(transform.position.z, (transform.position.z + 3))), transform.rotation);
+            Instantiate(hold, new Vector3(Random.Range(transform.position.x, (transform.position.x + 3)), 1.27f,
+                Random.Range(transform.position.z, (transform.position.z + 3))), transform.rotation);
 
         }
     }

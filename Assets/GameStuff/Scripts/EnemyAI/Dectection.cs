@@ -72,7 +72,9 @@ public class Dectection : MonoBehaviour
             anim.SetBool("walk", true);
             anim.SetBool("run", true);
             agent.speed = runningSpeed;
+
             agent.destination = lastSeen;
+
             hitRange = false;
         }
         else
@@ -122,6 +124,7 @@ public class Dectection : MonoBehaviour
         if (foundSomething)
         {
             RaycastHit hitInfo;
+
             if (Physics.Linecast(transform.position, hitColliders[hold].transform.position, out hitInfo, detectLayers))
             {
                 if (hitInfo.transform == hitColliders[hold].transform)

@@ -144,6 +144,7 @@ public class HealthOfPlayer : MonoBehaviour
         PlayerPrefs.SetInt("GobNumber", gobnumber);
         SceneManager.LoadScene("YouGotFired");
         Debug.Log("Player is dead");
+
         if(trapdamage == true)
         {
             int achieve = PlayerPrefs.GetInt("work place accident", 0);

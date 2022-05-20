@@ -72,7 +72,7 @@ public class Achievements : MonoBehaviour
         }
 
         int achieve7 = PlayerPrefs.GetInt("Mcduck money coin", 0);
-        Debug.Log("Mcduck money coin :" + achieve6);
+        Debug.Log("Mcduck money coin :" + achieve7);
         if (achieve7 == 1)
         {
             StartCoroutine("unlock");
@@ -80,7 +80,7 @@ public class Achievements : MonoBehaviour
         }
 
         int achieve8 = PlayerPrefs.GetInt("At least he had chicken", 0);
-        Debug.Log("At least he had chicken :" + achieve6);
+        Debug.Log("At least he had chicken :" + achieve8);
         if (achieve8 == 1)
         {
             StartCoroutine("unlock");
@@ -88,7 +88,7 @@ public class Achievements : MonoBehaviour
         }
 
         int achieve9 = PlayerPrefs.GetInt("Fire and blood", 0);
-        Debug.Log("Fire and blood :" + achieve6);
+        Debug.Log("Fire and blood :" + achieve9);
         if (achieve9 == 1)
         {
             StartCoroutine("unlock");
