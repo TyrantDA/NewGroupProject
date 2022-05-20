@@ -47,6 +47,7 @@ public class fireputout : MonoBehaviour
         }
         if (go == true)
         {
+            outtext.gameObject.SetActive(false);
             Destroy(hold);
         }
     }

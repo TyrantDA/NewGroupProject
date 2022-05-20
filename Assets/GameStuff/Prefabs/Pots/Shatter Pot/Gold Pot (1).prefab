@@ -325,6 +325,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gold Pot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5810755380349416824, guid: 0eb1f591bd1fb504dbd2d4400b782288, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0eb1f591bd1fb504dbd2d4400b782288, type: 3}
 --- !u!1 &7999501930655994613 stripped

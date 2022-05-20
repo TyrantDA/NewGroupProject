@@ -52,9 +52,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 50
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -87,7 +87,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   breakObject: {fileID: 7999501930940584873, guid: ce1d08a38cb853c4e87003387078f790, type: 3}
-  pot: {fileID: 0}
+  pot: {fileID: 57594210480803162}
   pot1: {fileID: 4616109266664831350}
   pot2: {fileID: 1976849238374348279}
 --- !u!135 &5144451767163573505
@@ -243,9 +243,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 50
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -278,7 +278,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -375,6 +375,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 480687d84fd81f14fb511d97ac492cab, type: 3}
+--- !u!1 &57594210480803162 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8935528520291736794, guid: 480687d84fd81f14fb511d97ac492cab, type: 3}
+  m_PrefabInstance: {fileID: 8993057859575976320}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &830717376690624480 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8595840568761517664, guid: 480687d84fd81f14fb511d97ac492cab, type: 3}

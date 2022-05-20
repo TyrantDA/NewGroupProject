@@ -281,6 +281,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gold Pot (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8897704171114119261, guid: 0bfe4f32d0290054bb7c6a900ee81b20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8897704171114119262, guid: 0bfe4f32d0290054bb7c6a900ee81b20, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -22,7 +22,7 @@ public class potBreak : MonoBehaviour
         {
             pot1.Play();
         }
-        else if (sound == 0)
+        else if (sound == 1)
         {
             pot2.Play();
         }
