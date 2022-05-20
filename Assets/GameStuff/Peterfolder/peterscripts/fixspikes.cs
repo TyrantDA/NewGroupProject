@@ -41,7 +41,8 @@ public class fixspikes : MonoBehaviour
             transform.GetChild(1).gameObject.GetComponent<Animation>().enabled = true;
             if (spikesound == true)
             {
-            soundssp.enabled = true;
+                soundssp.enabled = true;
+
             }
         }
     }
