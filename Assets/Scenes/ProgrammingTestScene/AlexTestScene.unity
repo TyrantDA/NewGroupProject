@@ -1530,7 +1530,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145124656}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2e009b4e5f73d354bbafe6849e6c7950, type: 3}
@@ -6507,10 +6507,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 6451692334672151599, guid: 72fe133159cc24843b0df129596aec58, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72fe133159cc24843b0df129596aec58, type: 3}
 --- !u!1001 &991221086
@@ -10279,7 +10275,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492059965}
-  m_LocalRotation: {x: -0.056391165, y: 0.6155165, z: -0.42455035, w: 0.66160154}
+  m_LocalRotation: {x: -0.056391127, y: 0.6155164, z: -0.4245503, w: 0.66160154}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

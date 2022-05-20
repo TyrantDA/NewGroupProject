@@ -14,6 +14,7 @@ public class spikecont : MonoBehaviour
     public Animation anim8;
     public bool up1;
     public bool up2;
+    public AudioSource Spike;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,12 +47,14 @@ public class spikecont : MonoBehaviour
         if (up1 == true)
         {
             up1 = false;
+            Spike.Play();
             //sound
 
         }
         if (up2 == true)
         {
             up2 = false;
+            Spike.Play();
             //sound
 
         }
