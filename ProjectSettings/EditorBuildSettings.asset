@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ProgrammingTestScene/Petertest3donttouchthismatt.unity
     guid: cccaef7cf412c7145a34e9cae399fc1f
+  - enabled: 1
+    path: Assets/Scenes/RB light seen/20th hi rez render.unity
+    guid: 528106a4689aca34cb33fb43accc1895
   m_configObjects: {}
