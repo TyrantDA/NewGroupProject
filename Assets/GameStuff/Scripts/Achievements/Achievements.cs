@@ -6,6 +6,7 @@ public class Achievements : MonoBehaviour
 {
     public GameObject achievementUI;
     public GameObject spawnPoint;
+    public AudioSource achieve;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,7 @@ public class Achievements : MonoBehaviour
     IEnumerator unlock()
     {
         spawnPoint.SetActive(true);
+        achieve.Play();
         yield return new WaitForSeconds(5);
         spawnPoint.SetActive(false);
     }

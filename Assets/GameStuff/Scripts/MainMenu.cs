@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     public GameObject spawnPoint;
     public GameObject OptionMenuBackerIU;
     public GameObject ControlsUI;
+    public AudioSource achieve;
 
     bool AchievementOn = false;
     bool isOption = false;
@@ -36,6 +37,7 @@ public class MainMenu : MonoBehaviour
     IEnumerator unlock()
     {
         spawnPoint.SetActive(true);
+        achieve.Play();
         yield return new WaitForSeconds(5);
         spawnPoint.SetActive(false);
     }

@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/transitionScenes/WelcomGoblin.unity
     guid: e69415067bcccb445bcddb39f2c5df7b
   - enabled: 1
+    path: Assets/Scenes/RB light seen/light seen 2 bakeing light map.unity
+    guid: 3ad4ae3aabd3d3445919f7220e763fc8
+  - enabled: 1
     path: Assets/Scenes/petersceen4.unity
     guid: fdab29b0e978ad0499be97eae116d648
   - enabled: 1
