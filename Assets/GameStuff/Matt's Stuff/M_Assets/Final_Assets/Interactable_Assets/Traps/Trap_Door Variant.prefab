@@ -255,6 +255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   resttime: 2.5
+  holdfix: {fileID: 146935103}
   open: {fileID: 8884121002336696488}
   close: {fileID: 8928301801801670817}
 --- !u!1 &3945622699830902951
