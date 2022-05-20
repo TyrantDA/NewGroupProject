@@ -12,12 +12,14 @@ public class spikecont : MonoBehaviour
     public Animation anim6;
     public Animation anim7;
     public Animation anim8;
-
+    public bool up1;
+    public bool up2;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine("Go");
-
+        up1 = false;
+        up2 = false;
     }
     IEnumerator Go()
     {
@@ -25,11 +27,14 @@ public class spikecont : MonoBehaviour
         anim3.Play("spikelee");
         anim5.Play("spikelee");
         anim7.Play("spikelee");
+        up1 = true;
         yield return new WaitForSeconds(1.5f);
         anim2.Play("spikelee");
         anim4.Play("spikelee");
         anim6.Play("spikelee");
         anim8.Play("spikelee");
+        up2 = true;
+
         yield return new WaitForSeconds(1.5f);
         StartCoroutine("Go");
 
@@ -38,5 +43,17 @@ public class spikecont : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (up1 == true)
+        {
+            up1 = false;
+            //sound
+
+        }
+        if (up2 == true)
+        {
+            up2 = false;
+            //sound
+
+        }
     }
 }
