@@ -8,10 +8,11 @@ public class potBreak : MonoBehaviour
     public GameObject pot;
     public AudioSource pot1;
     public AudioSource pot2;
+    public bool done;
     // Start is called before the first frame update
     void Start()
     {
-        
+        done = false;
     }
 
     void potSounds()
@@ -31,11 +32,16 @@ public class potBreak : MonoBehaviour
 
     public void BreakPot()
     {
-        potSounds();
-        pot.SetActive(false);
-        GameObject hold = Instantiate(breakObject, transform.position, transform.rotation);
-        Destroy(hold, 5);
-        Destroy(this.gameObject, 5);
+        if (done == false)
+        {
+            done = true;
+            potSounds();
+            pot.SetActive(false);
+            GameObject hold = Instantiate(breakObject, transform.position, transform.rotation);
+            Destroy(hold, 5);
+            Destroy(this.gameObject, 5);
+        }
+
     }
 
     // Update is called once per frame
